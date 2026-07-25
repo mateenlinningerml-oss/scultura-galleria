@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Museo — Galleria Scultura</title>
+  <meta name="description" content="Missione, storia e materiali del museo Galleria Scultura." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="about">
+  <div class="marble-edge-top" aria-hidden="true"></div>
+  <div class="marble-edge-bottom" aria-hidden="true"></div>
+  <div class="marble-edge-accent marble-edge-accent--left" aria-hidden="true"></div>
+  <div class="marble-edge-accent marble-edge-accent--right" aria-hidden="true"></div>
+  <div class="museum-topbar" data-section="topbar">
+    <div class="container">
+      <span data-i18n="topbar.location">Roma · Italia</span>
+      <span class="topbar-hide-sm" data-i18n="topbar.hours">Collezione permanente · Online</span>
+      <a href="contact.html" data-i18n="topbar.visit">Informazioni visita</a>
+    </div>
+  </div>
+
+  <header class="site-header scrolled">
+    <nav class="nav" aria-label="Navigation">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">Galleria Scultura</span>
+        <span class="logo-sub" data-i18n="logo.sub">Museo · Roma</span>
+      </a>
+      <div class="nav-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="it">IT</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="nav-toggle" type="button" data-i18n-aria="nav.menu" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li data-section="hero"><a href="index.html" data-i18n="nav.home">Ingresso</a></li>
+          <li data-section="pageGallery"><a href="gallery.html" data-i18n="nav.gallery">Collezione</a></li>
+          <li data-section="pageAbout"><a href="about.html" class="active" data-i18n="nav.about">Il Museo</a></li>
+          <li data-section="pageContact"><a href="contact.html" data-i18n="nav.contact">Visita</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="page-root" data-page-root="about">
+    <!-- Baukasten -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-mark">Galleria Scultura</div>
+          <div class="logo-sub" data-i18n="logo.sub">Museo · Roma</div>
+          <p data-i18n="footer.blurb">Museo online di scultura nello spirito romano-italiano.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav">Navigazione</h4>
+          <a href="index.html" data-i18n="nav.home">Ingresso</a>
+          <a href="gallery.html" data-i18n="nav.gallery">Collezione</a>
+          <a href="about.html" data-i18n="nav.about">Il Museo</a>
+          <a href="contact.html" data-i18n="nav.contact">Visita</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.materials">Sezioni</h4>
+          <a href="gallery.html" data-i18n="footer.marble">Marmo</a>
+          <a href="gallery.html" data-i18n="footer.bronze">Bronzo</a>
+          <a href="gallery.html" data-i18n="footer.terra">Terracotta</a>
+          <a href="gallery.html" data-i18n="footer.wood">Legno &amp; pietra</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Galleria Scultura</span>
+        <span data-i18n="footer.tagline">Collezione permanente</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/blocks.js"></script>
+  <script src="js/page-renderer.js"></script>
+  <script src="js/content-loader.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

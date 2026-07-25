@@ -1,0 +1,1178 @@
+{
+  "settings": {
+    "logo": "Galleria Scultura",
+    "contactEmail": "atelier@galleria-scultura.example",
+    "stats": {
+      "works": "9",
+      "materials": "IV",
+      "rooms": "III"
+    },
+    "sections": {
+      "topbar": true,
+      "hero": true,
+      "visit": true,
+      "intro": true,
+      "featured": true,
+      "process": true,
+      "quote": true,
+      "contactHome": true,
+      "pageGallery": true,
+      "pageAbout": true,
+      "pageContact": false,
+      "aboutMission": true,
+      "aboutMaterials": true,
+      "aboutDesign": true,
+      "aboutQuote": true,
+      "contactVisitStrip": false,
+      "contactForm": true,
+      "contactNext": true
+    },
+    "builder": true
+  },
+  "texts": {
+    "it": {
+      "meta.title.home": "Galleria Scultura — Museo di scultura",
+      "meta.title.gallery": "Collezione — Galleria Scultura",
+      "meta.title.about": "Il Museo — Galleria Scultura",
+      "meta.title.contact": "Visita & Contatti — Galleria Scultura",
+      "meta.desc.home": "Museo online di scultura contemporanea nello spirito della tradizione romana e italiana.",
+      "topbar.location": "Roma · Italia",
+      "topbar.hours": "Collezione permanente · Online",
+      "topbar.visit": "Informazioni visita",
+      "nav.home": "Ingresso",
+      "nav.gallery": "Collezione",
+      "nav.about": "Il Museo",
+      "nav.contact": "Visita",
+      "nav.menu": "Menu",
+      "logo.sub": "Museo · Roma",
+      "hero.kicker": "Collezione permanente",
+      "hero.title": "Forma Aeterna",
+      "hero.tagline": "Un museo dedicato alla scultura tra Roma e il presente",
+      "hero.desc": "Benvenuti nelle sale digitali del museo: opere in marmo, bronzo e terracotta, presentate come in un percorso espositivo — silenzio, luce e materia.",
+      "hero.cta.gallery": "Entra in collezione",
+      "hero.cta.about": "Scopre il museo",
+      "visit.hours.label": "Orari",
+      "visit.hours.value": "Aperto sempre · Online",
+      "visit.ticket.label": "Ingresso",
+      "visit.ticket.value": "Libero · Collezione digitale",
+      "visit.place.label": "Sede",
+      "visit.place.value": "Via dell’Arte 12 · Studio Roma",
+      "intro.visual.kicker": "Sala I",
+      "intro.visual.title": "Scultura contemporanea",
+      "intro.kicker": "Il museo",
+      "intro.title": "Uno spazio per la forma e la storia",
+      "intro.p1": "Come in un museo italiano, ogni opera ha il suo silenzio: cartellino, materia, misura. Qui la bottega si apre al pubblico — un percorso tra pietra, metallo e luce.",
+      "intro.p2": "L’allestimento richiama le sale classiche: pareti quiete, didascalie chiare, rispetto per l’oggetto. Non un negozio, ma un luogo di contemplazione.",
+      "intro.cta": "Storia del museo",
+      "intro.stat.works": "Opere in collezione",
+      "intro.stat.materials": "Materiali",
+      "intro.stat.inspo": "Sale espositive",
+      "featured.kicker": "In evidenza",
+      "featured.title": "Dalla collezione",
+      "featured.lead": "Una selezione di opere esposte — toccate o cliccate per aprire la didascalia completa.",
+      "featured.all": "Tutta la collezione",
+      "process.kicker": "Percorso",
+      "process.title": "Dal laboratorio alla sala",
+      "process.lead": "Quattro tappe del viaggio di un’opera — dall’idea all’ingresso in collezione.",
+      "process.1.title": "Studio",
+      "process.1.desc": "Schizzi, modelli e la scelta del materiale: marmo, bronzo o argilla.",
+      "process.2.title": "Laboratorio",
+      "process.2.desc": "Scalpello, fusione, cottura: il dialogo tra mano e materia.",
+      "process.3.title": "Restauro & finitura",
+      "process.3.desc": "Lucidatura, patina e gli ultimi dettagli — finché la superficie respira.",
+      "process.4.title": "Esposizione",
+      "process.4.desc": "L’opera entra in sala: inventariata, fotografata e condivisa con i visitatori.",
+      "quote.text": "Ars longa, vita brevis — l’arte è lunga, la vita breve. Per questo ciò che resta in pietra e metallo merita una sala.",
+      "quote.cite": "— Galleria Scultura · Museo",
+      "contact.kicker": "Visita & contatti",
+      "contact.title": "Pianificate la vostra visita",
+      "contact.lead": "Richieste su opere, prestiti, visite in atelier o stampa istituzionale.",
+      "contact.email": "Segreteria",
+      "contact.address": "Sede",
+      "contact.address.value": "Via dell’Arte 12 · Studio Roma",
+      "contact.visits": "Visite",
+      "contact.visits.value": "Su appuntamento",
+      "contact.reply": "Risposta",
+      "contact.reply.value": "Entro pochi giorni lavorativi",
+      "form.name": "Nome",
+      "form.email": "E-mail",
+      "form.subject": "Motivo della richiesta",
+      "form.subject.general": "Informazioni generali",
+      "form.subject.work": "Opera in collezione",
+      "form.subject.commission": "Commissione / Prestito",
+      "form.subject.visit": "Visita in sede",
+      "form.subject.press": "Stampa / Media",
+      "form.message": "Messaggio",
+      "form.placeholder": "La vostra richiesta…",
+      "form.submit": "Invia alla segreteria",
+      "form.note": "Modulo demo — conferma locale, nessun invio al server.",
+      "form.success": "Grazie — la richiesta è stata registrata.",
+      "footer.blurb": "Museo online di scultura nello spirito romano-italiano. Collezione permanente aperta a tutti i visitatori del web.",
+      "footer.nav": "Navigazione",
+      "footer.materials": "Sezioni",
+      "footer.marble": "Marmo",
+      "footer.bronze": "Bronzo",
+      "footer.terra": "Terracotta",
+      "footer.wood": "Legno & pietra",
+      "footer.tagline": "Collezione permanente",
+      "gallery.hero.kicker": "Catalogo",
+      "gallery.hero.title": "La Collezione",
+      "gallery.hero.lead": "Tutte le opere inventariate — filtrate per materiale, come nelle sale del museo.",
+      "gallery.kicker": "Sale",
+      "gallery.title": "Opere esposte",
+      "gallery.lead": "Selezionate un’opera per leggere inventariazione, materia e nota di sala.",
+      "filter.all": "Tutte",
+      "filter.marble": "Marmo",
+      "filter.bronze": "Bronzo",
+      "filter.terra": "Terracotta",
+      "filter.stone": "Pietra",
+      "filter.wood": "Legno",
+      "mat.marble": "Marmo",
+      "mat.bronze": "Bronzo",
+      "mat.stone": "Pietra",
+      "mat.terra": "Terracotta",
+      "mat.wood": "Legno",
+      "mat.travertine": "Travertino",
+      "mat.alabaster": "Alabastro",
+      "about.hero.kicker": "Istituzione",
+      "about.hero.title": "Il Museo",
+      "about.hero.lead": "Missione, storia e materiali — il carattere di uno spazio espositivo italiano.",
+      "about.visual.kicker": "Archivio",
+      "about.visual.title": "Tra laboratorio e sala",
+      "about.kicker": "Missione",
+      "about.title": "Custodire e condividere la forma",
+      "about.p1": "Galleria Scultura nasce come museo personale: un luogo dove le sculture trovano ordine, didascalia e pubblico — senza perdere l’intimità della bottega.",
+      "about.p2": "Ogni pezzo porta un nome latino o mitologico e un numero d’inventario: ponte tra antico e contemporaneo, tra studio e sala.",
+      "about.t1.year": "Fondazione",
+      "about.t1.title": "Primi nuclei di collezione",
+      "about.t1.desc": "Terracotta e studi — le prime opere catalogate.",
+      "about.t2.year": "Espansione",
+      "about.t2.title": "Marmo e travertino",
+      "about.t2.desc": "L’ingresso della pietra monumentale in collezione.",
+      "about.t3.year": "Bronzi",
+      "about.t3.title": "Fusione e patina",
+      "about.t3.desc": "Il metallo arricchisce le sale di calore e durata.",
+      "about.t4.year": "Museo online",
+      "about.t4.title": "Apertura al pubblico digitale",
+      "about.t4.desc": "La collezione permanente diventa visitabile da ogni parte del mondo.",
+      "about.mat.kicker": "Materiali",
+      "about.mat.title": "Le voci della materia",
+      "about.mat.lead": "Come nelle sezioni di un museo: ogni materiale ha la sua sala ideale.",
+      "about.mat.m.title": "Marmo",
+      "about.mat.m.desc": "Carrara e affini: luce, freschezza e la linea classica della figura.",
+      "about.mat.b.title": "Bronzo",
+      "about.mat.b.desc": "Fusione e patina — caldo, durevole, con l’eco dei fori antichi.",
+      "about.mat.t.title": "Terracotta",
+      "about.mat.t.desc": "Argilla cotta: intima, artigianale, vicina alla terra d’Italia.",
+      "about.design.kicker": "Allestimento",
+      "about.design.title": "Come un museo italiano",
+      "about.design.lead": "Principi dell’esperienza espositiva su questo sito.",
+      "about.d1.title": "Didascalie chiare",
+      "about.d1.desc": "Titolo, materia, misura e data — come sui cartellini di sala.",
+      "about.d2.title": "Luce e quiete",
+      "about.d2.desc": "Pareti calde, ombre morbide, niente rumore visivo intorno alle opere.",
+      "about.d3.title": "Materiali nobili",
+      "about.d3.desc": "Marmo, bronzo e terracotta — la tavolozza del Mediterraneo.",
+      "about.d4.title": "Percorso",
+      "about.d4.desc": "Dall’ingresso alla collezione, come un itinerario tra le sale.",
+      "about.quote": "Un museo non grida: lascia che sia l’opera a parlare.",
+      "about.cta.gallery": "Visita la collezione",
+      "about.cta.contact": "Contatti",
+      "contact.hero.kicker": "Informazioni",
+      "contact.hero.title": "Visita & Contatti",
+      "contact.hero.lead": "Segreteria per opere, visite, prestiti e stampa.",
+      "contact.page.title": "Segreteria del museo",
+      "contact.page.lead": "Siamo a disposizione per visite in sede, richieste di prestito e informazioni sulle opere.",
+      "contact.next.kicker": "Prossima sala",
+      "contact.next.title": "Continuate in collezione",
+      "contact.next.lead": "Prima di scrivere: forse l’opera che cercate è già esposta.",
+      "contact.next.cta": "Alla collezione",
+      "lightbox.close": "Chiudi"
+    },
+    "en": {
+      "meta.title.home": "Galleria Scultura — Sculpture Museum",
+      "meta.title.gallery": "Collection — Galleria Scultura",
+      "meta.title.about": "The Museum — Galleria Scultura",
+      "meta.title.contact": "Visit & Contact — Galleria Scultura",
+      "meta.desc.home": "Online sculpture museum in the spirit of Roman and Italian tradition.",
+      "topbar.location": "Rome · Italy",
+      "topbar.hours": "Permanent collection · Online",
+      "topbar.visit": "Visitor information",
+      "nav.home": "Entrance",
+      "nav.gallery": "Collection",
+      "nav.about": "The Museum",
+      "nav.contact": "Visit",
+      "nav.menu": "Menu",
+      "logo.sub": "Museum · Rome",
+      "hero.kicker": "Permanent collection",
+      "hero.title": "Forma Aeterna",
+      "hero.tagline": "A museum of sculpture between Rome and the present",
+      "hero.desc": "Welcome to the museum’s digital halls: works in marble, bronze and terracotta, presented as an exhibition path — silence, light and matter.",
+      "hero.cta.gallery": "Enter the collection",
+      "hero.cta.about": "About the museum",
+      "visit.hours.label": "Hours",
+      "visit.hours.value": "Always open · Online",
+      "visit.ticket.label": "Admission",
+      "visit.ticket.value": "Free · Digital collection",
+      "visit.place.label": "Location",
+      "visit.place.value": "Via dell’Arte 12 · Studio Rome",
+      "intro.visual.kicker": "Room I",
+      "intro.visual.title": "Contemporary sculpture",
+      "intro.kicker": "The museum",
+      "intro.title": "A space for form and history",
+      "intro.p1": "As in an Italian museum, every work has its silence: wall label, material, measure. Here the studio opens to the public — a path through stone, metal and light.",
+      "intro.p2": "The display recalls classical rooms: quiet walls, clear captions, respect for the object. Not a shop, but a place for contemplation.",
+      "intro.cta": "Museum history",
+      "intro.stat.works": "Works in collection",
+      "intro.stat.materials": "Materials",
+      "intro.stat.inspo": "Exhibition rooms",
+      "featured.kicker": "Highlights",
+      "featured.title": "From the collection",
+      "featured.lead": "A selection of works on display — click to open the full wall label.",
+      "featured.all": "Full collection",
+      "process.kicker": "Itinerary",
+      "process.title": "From workshop to gallery",
+      "process.lead": "Four stages in a work’s journey — from idea to entry into the collection.",
+      "process.1.title": "Study",
+      "process.1.desc": "Sketches, models and the choice of material: marble, bronze or clay.",
+      "process.2.title": "Workshop",
+      "process.2.desc": "Chisel, cast, fire: the dialogue between hand and material.",
+      "process.3.title": "Finish & care",
+      "process.3.desc": "Polish, patina and final details — until the surface breathes.",
+      "process.4.title": "Display",
+      "process.4.desc": "The work enters the room: inventoried, photographed and shared with visitors.",
+      "quote.text": "Ars longa, vita brevis — art is long, life is short. That is why what remains in stone and metal deserves a room.",
+      "quote.cite": "— Galleria Scultura · Museum",
+      "contact.kicker": "Visit & contact",
+      "contact.title": "Plan your visit",
+      "contact.lead": "Enquiries about works, loans, studio visits or institutional press.",
+      "contact.email": "Office",
+      "contact.address": "Address",
+      "contact.address.value": "Via dell’Arte 12 · Studio Rome",
+      "contact.visits": "Visits",
+      "contact.visits.value": "By appointment",
+      "contact.reply": "Reply",
+      "contact.reply.value": "Within a few working days",
+      "form.name": "Name",
+      "form.email": "Email",
+      "form.subject": "Reason for enquiry",
+      "form.subject.general": "General information",
+      "form.subject.work": "Work in the collection",
+      "form.subject.commission": "Commission / Loan",
+      "form.subject.visit": "On-site visit",
+      "form.subject.press": "Press / Media",
+      "form.message": "Message",
+      "form.placeholder": "Your enquiry…",
+      "form.submit": "Send to the office",
+      "form.note": "Demo form — local confirmation only, not sent to a server.",
+      "form.success": "Thank you — your request has been recorded.",
+      "footer.blurb": "Online sculpture museum in the Roman-Italian spirit. Permanent collection open to every visitor of the web.",
+      "footer.nav": "Navigation",
+      "footer.materials": "Sections",
+      "footer.marble": "Marble",
+      "footer.bronze": "Bronze",
+      "footer.terra": "Terracotta",
+      "footer.wood": "Wood & stone",
+      "footer.tagline": "Permanent collection",
+      "gallery.hero.kicker": "Catalogue",
+      "gallery.hero.title": "The Collection",
+      "gallery.hero.lead": "All inventoried works — filter by material, as in the museum rooms.",
+      "gallery.kicker": "Rooms",
+      "gallery.title": "Works on display",
+      "gallery.lead": "Select a work to read inventory, material and gallery note.",
+      "filter.all": "All",
+      "filter.marble": "Marble",
+      "filter.bronze": "Bronze",
+      "filter.terra": "Terracotta",
+      "filter.stone": "Stone",
+      "filter.wood": "Wood",
+      "mat.marble": "Marble",
+      "mat.bronze": "Bronze",
+      "mat.stone": "Stone",
+      "mat.terra": "Terracotta",
+      "mat.wood": "Wood",
+      "mat.travertine": "Travertine",
+      "mat.alabaster": "Alabaster",
+      "about.hero.kicker": "Institution",
+      "about.hero.title": "The Museum",
+      "about.hero.lead": "Mission, history and materials — the character of an Italian exhibition space.",
+      "about.visual.kicker": "Archive",
+      "about.visual.title": "Between workshop and room",
+      "about.kicker": "Mission",
+      "about.title": "To care for and share form",
+      "about.p1": "Galleria Scultura began as a personal museum: a place where sculptures find order, wall labels and an audience — without losing the intimacy of the studio.",
+      "about.p2": "Each piece carries a Latin or mythological name and an inventory number: a bridge between ancient and contemporary, between study and gallery.",
+      "about.t1.year": "Foundation",
+      "about.t1.title": "First core of the collection",
+      "about.t1.desc": "Terracotta and studies — the first catalogued works.",
+      "about.t2.year": "Expansion",
+      "about.t2.title": "Marble and travertine",
+      "about.t2.desc": "Monumental stone enters the collection.",
+      "about.t3.year": "Bronzes",
+      "about.t3.title": "Casting and patina",
+      "about.t3.desc": "Metal brings warmth and permanence to the rooms.",
+      "about.t4.year": "Online museum",
+      "about.t4.title": "Opening to a digital public",
+      "about.t4.desc": "The permanent collection becomes visitable from anywhere in the world.",
+      "about.mat.kicker": "Materials",
+      "about.mat.title": "The voices of material",
+      "about.mat.lead": "As in museum sections: each material has its ideal room.",
+      "about.mat.m.title": "Marble",
+      "about.mat.m.desc": "Carrara and kindred stones: light, coolness and the classical line of the figure.",
+      "about.mat.b.title": "Bronze",
+      "about.mat.b.desc": "Cast and patina — warm, lasting, with the echo of ancient forums.",
+      "about.mat.t.title": "Terracotta",
+      "about.mat.t.desc": "Fired clay: intimate, handmade, close to the soil of Italy.",
+      "about.design.kicker": "Display",
+      "about.design.title": "Like an Italian museum",
+      "about.design.lead": "Principles of the exhibition experience on this site.",
+      "about.d1.title": "Clear labels",
+      "about.d1.desc": "Title, material, size and date — as on gallery wall labels.",
+      "about.d2.title": "Light and quiet",
+      "about.d2.desc": "Warm walls, soft shadows, no visual noise around the works.",
+      "about.d3.title": "Noble materials",
+      "about.d3.desc": "Marble, bronze and terracotta — the Mediterranean palette.",
+      "about.d4.title": "Path",
+      "about.d4.desc": "From entrance to collection, like an itinerary through the rooms.",
+      "about.quote": "A museum does not shout: it lets the work speak.",
+      "about.cta.gallery": "Visit the collection",
+      "about.cta.contact": "Contact",
+      "contact.hero.kicker": "Information",
+      "contact.hero.title": "Visit & Contact",
+      "contact.hero.lead": "Office for works, visits, loans and press.",
+      "contact.page.title": "Museum office",
+      "contact.page.lead": "We are available for on-site visits, loan requests and information about the works.",
+      "contact.next.kicker": "Next room",
+      "contact.next.title": "Continue in the collection",
+      "contact.next.lead": "Before you write: the work you seek may already be on display.",
+      "contact.next.cta": "To the collection",
+      "lightbox.close": "Close"
+    }
+  },
+  "sculptures": [
+    {
+      "id": "aurora",
+      "title": "Aurora",
+      "inventory": "GS-001",
+      "year": "2024",
+      "category": "marmor",
+      "featured": true,
+      "image": "",
+      "size": "78 cm",
+      "meta": {
+        "it": "Marmo di Carrara · 2024 · 78 cm · Inv. GS-001",
+        "en": "Carrara marble · 2024 · 78 cm · Inv. GS-001"
+      },
+      "desc": {
+        "it": "Figura quieta nella prima luce del mattino. La superficie del marmo di Carrara cattura ombra e splendore — come Sol che apre il giorno.",
+        "en": "A quiet figure in the first light of morning. Carrara marble catches shadow and sheen — like Sol opening the day."
+      },
+      "materialKey": "mat.marble"
+    },
+    {
+      "id": "minerva",
+      "title": "Minerva",
+      "inventory": "GS-002",
+      "year": "2023",
+      "category": "bronze",
+      "featured": true,
+      "image": "",
+      "size": "92 cm",
+      "meta": {
+        "it": "Bronzo patinato · 2023 · 92 cm · Inv. GS-002",
+        "en": "Patinated bronze · 2023 · 92 cm · Inv. GS-002"
+      },
+      "desc": {
+        "it": "Saggezza e protezione in un gesto. Il bronzo patinato dona profondità calda, come un reperto dei fori romani.",
+        "en": "Wisdom and protection in a single gesture. Patinated bronze gives warm depth, like a find from the Roman forums."
+      },
+      "materialKey": "mat.bronze"
+    },
+    {
+      "id": "tiber",
+      "title": "Tiber",
+      "inventory": "GS-003",
+      "year": "2025",
+      "category": "stein",
+      "featured": true,
+      "image": "",
+      "size": "110 cm",
+      "meta": {
+        "it": "Travertino · 2025 · 110 cm · Inv. GS-003",
+        "en": "Travertine · 2025 · 110 cm · Inv. GS-003"
+      },
+      "desc": {
+        "it": "Il fiume di Roma come onda astratta. Il travertino — pietra delle colonnati — unisce movimento e quiete.",
+        "en": "The river of Rome as an abstract wave. Travertine — the stone of colonnades — joins movement and stillness."
+      },
+      "materialKey": "mat.stone"
+    },
+    {
+      "id": "vesper",
+      "title": "Vesper",
+      "inventory": "GS-004",
+      "year": "2022",
+      "category": "ton",
+      "featured": false,
+      "image": "",
+      "size": "54 cm",
+      "meta": {
+        "it": "Terracotta · 2022 · 54 cm · Inv. GS-004",
+        "en": "Terracotta · 2022 · 54 cm · Inv. GS-004"
+      },
+      "desc": {
+        "it": "Luce serale nell’argilla cotta. La superficie lavorata a mano racconta la tradizione di bottega.",
+        "en": "Evening light in fired clay. The handworked surface tells of workshop tradition."
+      },
+      "materialKey": "mat.terra"
+    },
+    {
+      "id": "forum",
+      "title": "Forum",
+      "inventory": "GS-005",
+      "year": "2024",
+      "category": "marmor",
+      "featured": false,
+      "image": "",
+      "size": "145 cm",
+      "meta": {
+        "it": "Marmo di Carrara · 2024 · 145 cm · Inv. GS-005",
+        "en": "Carrara marble · 2024 · 145 cm · Inv. GS-005"
+      },
+      "desc": {
+        "it": "Forma colonnare monumentale, ridotta all’essenziale. Tra classicità e modernità — eco dell’architettura antica.",
+        "en": "A monumental column form, reduced to essentials. Between classicism and modernity — an echo of ancient architecture."
+      },
+      "materialKey": "mat.marble"
+    },
+    {
+      "id": "luna",
+      "title": "Luna",
+      "inventory": "GS-006",
+      "year": "2023",
+      "category": "stein",
+      "featured": false,
+      "image": "",
+      "size": "48 cm",
+      "meta": {
+        "it": "Alabastro · 2023 · 48 cm · Inv. GS-006",
+        "en": "Alabaster · 2023 · 48 cm · Inv. GS-006"
+      },
+      "desc": {
+        "it": "Alabastro traslucido come luce di luna. La figura sembra brillare dall’interno.",
+        "en": "Translucent alabaster like moonlight. The figure seems to glow from within."
+      },
+      "materialKey": "mat.stone"
+    },
+    {
+      "id": "vulcan",
+      "title": "Vulcanus",
+      "inventory": "GS-007",
+      "year": "2025",
+      "category": "bronze",
+      "featured": false,
+      "image": "",
+      "size": "68 cm",
+      "meta": {
+        "it": "Bronzo · 2025 · 68 cm · Inv. GS-007",
+        "en": "Bronze · 2025 · 68 cm · Inv. GS-007"
+      },
+      "desc": {
+        "it": "Forza e fuoco del dio fabbro. Patina scura e accenti d’oro ricordano il calore del laboratorio.",
+        "en": "Strength and fire of the smith-god. Dark patina and golden accents recall the heat of the workshop."
+      },
+      "materialKey": "mat.bronze"
+    },
+    {
+      "id": "silva",
+      "title": "Silva",
+      "inventory": "GS-008",
+      "year": "2022",
+      "category": "holz",
+      "featured": false,
+      "image": "",
+      "size": "61 cm",
+      "meta": {
+        "it": "Legno d’ulivo · 2022 · 61 cm · Inv. GS-008",
+        "en": "Olive wood · 2022 · 61 cm · Inv. GS-008"
+      },
+      "desc": {
+        "it": "Dal legno di un antico ulivo. La venatura resta visibile — natura e forma in dialogo.",
+        "en": "From the wood of an old olive tree. The grain remains visible — nature and form in dialogue."
+      },
+      "materialKey": "mat.wood"
+    },
+    {
+      "id": "roma",
+      "title": "Roma Aeterna",
+      "inventory": "GS-009",
+      "year": "2021",
+      "category": "marmor",
+      "featured": false,
+      "image": "",
+      "size": "120 cm",
+      "meta": {
+        "it": "Marmo di Carrara · 2021 · 120 cm · Inv. GS-009",
+        "en": "Carrara marble · 2021 · 120 cm · Inv. GS-009"
+      },
+      "desc": {
+        "it": "Omaggio alla città eterna. Una lupa stilizzata e l’idea di origine, protezione e continuità.",
+        "en": "A homage to the eternal city. A stylised she-wolf and the idea of origin, protection and continuity."
+      },
+      "materialKey": "mat.marble"
+    },
+    {
+      "id": "opera-mrnghttk",
+      "title": "Nuova opera",
+      "inventory": "GS-010",
+      "year": "2026",
+      "size": "",
+      "category": "marmor",
+      "featured": false,
+      "image": "",
+      "meta": {
+        "it": "",
+        "en": ""
+      },
+      "desc": {
+        "it": "",
+        "en": ""
+      },
+      "materialKey": "mat.marble"
+    }
+  ],
+  "pages": {
+    "home": {
+      "enabled": true,
+      "blocks": [
+        {
+          "id": "blk_mrt231umkp5os",
+          "type": "freeCanvas",
+          "enabled": true,
+          "data": {
+            "height": 520,
+            "background": "#ebe4d7",
+            "items": [
+              {
+                "id": "img_mrt2iqszco5",
+                "type": "image",
+                "src": "/uploads/1784542480660-3d5595ef5368.jpeg",
+                "x": 52.55890725556057,
+                "y": 48.89999530498798,
+                "w": 28,
+                "h": 36,
+                "z": 1,
+                "objectFit": "cover"
+              },
+              {
+                "id": "img_mrt2iy2jrbm",
+                "type": "image",
+                "src": "/uploads/1784542480674-361056721f6e.jpeg",
+                "x": 24.41961170253313,
+                "y": 48.95385437011719,
+                "w": 28,
+                "h": 36,
+                "z": 2,
+                "objectFit": "cover"
+              }
+            ]
+          }
+        },
+        {
+          "id": "blk_hero_v937o8",
+          "type": "hero",
+          "enabled": true,
+          "data": {
+            "ornament": "MUSEO",
+            "kicker": {
+              "it": "Collezione permanente",
+              "en": "Permanent collection"
+            },
+            "title": {
+              "it": "Forma Aeterna",
+              "en": "Forma Aeterna"
+            },
+            "tagline": {
+              "it": "Un museo dedicato alla scultura tra Roma e il presente",
+              "en": "A museum of sculpture between Rome and the present"
+            },
+            "desc": {
+              "it": "Benvenuti nelle sale digitali del museo: opere in marmo, bronzo e terracotta, presentate come in un percorso espositivo — silenzio, luce e materia.",
+              "en": "Welcome to the museum’s digital halls: works in marble, bronze and terracotta, presented as an exhibition path — silence, light and matter."
+            },
+            "ctaPrimary": {
+              "it": "Entra in collezione",
+              "en": "Enter the collection"
+            },
+            "ctaPrimaryLink": "gallery.html",
+            "ctaSecondary": {
+              "it": "Scopre il museo",
+              "en": "About the museum"
+            },
+            "ctaSecondaryLink": "about.html"
+          }
+        },
+        {
+          "id": "blk_visit_13zoas",
+          "type": "visit",
+          "enabled": true,
+          "data": {
+            "items": [
+              {
+                "label": {
+                  "it": "Orari",
+                  "en": "Hours"
+                },
+                "value": {
+                  "it": "Aperto sempre · Online",
+                  "en": "Always open · Online"
+                }
+              },
+              {
+                "label": {
+                  "it": "Ingresso",
+                  "en": "Admission"
+                },
+                "value": {
+                  "it": "Libero · Collezione digitale",
+                  "en": "Free · Digital collection"
+                }
+              },
+              {
+                "label": {
+                  "it": "Sede",
+                  "en": "Location"
+                },
+                "value": {
+                  "it": "Via dell’Arte 12 · Studio Roma",
+                  "en": "Via dell’Arte 12 · Studio Rome"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "blk_intro_hsj90o",
+          "type": "intro",
+          "enabled": true,
+          "data": {
+            "visualKicker": {
+              "it": "Sala I",
+              "en": "Room I"
+            },
+            "visualTitle": {
+              "it": "Scultura contemporanea",
+              "en": "Contemporary sculpture"
+            },
+            "image": "",
+            "kicker": {
+              "it": "Il museo",
+              "en": "The museum"
+            },
+            "title": {
+              "it": "Uno spazio per la forma e la storia",
+              "en": "A space for form and history"
+            },
+            "p1": {
+              "it": "Come in un museo italiano, ogni opera ha il suo silenzio: cartellino, materia, misura. Qui la bottega si apre al pubblico — un percorso tra pietra, metallo e luce.",
+              "en": "As in an Italian museum, every work has its silence: wall label, material, measure. Here the studio opens to the public — a path through stone, metal and light."
+            },
+            "p2": {
+              "it": "L’allestimento richiama le sale classiche: pareti quiete, didascalie chiare, rispetto per l’oggetto. Non un negozio, ma un luogo di contemplazione.",
+              "en": "The display recalls classical rooms: quiet walls, clear captions, respect for the object. Not a shop, but a place for contemplation."
+            },
+            "cta": {
+              "it": "Storia del museo",
+              "en": "Museum history"
+            },
+            "ctaLink": "about.html",
+            "showStats": true
+          }
+        },
+        {
+          "id": "blk_featured_fsbv5f",
+          "type": "featured",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "In evidenza",
+              "en": "Highlights"
+            },
+            "title": {
+              "it": "Dalla collezione",
+              "en": "From the collection"
+            },
+            "lead": {
+              "it": "Una selezione di opere esposte — toccate o cliccate per aprire la didascalia completa.",
+              "en": "A selection of works on display — click to open the full wall label."
+            },
+            "cta": {
+              "it": "Tutta la collezione",
+              "en": "Full collection"
+            },
+            "ctaLink": "gallery.html",
+            "mode": "featured"
+          }
+        },
+        {
+          "id": "blk_process_r7vm2s",
+          "type": "process",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Percorso",
+              "en": "Itinerary"
+            },
+            "title": {
+              "it": "Dal laboratorio alla sala",
+              "en": "From workshop to gallery"
+            },
+            "lead": {
+              "it": "Quattro tappe del viaggio di un’opera — dall’idea all’ingresso in collezione.",
+              "en": "Four stages in a work’s journey — from idea to entry into the collection."
+            },
+            "steps": [
+              {
+                "num": "I",
+                "title": {
+                  "it": "Studio",
+                  "en": "Study"
+                },
+                "desc": {
+                  "it": "Schizzi, modelli e la scelta del materiale: marmo, bronzo o argilla.",
+                  "en": "Sketches, models and the choice of material: marble, bronze or clay."
+                }
+              },
+              {
+                "num": "II",
+                "title": {
+                  "it": "Laboratorio",
+                  "en": "Workshop"
+                },
+                "desc": {
+                  "it": "Scalpello, fusione, cottura: il dialogo tra mano e materia.",
+                  "en": "Chisel, cast, fire: the dialogue between hand and material."
+                }
+              },
+              {
+                "num": "III",
+                "title": {
+                  "it": "Restauro & finitura",
+                  "en": "Finish & care"
+                },
+                "desc": {
+                  "it": "Lucidatura, patina e gli ultimi dettagli — finché la superficie respira.",
+                  "en": "Polish, patina and final details — until the surface breathes."
+                }
+              },
+              {
+                "num": "IV",
+                "title": {
+                  "it": "Esposizione",
+                  "en": "Display"
+                },
+                "desc": {
+                  "it": "L’opera entra in sala: inventariata, fotografata e condivisa con i visitatori.",
+                  "en": "The work enters the room: inventoried, photographed and shared with visitors."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "blk_quote_boeyid",
+          "type": "quote",
+          "enabled": true,
+          "data": {
+            "text": {
+              "it": "Ars longa, vita brevis — l’arte è lunga, la vita breve. Per questo ciò che resta in pietra e metallo merita una sala.",
+              "en": "Ars longa, vita brevis — art is long, life is short. That is why what remains in stone and metal deserves a room."
+            },
+            "cite": {
+              "it": "— Galleria Scultura · Museo",
+              "en": "— Galleria Scultura · Museum"
+            }
+          }
+        },
+        {
+          "id": "blk_contact_cee79k",
+          "type": "contact",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Visita & contatti",
+              "en": "Visit & contact"
+            },
+            "title": {
+              "it": "Pianificate la vostra visita",
+              "en": "Plan your visit"
+            },
+            "lead": {
+              "it": "Richieste su opere, prestiti, visite in atelier o stampa istituzionale.",
+              "en": "Enquiries about works, loans, studio visits or institutional press."
+            },
+            "showForm": true
+          }
+        },
+        {
+          "id": "blk_mrt2300u18ses",
+          "type": "freeCanvas",
+          "enabled": true,
+          "data": {
+            "height": 520,
+            "background": "#ebe4d7",
+            "items": []
+          }
+        }
+      ]
+    },
+    "gallery": {
+      "enabled": true,
+      "blocks": [
+        {
+          "id": "blk_pageHero_wxpnd5",
+          "type": "pageHero",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Catalogo",
+              "en": "Catalogue"
+            },
+            "title": {
+              "it": "La Collezione",
+              "en": "The Collection"
+            },
+            "lead": {
+              "it": "Tutte le opere inventariate — filtrate per materiale, come nelle sale del museo.",
+              "en": "All inventoried works — filter by material, as in the museum rooms."
+            }
+          }
+        },
+        {
+          "id": "blk_gallery_mgeppj",
+          "type": "gallery",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Sale",
+              "en": "Rooms"
+            },
+            "title": {
+              "it": "Opere esposte",
+              "en": "Works on display"
+            },
+            "lead": {
+              "it": "Selezionate un’opera per leggere inventariazione, materia e nota di sala.",
+              "en": "Select a work to read inventory, material and gallery note."
+            },
+            "showFilters": true
+          }
+        }
+      ]
+    },
+    "about": {
+      "enabled": true,
+      "blocks": [
+        {
+          "id": "blk_pageHero_mgxvfn",
+          "type": "pageHero",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Istituzione",
+              "en": "Institution"
+            },
+            "title": {
+              "it": "Il Museo",
+              "en": "The Museum"
+            },
+            "lead": {
+              "it": "Missione, storia e materiali — il carattere di uno spazio espositivo italiano.",
+              "en": "Mission, history and materials — the character of an Italian exhibition space."
+            }
+          }
+        },
+        {
+          "id": "blk_intro_9xx9n5",
+          "type": "intro",
+          "enabled": true,
+          "data": {
+            "visualKicker": {
+              "it": "Archivio",
+              "en": "Archive"
+            },
+            "visualTitle": {
+              "it": "Tra laboratorio e sala",
+              "en": "Between workshop and room"
+            },
+            "image": "",
+            "kicker": {
+              "it": "Missione",
+              "en": "Mission"
+            },
+            "title": {
+              "it": "Custodire e condividere la forma",
+              "en": "To care for and share form"
+            },
+            "p1": {
+              "it": "Galleria Scultura nasce come museo personale: un luogo dove le sculture trovano ordine, didascalia e pubblico — senza perdere l’intimità della bottega.",
+              "en": "Galleria Scultura began as a personal museum: a place where sculptures find order, wall labels and an audience — without losing the intimacy of the studio."
+            },
+            "p2": {
+              "it": "Ogni pezzo porta un nome latino o mitologico e un numero d’inventario: ponte tra antico e contemporaneo, tra studio e sala.",
+              "en": "Each piece carries a Latin or mythological name and an inventory number: a bridge between ancient and contemporary, between study and gallery."
+            },
+            "cta": {
+              "it": "",
+              "en": ""
+            },
+            "ctaLink": "",
+            "showStats": false
+          }
+        },
+        {
+          "id": "blk_materials_y0lnnz",
+          "type": "materials",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Materiali",
+              "en": "Materials"
+            },
+            "title": {
+              "it": "Le voci della materia",
+              "en": "The voices of material"
+            },
+            "lead": {
+              "it": "Come nelle sezioni di un museo: ogni materiale ha la sua sala ideale.",
+              "en": "As in museum sections: each material has its ideal room."
+            },
+            "cards": [
+              {
+                "icon": "M",
+                "title": {
+                  "it": "Marmo",
+                  "en": "Marble"
+                },
+                "desc": {
+                  "it": "Carrara e affini: luce, freschezza e la linea classica della figura.",
+                  "en": "Carrara and kindred stones: light, coolness and the classical line of the figure."
+                }
+              },
+              {
+                "icon": "B",
+                "title": {
+                  "it": "Bronzo",
+                  "en": "Bronze"
+                },
+                "desc": {
+                  "it": "Fusione e patina — caldo, durevole, con l’eco dei fori antichi.",
+                  "en": "Cast and patina — warm, lasting, with the echo of ancient forums."
+                }
+              },
+              {
+                "icon": "T",
+                "title": {
+                  "it": "Terracotta",
+                  "en": "Terracotta"
+                },
+                "desc": {
+                  "it": "Argilla cotta: intima, artigianale, vicina alla terra d’Italia.",
+                  "en": "Fired clay: intimate, handmade, close to the soil of Italy."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "blk_process_q48rlb",
+          "type": "process",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Allestimento",
+              "en": "Display"
+            },
+            "title": {
+              "it": "Come un museo italiano",
+              "en": "Like an Italian museum"
+            },
+            "lead": {
+              "it": "Principi dell’esperienza espositiva su questo sito.",
+              "en": "Principles of the exhibition experience on this site."
+            },
+            "steps": [
+              {
+                "num": "I",
+                "title": {
+                  "it": "Didascalie chiare",
+                  "en": "Clear labels"
+                },
+                "desc": {
+                  "it": "Titolo, materia, misura e data — come sui cartellini di sala.",
+                  "en": "Title, material, size and date — as on gallery wall labels."
+                }
+              },
+              {
+                "num": "II",
+                "title": {
+                  "it": "Luce e quiete",
+                  "en": "Light and quiet"
+                },
+                "desc": {
+                  "it": "Pareti calde, ombre morbide, niente rumore visivo intorno alle opere.",
+                  "en": "Warm walls, soft shadows, no visual noise around the works."
+                }
+              },
+              {
+                "num": "III",
+                "title": {
+                  "it": "Materiali nobili",
+                  "en": "Noble materials"
+                },
+                "desc": {
+                  "it": "Marmo, bronzo e terracotta — la tavolozza del Mediterraneo.",
+                  "en": "Marble, bronze and terracotta — the Mediterranean palette."
+                }
+              },
+              {
+                "num": "IV",
+                "title": {
+                  "it": "Percorso",
+                  "en": "Path"
+                },
+                "desc": {
+                  "it": "Dall’ingresso alla collezione, come un itinerario tra le sale.",
+                  "en": "From entrance to collection, like an itinerary through the rooms."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "blk_quote_zyzi9f",
+          "type": "quote",
+          "enabled": true,
+          "data": {
+            "text": {
+              "it": "Un museo non grida: lascia che sia l’opera a parlare.",
+              "en": "A museum does not shout: it lets the work speak."
+            },
+            "cite": {
+              "it": "— Galleria Scultura · Museo",
+              "en": "— Galleria Scultura · Museum"
+            }
+          }
+        }
+      ]
+    },
+    "contact": {
+      "enabled": false,
+      "blocks": [
+        {
+          "id": "blk_pageHero_cvcpip",
+          "type": "pageHero",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Informazioni",
+              "en": "Information"
+            },
+            "title": {
+              "it": "Visita & Contatti",
+              "en": "Visit & Contact"
+            },
+            "lead": {
+              "it": "Segreteria per opere, visite, prestiti e stampa.",
+              "en": "Office for works, visits, loans and press."
+            }
+          }
+        },
+        {
+          "id": "blk_visit_w8aeh8",
+          "type": "visit",
+          "enabled": false,
+          "data": {
+            "items": [
+              {
+                "label": {
+                  "it": "Orari",
+                  "en": "Hours"
+                },
+                "value": {
+                  "it": "Aperto sempre · Online",
+                  "en": "Always open · Online"
+                }
+              },
+              {
+                "label": {
+                  "it": "Ingresso",
+                  "en": "Admission"
+                },
+                "value": {
+                  "it": "Libero · Collezione digitale",
+                  "en": "Free · Digital collection"
+                }
+              },
+              {
+                "label": {
+                  "it": "Sede",
+                  "en": "Location"
+                },
+                "value": {
+                  "it": "Via dell’Arte 12 · Studio Roma",
+                  "en": "Via dell’Arte 12 · Studio Rome"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "blk_contact_zcsgq8",
+          "type": "contact",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Visita & contatti",
+              "en": "Visit & contact"
+            },
+            "title": {
+              "it": "Segreteria del museo",
+              "en": "Museum office"
+            },
+            "lead": {
+              "it": "Siamo a disposizione per visite in sede, richieste di prestito e informazioni sulle opere.",
+              "en": "We are available for on-site visits, loan requests and information about the works."
+            },
+            "showForm": true
+          }
+        },
+        {
+          "id": "blk_cta_4lk0na",
+          "type": "cta",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "Prossima sala",
+              "en": "Next room"
+            },
+            "title": {
+              "it": "Continuate in collezione",
+              "en": "Continue in the collection"
+            },
+            "lead": {
+              "it": "Prima di scrivere: forse l’opera che cercate è già esposta.",
+              "en": "Before you write: the work you seek may already be on display."
+            },
+            "cta": {
+              "it": "Alla collezione",
+              "en": "To the collection"
+            },
+            "ctaLink": "gallery.html",
+            "dark": true
+          }
+        }
+      ]
+    }
+  }
+}

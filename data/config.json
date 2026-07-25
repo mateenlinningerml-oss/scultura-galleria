@@ -1,0 +1,5 @@
+{
+  "adminPassword": "museo2026",
+  "sessionSecret": "cambia-questa-chiave-segreta",
+  "port": 3847
+}

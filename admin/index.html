@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Galleria Scultura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="auth-locked">
+  <!-- Nur Login — Admin-Inhalt ist versteckt bis body.is-authenticated -->
+  <div id="login-view" class="login-view" role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <div class="login-card">
+      <p class="login-kicker">Galleria Scultura</p>
+      <h1 id="login-title">Anmeldung</h1>
+      <p class="login-lead">Bitte melden Sie sich an, um Texte und Bilder zu verwalten.</p>
+      <form id="login-form" autocomplete="on">
+        <label for="password">Passwort</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required autofocus />
+        <p id="login-error" class="error" hidden></p>
+        <button type="submit" class="btn btn-primary" id="login-submit">Anmelden</button>
+      </form>
+      <p class="login-hint">Zugang nur mit Admin-Passwort.</p>
+    </div>
+  </div>
+
+  <div id="app-view" class="app-view" hidden aria-hidden="true">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <strong>Museo Admin</strong>
+        <span>Galleria Scultura</span>
+      </div>
+      <nav class="sidebar-nav">
+        <button type="button" class="nav-item active" data-panel="sculptures">Werke &amp; Bilder</button>
+        <button type="button" class="nav-item" data-panel="builder">Baukasten</button>
+        <button type="button" class="nav-item" data-panel="texts">Texte (IT / EN)</button>
+        <button type="button" class="nav-item" data-panel="sections">Sektionen</button>
+        <button type="button" class="nav-item" data-panel="settings">Einstellungen</button>
+      </nav>
+      <div class="sidebar-foot">
+        <a href="/" target="_blank" rel="noopener">Website öffnen ↗</a>
+        <button type="button" id="logout-btn" class="btn btn-ghost">Abmelden</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <div>
+          <h2 id="panel-title">Werke &amp; Bilder</h2>
+          <p id="panel-sub" class="muted">Skulpturen anlegen, Bilder hochladen, in der Galerie anzeigen.</p>
+        </div>
+        <button type="button" id="save-all-btn" class="btn btn-primary">Alles speichern</button>
+      </header>
+      <p id="toast" class="toast" hidden></p>
+
+      <!-- Sculptures -->
+      <section id="panel-sculptures" class="panel">
+        <div class="toolbar">
+          <button type="button" id="add-sculpture-btn" class="btn btn-outline">+ Neues Werk</button>
+        </div>
+        <div id="sculpture-list" class="sculpture-list"></div>
+      </section>
+
+      <!-- Visual page builder -->
+      <section id="panel-builder" class="panel panel-builder-visual" hidden>
+        <div class="visual-toolbar">
+          <div class="lang-tabs" id="builder-page-tabs">
+            <button type="button" class="tab active" data-builder-page="home">Startseite</button>
+            <button type="button" class="tab" data-builder-page="gallery">Collezione</button>
+            <button type="button" class="tab" data-builder-page="about">Il Museo</button>
+            <button type="button" class="tab" data-builder-page="contact">Visita</button>
+          </div>
+          <div class="visual-toolbar-actions">
+            <label class="check-row">
+              <input type="checkbox" id="builder-page-enabled" checked />
+              Seite sichtbar
+            </label>
+            <select id="builder-add-type"></select>
+            <button type="button" id="builder-add-btn" class="btn btn-outline btn-sm">+ Block</button>
+            <button type="button" id="builder-add-canvas-btn" class="btn btn-outline btn-sm">+ Freie Bildfläche</button>
+            <button type="button" id="builder-view-toggle" class="btn btn-outline btn-sm">Liste</button>
+          </div>
+        </div>
+
+        <div class="visual-workspace">
+          <aside class="media-rail">
+            <div class="media-rail-head">
+              <strong>Medien</strong>
+              <label class="btn btn-outline btn-sm file-btn">
+                Hochladen
+                <input type="file" id="media-upload-input" accept="image/*" multiple />
+              </label>
+            </div>
+            <p class="muted media-hint">Bilder hierher ziehen oder auf die Vorschau / freie Fläche.</p>
+            <div id="media-grid" class="media-grid"></div>
+          </aside>
+
+          <div class="visual-stage">
+            <div class="visual-stage-label">Live-Vorschau — Blöcke ziehen · Bilder auf „Freie Fläche“ ablegen und verschieben</div>
+            <div id="visual-preview" class="visual-preview"></div>
+            <div id="builder-list" class="builder-list builder-list-alt" hidden></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Block editor modal -->
+      <div id="builder-modal" class="builder-modal" hidden>
+        <div class="builder-modal-panel">
+          <header class="builder-modal-head">
+            <h3 id="builder-modal-title">Block bearbeiten</h3>
+            <button type="button" class="btn btn-outline btn-sm" id="builder-modal-close">Schließen</button>
+          </header>
+          <div class="toolbar">
+            <div class="lang-tabs">
+              <button type="button" class="tab active" data-builder-lang="it">Italiano</button>
+              <button type="button" class="tab" data-builder-lang="en">English</button>
+            </div>
+          </div>
+          <div id="builder-modal-fields" class="builder-modal-fields"></div>
+          <footer class="builder-modal-foot">
+            <button type="button" class="btn btn-primary" id="builder-modal-done">Übernehmen</button>
+          </footer>
+        </div>
+      </div>
+
+      <!-- Texts -->
+      <section id="panel-texts" class="panel" hidden>
+        <div class="toolbar">
+          <div class="lang-tabs">
+            <button type="button" class="tab active" data-lang="it">Italiano</button>
+            <button type="button" class="tab" data-lang="en">English</button>
+          </div>
+          <input type="search" id="text-filter" placeholder="Schlüssel oder Text suchen…" />
+        </div>
+        <div id="text-groups" class="text-groups"></div>
+      </section>
+
+      <!-- Sections visibility -->
+      <section id="panel-sections" class="panel" hidden>
+        <p class="muted tip" style="margin-top:0;margin-bottom:1.25rem;">
+          Deaktivierte Bereiche erscheinen nicht mehr auf der Website. Navigation-Einträge für ausgeschaltete Seiten werden ebenfalls ausgeblendet.
+        </p>
+        <div id="sections-list" class="sections-list"></div>
+      </section>
+
+      <!-- Settings -->
+      <section id="panel-settings" class="panel" hidden>
+        <div class="form-grid">
+          <div class="field">
+            <label for="set-logo">Logo / Name</label>
+            <input type="text" id="set-logo" />
+          </div>
+          <div class="field">
+            <label for="set-email">Kontakt-E-Mail</label>
+            <input type="email" id="set-email" />
+          </div>
+          <div class="field">
+            <label for="set-works">Statistik: Werke</label>
+            <input type="text" id="set-works" />
+          </div>
+          <div class="field">
+            <label for="set-materials">Statistik: Materialien</label>
+            <input type="text" id="set-materials" />
+          </div>
+          <div class="field">
+            <label for="set-rooms">Statistik: Säle</label>
+            <input type="text" id="set-rooms" />
+          </div>
+        </div>
+        <p class="muted tip">
+          Admin-Passwort ändern: Datei <code>data/config.json</code> → <code>adminPassword</code>.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/blocks.js"></script>
+  <script src="../js/page-renderer.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/visual-editor.js"></script>
+</body>
+</html>

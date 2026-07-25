@@ -1,0 +1,298 @@
+/**
+ * Galleria Scultura — Museo server
+ * Serves the public site + admin API (texts, sculptures, uploads)
+ */
+
+const path = require("path");
+const fs = require("fs");
+const crypto = require("crypto");
+const express = require("express");
+const multer = require("multer");
+const cookieParser = require("cookie-parser");
+
+const ROOT = __dirname;
+const DATA_DIR = path.join(ROOT, "data");
+const CONTENT_FILE = path.join(DATA_DIR, "content.json");
+const CONFIG_FILE = path.join(DATA_DIR, "config.json");
+const UPLOAD_DIR = path.join(ROOT, "uploads");
+const SESSIONS = new Map();
+
+function loadConfig() {
+  const defaults = {
+    adminPassword: "museo2026",
+    sessionSecret: "cambia-questa-chiave-segreta",
+    port: 3847
+  };
+  try {
+    return { ...defaults, ...JSON.parse(fs.readFileSync(CONFIG_FILE, "utf8")) };
+  } catch {
+    return defaults;
+  }
+}
+
+function loadContent() {
+  if (!fs.existsSync(CONTENT_FILE)) {
+    throw new Error("data/content.json missing — run seed or restore the file.");
+  }
+  return JSON.parse(fs.readFileSync(CONTENT_FILE, "utf8"));
+}
+
+function saveContent(content) {
+  fs.writeFileSync(CONTENT_FILE, JSON.stringify(content, null, 2), "utf8");
+}
+
+function ensureDirs() {
+  for (const dir of [DATA_DIR, UPLOAD_DIR]) {
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  }
+}
+
+function createToken() {
+  return crypto.randomBytes(32).toString("hex");
+}
+
+function authMiddleware(req, res, next) {
+  const token = req.cookies?.gs_admin || req.headers["x-admin-token"];
+  if (!token || !SESSIONS.has(token)) {
+    return res.status(401).json({ error: "Non autorizzato" });
+  }
+  // refresh TTL
+  SESSIONS.set(token, Date.now());
+  next();
+}
+
+// Clean old sessions every hour
+setInterval(() => {
+  const maxAge = 1000 * 60 * 60 * 12;
+  const now = Date.now();
+  for (const [token, ts] of SESSIONS) {
+    if (now - ts > maxAge) SESSIONS.delete(token);
+  }
+}, 60 * 60 * 1000);
+
+ensureDirs();
+const config = loadConfig();
+const app = express();
+
+app.use(express.json({ limit: "4mb" }));
+app.use(cookieParser(config.sessionSecret));
+app.use("/uploads", express.static(UPLOAD_DIR));
+app.use("/admin", express.static(path.join(ROOT, "admin")));
+app.use(express.static(ROOT));
+
+const storage = multer.diskStorage({
+  destination: (_req, _file, cb) => cb(null, UPLOAD_DIR),
+  filename: (_req, file, cb) => {
+    const ext = path.extname(file.originalname).toLowerCase() || ".jpg";
+    const safe = `${Date.now()}-${crypto.randomBytes(6).toString("hex")}${ext}`;
+    cb(null, safe);
+  }
+});
+
+const upload = multer({
+  storage,
+  limits: { fileSize: 12 * 1024 * 1024 },
+  fileFilter: (_req, file, cb) => {
+    const ok = /^image\/(jpeg|jpg|png|webp|gif|avif)$/i.test(file.mimetype);
+    cb(ok ? null : new Error("Solo immagini (jpg, png, webp, gif)"), ok);
+  }
+});
+
+// ---------- Public API ----------
+app.get("/api/content", (_req, res) => {
+  try {
+    res.json(loadContent());
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ---------- Auth ----------
+app.post("/api/admin/login", (req, res) => {
+  const password = String(req.body?.password || "");
+  const expected = String(config.adminPassword || "");
+  const a = crypto.createHash("sha256").update(password).digest();
+  const b = crypto.createHash("sha256").update(expected).digest();
+  const ok = crypto.timingSafeEqual(a, b);
+  if (!ok) {
+    return res.status(401).json({ error: "Password errata" });
+  }
+  const token = createToken();
+  SESSIONS.set(token, Date.now());
+  res.cookie("gs_admin", token, {
+    httpOnly: true,
+    sameSite: "lax",
+    maxAge: 1000 * 60 * 60 * 12,
+    path: "/"
+  });
+  res.json({ ok: true });
+});
+
+app.post("/api/admin/logout", (req, res) => {
+  const token = req.cookies?.gs_admin;
+  if (token) SESSIONS.delete(token);
+  res.clearCookie("gs_admin");
+  res.json({ ok: true });
+});
+
+app.get("/api/admin/me", (req, res) => {
+  const token = req.cookies?.gs_admin;
+  res.json({ authenticated: Boolean(token && SESSIONS.has(token)) });
+});
+
+// ---------- Admin content ----------
+app.get("/api/admin/content", authMiddleware, (_req, res) => {
+  try {
+    res.json(loadContent());
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put("/api/admin/content", authMiddleware, (req, res) => {
+  try {
+    const body = req.body;
+    if (!body || typeof body !== "object") {
+      return res.status(400).json({ error: "Contenuto non valido" });
+    }
+    if (!body.texts || !body.sculptures) {
+      return res.status(400).json({ error: "Struttura incompleta (texts, sculptures)" });
+    }
+    saveContent(body);
+    res.json({ ok: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put("/api/admin/texts", authMiddleware, (req, res) => {
+  try {
+    const content = loadContent();
+    const { lang, texts } = req.body || {};
+    if ((lang !== "it" && lang !== "en") || !texts || typeof texts !== "object") {
+      return res.status(400).json({ error: "lang (it|en) e texts richiesti" });
+    }
+    content.texts = content.texts || {};
+    content.texts[lang] = { ...content.texts[lang], ...texts };
+    saveContent(content);
+    res.json({ ok: true, texts: content.texts[lang] });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put("/api/admin/settings", authMiddleware, (req, res) => {
+  try {
+    const content = loadContent();
+    content.settings = { ...content.settings, ...(req.body || {}) };
+    saveContent(content);
+    res.json({ ok: true, settings: content.settings });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put("/api/admin/sculptures", authMiddleware, (req, res) => {
+  try {
+    const content = loadContent();
+    if (!Array.isArray(req.body?.sculptures)) {
+      return res.status(400).json({ error: "sculptures array richiesto" });
+    }
+    content.sculptures = req.body.sculptures;
+    // keep stats.works in sync
+    if (content.settings?.stats) {
+      content.settings.stats.works = String(content.sculptures.length);
+    }
+    saveContent(content);
+    res.json({ ok: true, sculptures: content.sculptures });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get("/api/admin/media", authMiddleware, (_req, res) => {
+  try {
+    const files = fs
+      .readdirSync(UPLOAD_DIR)
+      .filter((f) => /\.(jpe?g|png|webp|gif|avif)$/i.test(f))
+      .map((filename) => {
+        const full = path.join(UPLOAD_DIR, filename);
+        const st = fs.statSync(full);
+        return {
+          filename,
+          url: `/uploads/${filename}`,
+          size: st.size,
+          mtime: st.mtimeMs
+        };
+      })
+      .sort((a, b) => b.mtime - a.mtime);
+    res.json({ media: files });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.post("/api/admin/upload", authMiddleware, (req, res) => {
+  upload.single("image")(req, res, (err) => {
+    if (err) {
+      return res.status(400).json({ error: err.message || "Upload fallito" });
+    }
+    if (!req.file) {
+      return res.status(400).json({ error: "Nessun file" });
+    }
+    const url = `/uploads/${req.file.filename}`;
+    // track in content.media for convenience
+    try {
+      const content = loadContent();
+      content.media = Array.isArray(content.media) ? content.media : [];
+      content.media.unshift({
+        url,
+        filename: req.file.filename,
+        addedAt: Date.now()
+      });
+      // keep last 200
+      content.media = content.media.slice(0, 200);
+      saveContent(content);
+    } catch {
+      /* ignore */
+    }
+    res.json({ ok: true, url, filename: req.file.filename });
+  });
+});
+
+app.delete("/api/admin/upload", authMiddleware, (req, res) => {
+  try {
+    const filename = path.basename(String(req.body?.filename || req.body?.url || ""));
+    const base = filename.includes("/") ? path.basename(filename) : filename;
+    if (!base) return res.status(400).json({ error: "filename richiesto" });
+    const full = path.join(UPLOAD_DIR, base);
+    if (fs.existsSync(full)) fs.unlinkSync(full);
+    try {
+      const content = loadContent();
+      content.media = (content.media || []).filter(
+        (m) => m.filename !== base && m.url !== `/uploads/${base}`
+      );
+      saveContent(content);
+    } catch {
+      /* ignore */
+    }
+    res.json({ ok: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// SPA-ish admin entry
+app.get("/admin", (_req, res) => {
+  res.sendFile(path.join(ROOT, "admin", "index.html"));
+});
+
+const PORT = Number(process.env.PORT) || config.port || 3847;
+app.listen(PORT, () => {
+  console.log("");
+  console.log("  Galleria Scultura — Museo");
+  console.log(`  Sito pubblico:  http://localhost:${PORT}/`);
+  console.log(`  Admin:          http://localhost:${PORT}/admin/`);
+  console.log(`  Password:       (data/config.json → adminPassword)`);
+  console.log("");
+});
