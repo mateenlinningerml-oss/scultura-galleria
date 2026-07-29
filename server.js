@@ -11,10 +11,20 @@ const multer = require("multer");
 const cookieParser = require("cookie-parser");
 
 const ROOT = __dirname;
-const DATA_DIR = path.join(ROOT, "data");
+const SEED_DATA_DIR = path.join(ROOT, "data");
+const SEED_UPLOAD_DIR = path.join(ROOT, "uploads");
+
+// On Render, set STORAGE_DIR=/var/data and mount a Persistent Disk at /var/data.
+// Locally, the project directory remains the storage location.
+const STORAGE_ROOT = process.env.STORAGE_DIR
+  ? path.resolve(process.env.STORAGE_DIR)
+  : ROOT;
+const DATA_DIR = path.join(STORAGE_ROOT, "data");
 const CONTENT_FILE = path.join(DATA_DIR, "content.json");
 const CONFIG_FILE = path.join(DATA_DIR, "config.json");
-const UPLOAD_DIR = path.join(ROOT, "uploads");
+const UPLOAD_DIR = path.join(STORAGE_ROOT, "uploads");
+const SEED_CONTENT_FILE = path.join(SEED_DATA_DIR, "content.json");
+const SEED_CONFIG_FILE = path.join(SEED_DATA_DIR, "config.json");
 const SESSIONS = new Map();
 
 function loadConfig() {
@@ -24,9 +34,19 @@ function loadConfig() {
     port: 3847
   };
   try {
-    return { ...defaults, ...JSON.parse(fs.readFileSync(CONFIG_FILE, "utf8")) };
+    const fileConfig = JSON.parse(fs.readFileSync(CONFIG_FILE, "utf8"));
+    return {
+      ...defaults,
+      ...fileConfig,
+      adminPassword: process.env.ADMIN_PASSWORD || fileConfig.adminPassword || defaults.adminPassword,
+      sessionSecret: process.env.SESSION_SECRET || fileConfig.sessionSecret || defaults.sessionSecret
+    };
   } catch {
-    return defaults;
+    return {
+      ...defaults,
+      adminPassword: process.env.ADMIN_PASSWORD || defaults.adminPassword,
+      sessionSecret: process.env.SESSION_SECRET || defaults.sessionSecret
+    };
   }
 }
 
@@ -38,12 +58,31 @@ function loadContent() {
 }
 
 function saveContent(content) {
-  fs.writeFileSync(CONTENT_FILE, JSON.stringify(content, null, 2), "utf8");
+  const tempFile = `${CONTENT_FILE}.tmp`;
+  fs.writeFileSync(tempFile, JSON.stringify(content, null, 2), "utf8");
+  fs.renameSync(tempFile, CONTENT_FILE);
+}
+
+function copyIfMissing(source, target) {
+  if (!fs.existsSync(target) && fs.existsSync(source)) {
+    fs.copyFileSync(source, target);
+  }
 }
 
 function ensureDirs() {
   for (const dir of [DATA_DIR, UPLOAD_DIR]) {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  }
+
+  // First boot with a fresh Persistent Disk: seed it from the repository.
+  copyIfMissing(SEED_CONTENT_FILE, CONTENT_FILE);
+  copyIfMissing(SEED_CONFIG_FILE, CONFIG_FILE);
+
+  if (fs.existsSync(SEED_UPLOAD_DIR)) {
+    for (const filename of fs.readdirSync(SEED_UPLOAD_DIR)) {
+      if (!/\.(jpe?g|png|webp|gif|avif)$/i.test(filename)) continue;
+      copyIfMissing(path.join(SEED_UPLOAD_DIR, filename), path.join(UPLOAD_DIR, filename));
+    }
   }
 }
 
@@ -293,6 +332,7 @@ app.listen(PORT, () => {
   console.log("  Galleria Scultura — Museo");
   console.log(`  Sito pubblico:  http://localhost:${PORT}/`);
   console.log(`  Admin:          http://localhost:${PORT}/admin/`);
-  console.log(`  Password:       (data/config.json → adminPassword)`);
+  console.log(`  Speicher:       ${STORAGE_ROOT}`);
+  console.log(`  Password:       ADMIN_PASSWORD oder data/config.json`);
   console.log("");
 });

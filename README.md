@@ -53,3 +53,17 @@ scultura-galleria/
 ## Hinweis
 
 Ohne `npm start` funktioniert die statische Seite weiterhin, aber **ohne** CMS-API (Standard-Texte aus `js/i18n.js`, keine Admin-Uploads).
+
+## Dauerhafte Speicherung auf Render
+
+Ohne Persistent Disk ist das Dateisystem eines Render Web Service flüchtig. Admin-Änderungen und Uploads können bei einem Neustart oder Deploy verschwinden.
+
+1. In Render beim Web Service unter **Disks** eine Persistent Disk anlegen.
+2. Mount Path: `/var/data`
+3. Unter **Environment** setzen:
+   - `STORAGE_DIR=/var/data`
+   - `ADMIN_PASSWORD=<ein neues starkes Passwort>`
+   - `SESSION_SECRET=<eine lange zufällige Zeichenfolge>`
+4. Service neu deployen.
+
+Beim ersten Start wird `data/content.json` zusammen mit vorhandenen Bildern aus dem Repository auf die leere Disk kopiert. Danach schreibt der Adminbereich dauerhaft nach `/var/data/data/content.json` und `/var/data/uploads/`.
