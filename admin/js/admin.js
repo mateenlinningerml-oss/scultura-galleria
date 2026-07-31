@@ -583,6 +583,35 @@ function renderBlockEditorFields(block) {
     });
     add("Formular anzeigen", chk);
   } else if (block.type === "pageHero") {
+    const imageWrap = document.createElement("div");
+    imageWrap.className = "field";
+    imageWrap.innerHTML = `
+      <label>Hintergrundbild des Seitenkopfs</label>
+      ${d.image ? `<img src="/${String(d.image).replace(/^\//, "")}" alt="" style="display:block;width:100%;max-height:220px;object-fit:cover;margin:.4rem 0;border-radius:4px;" />` : ""}
+      <input type="file" accept="image/*" />
+      ${d.image ? `<button type="button" class="btn-small" data-remove-pagehero-image>Bild entfernen</button>` : ""}
+      <small>Das Layout bleibt unverändert. Das Bild wird als Hintergrund mit dunklem Overlay verwendet. Alternativ ein Bild aus der Medienleiste direkt auf den Block ziehen.</small>
+    `;
+    imageWrap.querySelector('input[type="file"]')?.addEventListener("change", async (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      try {
+        d.image = await uploadImage(file);
+        markDirty();
+        renderBlockEditor();
+        window.GS_VISUAL?.refresh?.();
+        toast("Hintergrundbild hochgeladen — bitte speichern");
+      } catch (err) {
+        alert(err.message || "Upload fehlgeschlagen");
+      }
+    });
+    imageWrap.querySelector("[data-remove-pagehero-image]")?.addEventListener("click", () => {
+      d.image = "";
+      markDirty();
+      renderBlockEditor();
+      window.GS_VISUAL?.refresh?.();
+    });
+    fields.appendChild(imageWrap);
     biInput("Kicker", "kicker");
     biInput("Titel", "title");
     biInput("Lead", "lead", true);

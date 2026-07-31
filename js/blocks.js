@@ -143,6 +143,7 @@
       icon: "▬",
       description: "Titelbereich für Unterseiten",
       defaults: () => ({
+        image: "",
         kicker: bi("Catalogo", "Catalogue"),
         title: bi("La Collezione", "The Collection"),
         lead: bi("", "")

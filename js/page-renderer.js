@@ -279,9 +279,13 @@
           </div>
         </section>`;
 
-      case "pageHero":
+      case "pageHero": {
+        const bg = mediaUrl(d.image);
+        const bgStyle = bg
+          ? ` style="--page-hero-image:url(${esc(JSON.stringify(bg))})"`
+          : "";
         return `
-        <header class="page-hero" data-block-id="${esc(block.id)}" data-block-type="pageHero">
+        <header class="page-hero ${bg ? "page-hero--has-image" : ""}"${bgStyle} data-block-id="${esc(block.id)}" data-block-type="pageHero">
           <div class="container">
             <div class="page-hero-inner">
               ${L(d.kicker) ? `<p class="section-kicker">${esc(L(d.kicker))}</p>` : ""}
@@ -290,6 +294,7 @@
             </div>
           </div>
         </header>`;
+      }
 
       case "richText": {
         const align = d.align === "center" ? "text-center" : "";

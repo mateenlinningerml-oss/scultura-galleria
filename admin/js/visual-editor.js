@@ -338,7 +338,7 @@
       }
       return;
     }
-    if (block.type === "imageBanner" || block.type === "intro" || block.type === "imageText") {
+    if (block.type === "imageBanner" || block.type === "intro" || block.type === "imageText" || block.type === "pageHero") {
       block.data = block.data || {};
       block.data.image = url;
       return;

@@ -4174,3 +4174,157 @@ body[data-page="home"] [data-block-id="blk_materials_lagoon"] .material-card-cop
     gap: .85rem;
   }
 }
+
+
+/* =========================================================
+   v1.0.6 — Editable image for page hero / artist intro
+   ========================================================= */
+.page-hero .container {
+  display: grid;
+  gap: clamp(2.25rem, 5vw, 4.5rem);
+}
+.page-hero-media {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: #ddd5c8;
+  border: 1px solid var(--line);
+}
+.page-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.page-hero-media--empty {
+  display: grid;
+  place-items: center;
+  color: var(--text-light);
+  font-family: var(--font-display);
+  font-size: .62rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+body[data-page="about"] .page-hero {
+  min-height: 0 !important;
+  display: block !important;
+  padding: calc(var(--header-h) + clamp(2.5rem, 5vw, 5rem)) 0 clamp(5rem, 9vw, 8rem) !important;
+  background: #eee4d4 !important;
+  color: var(--text) !important;
+  overflow: hidden;
+}
+body[data-page="about"] .page-hero::after {
+  display: none !important;
+}
+body[data-page="about"] .page-hero-media {
+  aspect-ratio: 21 / 8;
+  border: 1px solid rgba(155,129,93,.28);
+}
+body[data-page="about"] .page-hero-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+body[data-page="about"] .page-hero .section-kicker {
+  color: var(--accent) !important;
+}
+body[data-page="about"] .page-hero h1 {
+  max-width: 980px;
+  margin: .5rem auto 1.35rem;
+  color: var(--text) !important;
+  font-size: clamp(3.2rem, 7vw, 7rem);
+  line-height: .92;
+  letter-spacing: -.035em;
+}
+body[data-page="about"] .page-hero p:not(.section-kicker) {
+  max-width: 720px;
+  margin-inline: auto;
+  color: var(--text-muted) !important;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  line-height: 1.65;
+}
+
+@media (max-width: 720px) {
+  .page-hero-media,
+  body[data-page="about"] .page-hero-media {
+    aspect-ratio: 4 / 3;
+  }
+  body[data-page="about"] .page-hero {
+    padding-top: calc(var(--header-h) + 1.5rem) !important;
+  }
+}
+
+
+/* =========================================================
+   v1.0.7 — Artist hero: original layout + editable background
+   ========================================================= */
+body[data-page="about"] .page-hero {
+  position: relative !important;
+  min-height: 72vh !important;
+  display: grid !important;
+  align-items: end !important;
+  overflow: hidden !important;
+  padding: clamp(10rem, 18vw, 15rem) 0 clamp(5rem, 9vw, 8rem) !important;
+  background-color: #102b2c !important;
+  background-image:
+    linear-gradient(180deg, rgba(5,25,25,.42), rgba(5,25,25,.90)),
+    var(--page-hero-image, linear-gradient(#102b2c, #102b2c)) !important;
+  background-position: center center, center 46% !important;
+  background-size: cover, cover !important;
+  background-repeat: no-repeat, no-repeat !important;
+  color: #fffaf1 !important;
+}
+body[data-page="about"] .page-hero .container {
+  display: block !important;
+}
+body[data-page="about"] .page-hero::after {
+  content: "WILLY" !important;
+  display: block !important;
+  position: absolute !important;
+  right: -.04em !important;
+  bottom: -.22em !important;
+  font-family: "Cinzel", serif !important;
+  font-size: clamp(7rem, 22vw, 20rem) !important;
+  letter-spacing: .02em !important;
+  color: rgba(255,255,255,.045) !important;
+  pointer-events: none !important;
+}
+body[data-page="about"] .page-hero-inner {
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 940px !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+body[data-page="about"] .page-hero .section-kicker {
+  color: #d6a17b !important;
+}
+body[data-page="about"] .page-hero h1 {
+  max-width: 900px !important;
+  margin: .45rem 0 1.25rem !important;
+  color: #fffaf1 !important;
+  font-size: clamp(3.9rem, 9vw, 8.5rem) !important;
+  line-height: .88 !important;
+  letter-spacing: -.045em !important;
+}
+body[data-page="about"] .page-hero p:not(.section-kicker) {
+  max-width: 720px !important;
+  margin-inline: 0 !important;
+  color: rgba(255,250,241,.74) !important;
+  font-size: clamp(1.15rem, 2vw, 1.45rem) !important;
+  line-height: 1.65 !important;
+}
+body[data-page="about"] .page-hero-media {
+  display: none !important;
+}
+@media (max-width: 720px) {
+  body[data-page="about"] .page-hero {
+    min-height: 620px !important;
+    padding: calc(var(--header-h) + 5rem) 0 4.5rem !important;
+    background-position: center center, center center !important;
+  }
+  body[data-page="about"] .page-hero h1 {
+    font-size: clamp(3.3rem, 16vw, 5.4rem) !important;
+  }
+}
