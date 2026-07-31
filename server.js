@@ -102,10 +102,20 @@ function syncRepositoryRelease() {
     copyAtomic(SEED_CONTENT_FILE, CONTENT_FILE);
   }
 
+  // Mirror repository uploads exactly. This intentionally removes stale files
+  // from the Render disk so the public site uses the same media as localhost.
+  const repositoryImages = new Set();
   if (fs.existsSync(SEED_UPLOAD_DIR)) {
     for (const filename of fs.readdirSync(SEED_UPLOAD_DIR)) {
       if (!/\.(jpe?g|png|webp|gif|avif)$/i.test(filename)) continue;
+      repositoryImages.add(filename);
       copyAtomic(path.join(SEED_UPLOAD_DIR, filename), path.join(UPLOAD_DIR, filename));
+    }
+  }
+  for (const filename of fs.readdirSync(UPLOAD_DIR)) {
+    if (!/\.(jpe?g|png|webp|gif|avif)$/i.test(filename)) continue;
+    if (!repositoryImages.has(filename)) {
+      fs.unlinkSync(path.join(UPLOAD_DIR, filename));
     }
   }
 
@@ -184,9 +194,20 @@ const app = express();
 
 app.use(express.json({ limit: "4mb" }));
 app.use(cookieParser(config.sessionSecret));
-app.use("/uploads", express.static(UPLOAD_DIR));
-app.use("/admin", express.static(path.join(ROOT, "admin")));
-app.use(express.static(ROOT));
+
+// Avoid old HTML/CSS/JS surviving a deploy in browser or proxy caches.
+app.use((req, res, next) => {
+  if (req.path.startsWith("/api/") || /\.(?:html|css|js|json)$/i.test(req.path) || req.path === "/") {
+    res.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+    res.set("Pragma", "no-cache");
+    res.set("Expires", "0");
+  }
+  next();
+});
+
+app.use("/uploads", express.static(UPLOAD_DIR, { etag: true, maxAge: 0 }));
+app.use("/admin", express.static(path.join(ROOT, "admin"), { etag: true, maxAge: 0 }));
+app.use(express.static(ROOT, { etag: true, maxAge: 0 }));
 
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => cb(null, UPLOAD_DIR),
