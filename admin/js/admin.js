@@ -585,14 +585,19 @@ function renderBlockEditorFields(block) {
   } else if (block.type === "pageHero") {
     const imageWrap = document.createElement("div");
     imageWrap.className = "field";
+    const previewSrc = d.image ? `/${String(d.image).replace(/^\//, "")}` : "";
     imageWrap.innerHTML = `
-      <label>Hintergrundbild des Seitenkopfs</label>
-      ${d.image ? `<img src="/${String(d.image).replace(/^\//, "")}" alt="" style="display:block;width:100%;max-height:220px;object-fit:cover;margin:.4rem 0;border-radius:4px;" />` : ""}
-      <input type="file" accept="image/*" />
+      <label>Hintergrundbild des Künstler-Seitenkopfs</label>
+      <div class="pagehero-upload-zone" data-pagehero-upload-zone style="border:1px dashed rgba(23,48,49,.35);padding:1rem;margin:.45rem 0;background:rgba(255,255,255,.38);text-align:center;">
+        ${previewSrc
+          ? `<img src="${previewSrc}" alt="Aktuelles Hintergrundbild" style="display:block;width:100%;height:180px;object-fit:cover;margin:0 0 .75rem;border-radius:4px;" />`
+          : `<div style="padding:2.5rem 1rem;color:#5c6966;">Noch kein Hintergrundbild ausgewählt</div>`}
+        <input type="file" accept="image/*" data-pagehero-file />
+      </div>
       ${d.image ? `<button type="button" class="btn-small" data-remove-pagehero-image>Bild entfernen</button>` : ""}
-      <small>Das Layout bleibt unverändert. Das Bild wird als Hintergrund mit dunklem Overlay verwendet. Alternativ ein Bild aus der Medienleiste direkt auf den Block ziehen.</small>
+      <small>Bild auswählen oder aus der Medienleiste direkt auf den Seitenkopf ziehen. Danach oben rechts „Alles speichern“ drücken.</small>
     `;
-    imageWrap.querySelector('input[type="file"]')?.addEventListener("change", async (e) => {
+    imageWrap.querySelector('[data-pagehero-file]')?.addEventListener("change", async (e) => {
       const file = e.target.files?.[0];
       if (!file) return;
       try {

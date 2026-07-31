@@ -282,7 +282,7 @@
       case "pageHero": {
         const bg = mediaUrl(d.image);
         const bgStyle = bg
-          ? ` style="--page-hero-image:url(${esc(JSON.stringify(bg))})"`
+          ? ` style="--page-hero-image:url(&quot;${esc(bg)}&quot;)"`
           : "";
         return `
         <header class="page-hero ${bg ? "page-hero--has-image" : ""}"${bgStyle} data-block-id="${esc(block.id)}" data-block-type="pageHero">
