@@ -26,6 +26,14 @@ const UPLOAD_DIR = path.join(STORAGE_ROOT, "uploads");
 const SEED_CONTENT_FILE = path.join(SEED_DATA_DIR, "content.json");
 const SEED_CONFIG_FILE = path.join(SEED_DATA_DIR, "config.json");
 const SESSIONS = new Map();
+const RELEASE_ID = (() => {
+  try {
+    return String(require(path.join(ROOT, "package.json")).version || "1.0.0");
+  } catch {
+    return "1.0.0";
+  }
+})();
+const RELEASE_MARKER = path.join(DATA_DIR, ".repository-release");
 
 function loadConfig() {
   const defaults = {
@@ -69,6 +77,42 @@ function copyIfMissing(source, target) {
   }
 }
 
+function copyAtomic(source, target) {
+  const temp = `${target}.tmp`;
+  fs.copyFileSync(source, temp);
+  fs.renameSync(temp, target);
+}
+
+function repositoryReleaseOnDisk() {
+  try {
+    return fs.readFileSync(RELEASE_MARKER, "utf8").trim();
+  } catch {
+    return "";
+  }
+}
+
+function syncRepositoryRelease() {
+  // Render serves CMS data from the Persistent Disk. Without this release sync,
+  // a deploy can run new HTML/CSS while still serving an old content.json.
+  // Sync once per package version so production matches the tested localhost build.
+  if (!process.env.STORAGE_DIR) return;
+  if (repositoryReleaseOnDisk() === RELEASE_ID) return;
+
+  if (fs.existsSync(SEED_CONTENT_FILE)) {
+    copyAtomic(SEED_CONTENT_FILE, CONTENT_FILE);
+  }
+
+  if (fs.existsSync(SEED_UPLOAD_DIR)) {
+    for (const filename of fs.readdirSync(SEED_UPLOAD_DIR)) {
+      if (!/\.(jpe?g|png|webp|gif|avif)$/i.test(filename)) continue;
+      copyAtomic(path.join(SEED_UPLOAD_DIR, filename), path.join(UPLOAD_DIR, filename));
+    }
+  }
+
+  fs.writeFileSync(RELEASE_MARKER, `${RELEASE_ID}\n`, "utf8");
+  console.log(`  Release-Sync:   Repository ${RELEASE_ID} → Persistent Disk`);
+}
+
 function ensureDirs() {
   for (const dir of [DATA_DIR, UPLOAD_DIR]) {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -84,6 +128,8 @@ function ensureDirs() {
       copyIfMissing(path.join(SEED_UPLOAD_DIR, filename), path.join(UPLOAD_DIR, filename));
     }
   }
+
+  syncRepositoryRelease();
 }
 
 function createToken() {
