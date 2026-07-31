@@ -18,6 +18,13 @@
       .replace(/"/g, "&quot;");
   }
 
+  function mediaUrl(value) {
+    const url = String(value || "").trim();
+    if (!url) return "";
+    if (/^(?:https?:)?\/\//i.test(url) || url.startsWith("data:") || url.startsWith("blob:")) return url;
+    return url.startsWith("/") ? url : `/${url.replace(/^\.\//, "")}`;
+  }
+
   function renderBlock(block) {
     if (!block || block.enabled === false) return "";
     const d = block.data || {};
@@ -176,7 +183,7 @@
                   const chapterClass = index === steps.length - 1 ? " process-card--final" : index % 2 ? " process-card--reverse" : "";
                   return `
                 <article class="process-card${chapterClass}" data-process-step="${index + 1}">
-                  ${visual ? `<div class="process-media">${s.image ? `<img src="${esc(s.image)}" alt="${esc(L(s.imageAlt) || L(s.title))}" loading="lazy" />` : `<div class="process-media-placeholder"><span>${esc(L(s.title))}</span><small>${esc(typeof t === "function" ? t("admin.imagePlaceholder") : "Image can be added in the admin")}</small></div>`}</div>` : ""}
+                  ${visual ? `<div class="process-media">${s.image ? `<img src="${esc(mediaUrl(s.image))}" alt="${esc(L(s.imageAlt) || L(s.title))}" loading="lazy" />` : `<div class="process-media-placeholder"><span>${esc(L(s.title))}</span><small>${esc(typeof t === "function" ? t("admin.imagePlaceholder") : "Image can be added in the admin")}</small></div>`}</div>` : ""}
                   <div class="process-copy">
                     <div class="process-num">${esc(s.num || "")}</div>
                     <h3>${esc(L(s.title))}</h3>

@@ -167,7 +167,9 @@
         drop.textContent =
           block.type === "freeCanvas"
             ? "Bild hier ablegen"
-            : "Bild hierher — wird in diesen Block gesetzt";
+            : block.type === "process"
+              ? "Bild auf den gewünschten Prozessschritt ziehen"
+              : "Bild hierher — wird in diesen Block gesetzt";
         el.appendChild(drop);
 
         return el.outerHTML;
@@ -339,6 +341,26 @@
     if (block.type === "imageBanner" || block.type === "intro" || block.type === "imageText") {
       block.data = block.data || {};
       block.data.image = url;
+      return;
+    }
+    if (block.type === "process") {
+      block.data = block.data || {};
+      const steps = Array.isArray(block.data.steps) ? block.data.steps : [];
+      if (!steps.length) {
+        toast("Dieser Prozessblock enthält keine Bildschritte", true);
+        return;
+      }
+
+      const card = event?.target?.closest?.("[data-process-step]");
+      let index = card ? Number(card.dataset.processStep) - 1 : -1;
+      if (index < 0 || index >= steps.length) {
+        const rect = el.getBoundingClientRect();
+        const relativeX = Math.max(0, Math.min(rect.width, (event?.clientX || rect.left) - rect.left));
+        index = Math.min(steps.length - 1, Math.floor((relativeX / Math.max(rect.width, 1)) * steps.length));
+      }
+
+      steps[index].image = url;
+      toast(`Bild für Schritt ${index + 1} gesetzt`);
       return;
     }
     // default: create freeCanvas with this image or set on selected

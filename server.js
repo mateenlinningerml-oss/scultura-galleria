@@ -98,24 +98,14 @@ function syncRepositoryRelease() {
   if (!process.env.STORAGE_DIR) return;
   if (repositoryReleaseOnDisk() === RELEASE_ID) return;
 
-  if (fs.existsSync(SEED_CONTENT_FILE)) {
-    copyAtomic(SEED_CONTENT_FILE, CONTENT_FILE);
-  }
+  // CMS content and uploaded media on the Persistent Disk belong to the admin.
+  // Deployments only seed missing files; they never overwrite edits or delete media.
+  copyIfMissing(SEED_CONTENT_FILE, CONTENT_FILE);
 
-  // Mirror repository uploads exactly. This intentionally removes stale files
-  // from the Render disk so the public site uses the same media as localhost.
-  const repositoryImages = new Set();
   if (fs.existsSync(SEED_UPLOAD_DIR)) {
     for (const filename of fs.readdirSync(SEED_UPLOAD_DIR)) {
       if (!/\.(jpe?g|png|webp|gif|avif)$/i.test(filename)) continue;
-      repositoryImages.add(filename);
-      copyAtomic(path.join(SEED_UPLOAD_DIR, filename), path.join(UPLOAD_DIR, filename));
-    }
-  }
-  for (const filename of fs.readdirSync(UPLOAD_DIR)) {
-    if (!/\.(jpe?g|png|webp|gif|avif)$/i.test(filename)) continue;
-    if (!repositoryImages.has(filename)) {
-      fs.unlinkSync(path.join(UPLOAD_DIR, filename));
+      copyIfMissing(path.join(SEED_UPLOAD_DIR, filename), path.join(UPLOAD_DIR, filename));
     }
   }
 

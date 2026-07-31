@@ -1,6 +1,6 @@
 {
   "name": "scultura-galleria",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Portfolio und Online-Galerie für Emanuele “Willy” Bellemo.",
   "main": "server.js",
   "scripts": {
