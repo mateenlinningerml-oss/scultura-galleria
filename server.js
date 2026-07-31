@@ -1,5 +1,5 @@
 /**
- * Galleria Scultura — Museo server
+ * Emanuele “Willy” Bellemo — website server
  * Serves the public site + admin API (texts, sculptures, uploads)
  */
 
@@ -110,6 +110,29 @@ setInterval(() => {
 }, 60 * 60 * 1000);
 
 ensureDirs();
+
+// One-time v2 branding migration. Keeps artworks and uploaded media intact.
+function migrateToWillyV2() {
+  try {
+    const current = loadContent();
+    if (Number(current.settings?.siteVersion || 0) >= 2) return;
+    const seed = JSON.parse(fs.readFileSync(SEED_CONTENT_FILE, "utf8"));
+    const migrated = {
+      ...current,
+      settings: { ...current.settings, ...seed.settings, siteVersion: 2 },
+      texts: seed.texts,
+      pages: seed.pages,
+      sculptures: current.sculptures || seed.sculptures,
+      media: current.media || seed.media || []
+    };
+    saveContent(migrated);
+    console.log("  Migrazione:     Willy Bellemo v2 applicata");
+  } catch (err) {
+    console.error("  Migrazione v2 non riuscita:", err.message);
+  }
+}
+
+migrateToWillyV2();
 const config = loadConfig();
 const app = express();
 
@@ -329,7 +352,7 @@ app.get("/admin", (_req, res) => {
 const PORT = Number(process.env.PORT) || config.port || 3847;
 app.listen(PORT, () => {
   console.log("");
-  console.log("  Galleria Scultura — Museo");
+  console.log("  Emanuele “Willy” Bellemo — Chioggia");
   console.log(`  Sito pubblico:  http://localhost:${PORT}/`);
   console.log(`  Admin:          http://localhost:${PORT}/admin/`);
   console.log(`  Speicher:       ${STORAGE_ROOT}`);

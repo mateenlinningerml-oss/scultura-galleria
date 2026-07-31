@@ -524,6 +524,31 @@ function renderBlockEditorFields(block) {
     biInput("Lead", "lead", true);
     (d.steps || []).forEach((step, i) => {
       textInput(`Schritt ${i + 1} Nr.`, () => step.num || "", (v) => { step.num = v; });
+      const imageWrap = document.createElement("div");
+      imageWrap.className = "field";
+      imageWrap.innerHTML = `
+        <label>Schritt ${i + 1} Bild</label>
+        ${step.image ? `<img src="/${step.image.replace(/^\//, "")}" alt="" style="display:block;width:100%;max-height:150px;object-fit:cover;margin:.4rem 0;border-radius:4px;" />` : ""}
+        <input type="file" accept="image/*" />
+        ${step.image ? `<button type="button" class="btn-small" data-remove-step-image>Bild entfernen</button>` : ""}
+      `;
+      const upload = imageWrap.querySelector('input[type="file"]');
+      upload.addEventListener("change", async () => {
+        if (!upload.files?.[0]) return;
+        try {
+          step.image = await uploadImage(upload.files[0]);
+          markDirty();
+          renderBlockEditor();
+        } catch (err) {
+          alert(err.message || "Upload fehlgeschlagen");
+        }
+      });
+      imageWrap.querySelector("[data-remove-step-image]")?.addEventListener("click", () => {
+        step.image = "";
+        markDirty();
+        renderBlockEditor();
+      });
+      fields.appendChild(imageWrap);
       textInput(
         `Schritt ${i + 1} Titel (${lang.toUpperCase()})`,
         () => biField(step.title, lang),

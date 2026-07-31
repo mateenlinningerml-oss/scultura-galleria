@@ -86,10 +86,11 @@
       })
     },
     process: {
-      label: "Prozess / 4 Schritte",
+      label: "Prozess / Bildschritte",
       icon: "Ⅳ",
-      description: "Dunkler Block mit vier Karten",
+      description: "Eleganter Prozess mit Bildern und Schritten",
       defaults: (t) => ({
+        variant: "visual",
         kicker: bi(t?.("process.kicker", "it"), t?.("process.kicker", "en")),
         title: bi(t?.("process.title", "it"), t?.("process.title", "en")),
         lead: bi(t?.("process.lead", "it"), t?.("process.lead", "en")),

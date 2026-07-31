@@ -26,8 +26,11 @@
     switch (type) {
       case "hero":
         return `
-        <section class="hero" data-block-id="${esc(block.id)}" data-block-type="hero">
-          <div class="hero-bg"><div class="hero-bg-marble"></div></div>
+        <section class="hero${d.image ? " hero--image" : ""}" data-block-id="${esc(block.id)}" data-block-type="hero">
+          <div class="hero-bg">
+            ${d.image ? `<img class="hero-bg-image" src="${esc(d.image)}" alt="" />` : `<div class="hero-bg-marble"></div>`}
+            ${d.image ? `<div class="hero-bg-overlay" aria-hidden="true"></div>` : ""}
+          </div>
           <div class="hero-content">
             ${d.ornament ? `<div class="hero-ornament" aria-hidden="true"><span>${esc(d.ornament)}</span></div>` : ""}
             ${L(d.kicker) ? `<p class="section-kicker">${esc(L(d.kicker))}</p>` : ""}
@@ -36,6 +39,23 @@
             <div class="hero-divider" aria-hidden="true"></div>
             ${L(d.desc) ? `<p class="hero-desc">${esc(L(d.desc))}</p>` : ""}
             <div class="hero-actions">
+              ${d.ctaPrimaryLink ? `<a href="${esc(d.ctaPrimaryLink)}" class="btn btn-primary">${esc(L(d.ctaPrimary))}</a>` : ""}
+              ${d.ctaSecondaryLink ? `<a href="${esc(d.ctaSecondaryLink)}" class="btn btn-outline">${esc(L(d.ctaSecondary))}</a>` : ""}
+            </div>
+          </div>
+        </section>`;
+
+      case "artistIntro":
+        return `
+        <section class="artist-intro" data-block-id="${esc(block.id)}" data-block-type="artistIntro">
+          <div class="artist-intro-inner">
+            ${L(d.eyebrow) ? `<p class="artist-intro-eyebrow">${esc(L(d.eyebrow))}</p>` : ""}
+            ${L(d.kicker) ? `<p class="artist-intro-kicker">${esc(L(d.kicker))}</p>` : ""}
+            <h2>${esc(L(d.title))}</h2>
+            ${L(d.tagline) ? `<p class="artist-intro-tagline">${esc(L(d.tagline))}</p>` : ""}
+            <div class="artist-intro-divider" aria-hidden="true"></div>
+            ${L(d.desc) ? `<p class="artist-intro-desc">${esc(L(d.desc))}</p>` : ""}
+            <div class="artist-intro-actions">
               ${d.ctaPrimaryLink ? `<a href="${esc(d.ctaPrimaryLink)}" class="btn btn-primary">${esc(L(d.ctaPrimary))}</a>` : ""}
               ${d.ctaSecondaryLink ? `<a href="${esc(d.ctaSecondaryLink)}" class="btn btn-outline">${esc(L(d.ctaSecondary))}</a>` : ""}
             </div>
@@ -141,21 +161,25 @@
 
       case "process": {
         const steps = Array.isArray(d.steps) ? d.steps : [];
+        const visual = d.variant === "visual" || steps.some((s) => s.image);
         return `
-        <section class="section process" data-block-id="${esc(block.id)}" data-block-type="process">
+        <section class="section process${visual ? " process--visual" : ""}" data-block-id="${esc(block.id)}" data-block-type="process">
           <div class="container">
-            ${L(d.kicker) ? `<p class="section-kicker">${esc(L(d.kicker))}</p>` : ""}
-            <h2 class="section-title">${esc(L(d.title))}</h2>
-            ${L(d.lead) ? `<p class="section-lead">${esc(L(d.lead))}</p>` : ""}
+            <header class="process-heading">
+              ${L(d.kicker) ? `<p class="section-kicker">${esc(L(d.kicker))}</p>` : ""}
+              <h2 class="section-title">${esc(L(d.title))}</h2>
+              ${L(d.lead) ? `<p class="section-lead">${esc(L(d.lead))}</p>` : ""}
+            </header>
             <div class="process-grid">
               ${steps
                 .map(
                   (s) => `
-                <div class="process-card">
+                <article class="process-card">
+                  ${visual ? `<div class="process-media">${s.image ? `<img src="${esc(s.image)}" alt="${esc(L(s.imageAlt) || L(s.title))}" loading="lazy" />` : `<div class="process-media-placeholder"><span>${esc(L(s.title))}</span></div>`}</div>` : ""}
                   <div class="process-num">${esc(s.num || "")}</div>
                   <h3>${esc(L(s.title))}</h3>
                   <p>${esc(L(s.desc))}</p>
-                </div>`
+                </article>`
                 )
                 .join("")}
             </div>

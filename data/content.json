@@ -1,11 +1,11 @@
 {
   "settings": {
-    "logo": "Galleria Scultura",
-    "contactEmail": "atelier@galleria-scultura.example",
+    "logo": "Emanuele “Willy” Bellemo",
+    "contactEmail": "atelier@emanuelewillybellemo.it",
     "stats": {
-      "works": "9",
-      "materials": "IV",
-      "rooms": "III"
+      "works": "10",
+      "materials": "VI",
+      "rooms": "Chioggia"
     },
     "sections": {
       "topbar": true,
@@ -27,73 +27,74 @@
       "contactForm": true,
       "contactNext": true
     },
-    "builder": true
+    "builder": true,
+    "siteVersion": 2
   },
   "texts": {
     "it": {
-      "meta.title.home": "Galleria Scultura — Museo di scultura",
-      "meta.title.gallery": "Collezione — Galleria Scultura",
-      "meta.title.about": "Il Museo — Galleria Scultura",
-      "meta.title.contact": "Visita & Contatti — Galleria Scultura",
-      "meta.desc.home": "Museo online di scultura contemporanea nello spirito della tradizione romana e italiana.",
-      "topbar.location": "Roma · Italia",
-      "topbar.hours": "Collezione permanente · Online",
-      "topbar.visit": "Informazioni visita",
-      "nav.home": "Ingresso",
-      "nav.gallery": "Collezione",
-      "nav.about": "Il Museo",
-      "nav.contact": "Visita",
+      "meta.title.home": "Emanuele “Willy” Bellemo — Scultore a Chioggia",
+      "meta.title.gallery": "Opere — Emanuele Willy Bellemo",
+      "meta.title.about": "L’artista — Emanuele Willy Bellemo",
+      "meta.title.contact": "Contatti — Emanuele Willy Bellemo",
+      "meta.desc.home": "Sculture e opere materiche nate dal mare, dal legno spiaggiato e dalla tradizione marinara di Chioggia.",
+      "topbar.location": "Chioggia · Venezia · Italia",
+      "topbar.hours": "Atelier sul canale · Visite su appuntamento",
+      "topbar.visit": "Contatti e visite",
+      "nav.home": "Home",
+      "nav.gallery": "Opere",
+      "nav.about": "L’artista",
+      "nav.contact": "Contatti",
       "nav.menu": "Menu",
-      "logo.sub": "Museo · Roma",
-      "hero.kicker": "Collezione permanente",
-      "hero.title": "Forma Aeterna",
-      "hero.tagline": "Un museo dedicato alla scultura tra Roma e il presente",
-      "hero.desc": "Benvenuti nelle sale digitali del museo: opere in marmo, bronzo e terracotta, presentate come in un percorso espositivo — silenzio, luce e materia.",
-      "hero.cta.gallery": "Entra in collezione",
-      "hero.cta.about": "Scopre il museo",
-      "visit.hours.label": "Orari",
-      "visit.hours.value": "Aperto sempre · Online",
-      "visit.ticket.label": "Ingresso",
-      "visit.ticket.value": "Libero · Collezione digitale",
-      "visit.place.label": "Sede",
-      "visit.place.value": "Via dell’Arte 12 · Studio Roma",
-      "intro.visual.kicker": "Sala I",
-      "intro.visual.title": "Scultura contemporanea",
-      "intro.kicker": "Il museo",
-      "intro.title": "Uno spazio per la forma e la storia",
-      "intro.p1": "Come in un museo italiano, ogni opera ha il suo silenzio: cartellino, materia, misura. Qui la bottega si apre al pubblico — un percorso tra pietra, metallo e luce.",
-      "intro.p2": "L’allestimento richiama le sale classiche: pareti quiete, didascalie chiare, rispetto per l’oggetto. Non un negozio, ma un luogo di contemplazione.",
-      "intro.cta": "Storia del museo",
-      "intro.stat.works": "Opere in collezione",
+      "logo.sub": "Scultore · Chioggia",
+      "hero.kicker": "Arte nata dal mare",
+      "hero.title": "Emanuele “Willy” Bellemo",
+      "hero.tagline": "Il mare modella la materia. Willy ne rivela la storia.",
+      "hero.desc": "Nel suo atelier sul canale di Chioggia, legni portati a riva, terracotta, sughero, resina e sabbia diventano opere ispirate al mondo marino.",
+      "hero.cta.gallery": "Scopri le opere",
+      "hero.cta.about": "Conosci l’artista",
+      "visit.hours.label": "Atelier",
+      "visit.hours.value": "Sul canale di Chioggia",
+      "visit.ticket.label": "Incontri",
+      "visit.ticket.value": "Visite su appuntamento",
+      "visit.place.label": "Ispirazione",
+      "visit.place.value": "Mare · Laguna · Tradizione",
+      "intro.visual.kicker": "Chioggia",
+      "intro.visual.title": "Una bottega sul canale",
+      "intro.kicker": "L’artista",
+      "intro.title": "Tra il mare e la materia",
+      "intro.p1": "Emanuele Bellemo, conosciuto artisticamente come Willy, raccoglie legni sulla spiaggia e li osserva finché una forma comincia a emergere. Ogni frammento porta con sé il viaggio del mare.",
+      "intro.p2": "Nel suo lavoro convivono tradizione marinara e sperimentazione: legno spiaggiato, terracotta, sughero, resina epossidica, sabbia e materiali inattesi diventano pesci, barche e presenze della laguna.",
+      "intro.cta": "La storia di Willy",
+      "intro.stat.works": "Opere online",
       "intro.stat.materials": "Materiali",
-      "intro.stat.inspo": "Sale espositive",
-      "featured.kicker": "In evidenza",
-      "featured.title": "Dalla collezione",
-      "featured.lead": "Una selezione di opere esposte — toccate o cliccate per aprire la didascalia completa.",
-      "featured.all": "Tutta la collezione",
-      "process.kicker": "Percorso",
-      "process.title": "Dal laboratorio alla sala",
-      "process.lead": "Quattro tappe del viaggio di un’opera — dall’idea all’ingresso in collezione.",
-      "process.1.title": "Studio",
-      "process.1.desc": "Schizzi, modelli e la scelta del materiale: marmo, bronzo o argilla.",
-      "process.2.title": "Laboratorio",
-      "process.2.desc": "Scalpello, fusione, cottura: il dialogo tra mano e materia.",
-      "process.3.title": "Restauro & finitura",
-      "process.3.desc": "Lucidatura, patina e gli ultimi dettagli — finché la superficie respira.",
-      "process.4.title": "Esposizione",
-      "process.4.desc": "L’opera entra in sala: inventariata, fotografata e condivisa con i visitatori.",
-      "quote.text": "Ars longa, vita brevis — l’arte è lunga, la vita breve. Per questo ciò che resta in pietra e metallo merita una sala.",
-      "quote.cite": "— Galleria Scultura · Museo",
-      "contact.kicker": "Visita & contatti",
-      "contact.title": "Pianificate la vostra visita",
-      "contact.lead": "Richieste su opere, prestiti, visite in atelier o stampa istituzionale.",
-      "contact.email": "Segreteria",
-      "contact.address": "Sede",
-      "contact.address.value": "Via dell’Arte 12 · Studio Roma",
+      "intro.stat.inspo": "Luogo d’origine",
+      "featured.kicker": "Opere selezionate",
+      "featured.title": "Dalla bottega al mondo",
+      "featured.lead": "Una selezione di opere di Willy. Apri ogni lavoro per scoprirne materiali, dettagli e storia.",
+      "featured.all": "Vedi tutte le opere",
+      "process.kicker": "Il processo",
+      "process.title": "Dal mare all’opera",
+      "process.lead": "Ogni creazione nasce da un incontro tra ciò che il mare restituisce e ciò che l’artista riesce a vedere.",
+      "process.1.title": "La ricerca",
+      "process.1.desc": "Willy percorre la spiaggia e raccoglie legni e materiali segnati dall’acqua, dal sale e dal tempo.",
+      "process.2.title": "L’intuizione",
+      "process.2.desc": "Osserva nodi, curve e imperfezioni finché nel materiale appare una figura possibile.",
+      "process.3.title": "La trasformazione",
+      "process.3.desc": "Nell’atelier scolpisce, assembla e combina legno, terracotta, resina, sabbia e sughero.",
+      "process.4.title": "L’opera",
+      "process.4.desc": "La materia conserva la propria storia e acquista una nuova identità, spesso legata al mare.",
+      "quote.text": "Ogni pezzo di legno ha già attraversato il mare. Il mio lavoro comincia ascoltando la forma che porta con sé.",
+      "quote.cite": "— Emanuele “Willy” Bellemo",
+      "contact.kicker": "Atelier & contatti",
+      "contact.title": "Entra nel mondo di Willy",
+      "contact.lead": "Per informazioni sulle opere, esposizioni o una visita all’atelier di Chioggia, scrivici.",
+      "contact.email": "E-mail",
+      "contact.address": "Luogo",
+      "contact.address.value": "Chioggia · Venezia · Italia",
       "contact.visits": "Visite",
       "contact.visits.value": "Su appuntamento",
       "contact.reply": "Risposta",
-      "contact.reply.value": "Entro pochi giorni lavorativi",
+      "contact.reply.value": "Appena possibile",
       "form.name": "Nome",
       "form.email": "E-mail",
       "form.subject": "Motivo della richiesta",
@@ -107,20 +108,20 @@
       "form.submit": "Invia alla segreteria",
       "form.note": "Modulo demo — conferma locale, nessun invio al server.",
       "form.success": "Grazie — la richiesta è stata registrata.",
-      "footer.blurb": "Museo online di scultura nello spirito romano-italiano. Collezione permanente aperta a tutti i visitatori del web.",
-      "footer.nav": "Navigazione",
-      "footer.materials": "Sezioni",
-      "footer.marble": "Marmo",
-      "footer.bronze": "Bronzo",
-      "footer.terra": "Terracotta",
-      "footer.wood": "Legno & pietra",
-      "footer.tagline": "Collezione permanente",
-      "gallery.hero.kicker": "Catalogo",
-      "gallery.hero.title": "La Collezione",
-      "gallery.hero.lead": "Tutte le opere inventariate — filtrate per materiale, come nelle sale del museo.",
-      "gallery.kicker": "Sale",
-      "gallery.title": "Opere esposte",
-      "gallery.lead": "Selezionate un’opera per leggere inventariazione, materia e nota di sala.",
+      "footer.blurb": "Sculture e opere materiche nate dal mare e realizzate nell’atelier di Emanuele “Willy” Bellemo a Chioggia.",
+      "footer.nav": "Esplora",
+      "footer.materials": "Materiali",
+      "footer.marble": "Legno spiaggiato",
+      "footer.bronze": "Terracotta",
+      "footer.terra": "Resina e sabbia",
+      "footer.wood": "Sughero e tecniche miste",
+      "footer.tagline": "Arte nata dal mare",
+      "gallery.hero.kicker": "Archivio delle opere",
+      "gallery.hero.title": "Le opere",
+      "gallery.hero.lead": "Una galleria aperta al mondo: sculture e composizioni nate a Chioggia.",
+      "gallery.kicker": "Collezione",
+      "gallery.title": "Opere di Willy",
+      "gallery.lead": "Seleziona un’opera per vedere materiali, dimensioni e dettagli.",
       "filter.all": "Tutte",
       "filter.marble": "Marmo",
       "filter.bronze": "Bronzo",
@@ -134,15 +135,15 @@
       "mat.wood": "Legno",
       "mat.travertine": "Travertino",
       "mat.alabaster": "Alabastro",
-      "about.hero.kicker": "Istituzione",
-      "about.hero.title": "Il Museo",
-      "about.hero.lead": "Missione, storia e materiali — il carattere di uno spazio espositivo italiano.",
-      "about.visual.kicker": "Archivio",
-      "about.visual.title": "Tra laboratorio e sala",
-      "about.kicker": "Missione",
-      "about.title": "Custodire e condividere la forma",
-      "about.p1": "Galleria Scultura nasce come museo personale: un luogo dove le sculture trovano ordine, didascalia e pubblico — senza perdere l’intimità della bottega.",
-      "about.p2": "Ogni pezzo porta un nome latino o mitologico e un numero d’inventario: ponte tra antico e contemporaneo, tra studio e sala.",
+      "about.hero.kicker": "Emanuele Bellemo",
+      "about.hero.title": "L’artista",
+      "about.hero.lead": "Un artigiano della materia, profondamente legato al mare e alla sua Chioggia.",
+      "about.visual.kicker": "La bottega",
+      "about.visual.title": "Dove tutto prende forma",
+      "about.kicker": "La storia",
+      "about.title": "Una vita vicina al mare",
+      "about.p1": "Willy vive e lavora a Chioggia, città di canali, barche e tradizione marinara. Il suo atelier affacciato sull’acqua è il luogo in cui i materiali raccolti diventano nuove presenze.",
+      "about.p2": "Partecipa durante l’anno a mostre, fiere ed eventi all’aperto insieme agli Artisti di Chioggia, portando l’arte nei musei e nei palazzi della città storica.",
       "about.t1.year": "Fondazione",
       "about.t1.title": "Primi nuclei di collezione",
       "about.t1.desc": "Terracotta e studi — le prime opere catalogate.",
@@ -155,15 +156,15 @@
       "about.t4.year": "Museo online",
       "about.t4.title": "Apertura al pubblico digitale",
       "about.t4.desc": "La collezione permanente diventa visitabile da ogni parte del mondo.",
-      "about.mat.kicker": "Materiali",
-      "about.mat.title": "Le voci della materia",
-      "about.mat.lead": "Come nelle sezioni di un museo: ogni materiale ha la sua sala ideale.",
-      "about.mat.m.title": "Marmo",
-      "about.mat.m.desc": "Carrara e affini: luce, freschezza e la linea classica della figura.",
-      "about.mat.b.title": "Bronzo",
-      "about.mat.b.desc": "Fusione e patina — caldo, durevole, con l’eco dei fori antichi.",
-      "about.mat.t.title": "Terracotta",
-      "about.mat.t.desc": "Argilla cotta: intima, artigianale, vicina alla terra d’Italia.",
+      "about.mat.kicker": "Materia",
+      "about.mat.title": "Una ricerca senza confini",
+      "about.mat.lead": "La natura suggerisce, Willy sperimenta.",
+      "about.mat.m.title": "Legno spiaggiato",
+      "about.mat.m.desc": "Segnato dal sale e dal tempo, è il punto di partenza di molte opere.",
+      "about.mat.b.title": "Terracotta e sughero",
+      "about.mat.b.desc": "Materiali caldi e tattili che dialogano con la tradizione artigiana.",
+      "about.mat.t.title": "Resina, sabbia e tecniche miste",
+      "about.mat.t.desc": "Elementi contemporanei che aggiungono luce, profondità e sorpresa.",
       "about.design.kicker": "Allestimento",
       "about.design.title": "Come un museo italiano",
       "about.design.lead": "Principi dell’esperienza espositiva su questo sito.",
@@ -175,84 +176,84 @@
       "about.d3.desc": "Marmo, bronzo e terracotta — la tavolozza del Mediterraneo.",
       "about.d4.title": "Percorso",
       "about.d4.desc": "Dall’ingresso alla collezione, come un itinerario tra le sale.",
-      "about.quote": "Un museo non grida: lascia che sia l’opera a parlare.",
-      "about.cta.gallery": "Visita la collezione",
-      "about.cta.contact": "Contatti",
-      "contact.hero.kicker": "Informazioni",
-      "contact.hero.title": "Visita & Contatti",
-      "contact.hero.lead": "Segreteria per opere, visite, prestiti e stampa.",
-      "contact.page.title": "Segreteria del museo",
-      "contact.page.lead": "Siamo a disposizione per visite in sede, richieste di prestito e informazioni sulle opere.",
-      "contact.next.kicker": "Prossima sala",
-      "contact.next.title": "Continuate in collezione",
-      "contact.next.lead": "Prima di scrivere: forse l’opera che cercate è già esposta.",
-      "contact.next.cta": "Alla collezione",
+      "about.quote": "Il mare non porta soltanto materiali: porta forme, ricordi e possibilità.",
+      "about.cta.gallery": "Scopri le opere",
+      "about.cta.contact": "Contatta Willy",
+      "contact.hero.kicker": "Chioggia",
+      "contact.hero.title": "Contatti",
+      "contact.hero.lead": "Informazioni sulle opere, collaborazioni, mostre e visite in atelier.",
+      "contact.page.title": "Scrivi a Willy",
+      "contact.page.lead": "Raccontaci quale opera ti interessa o quando vorresti visitare la bottega sul canale.",
+      "contact.next.kicker": "Continua la visita",
+      "contact.next.title": "Esplora le opere",
+      "contact.next.lead": "Scopri le forme nate dal legno, dal mare e dalla laguna.",
+      "contact.next.cta": "Vai alla galleria",
       "lightbox.close": "Chiudi"
     },
     "en": {
-      "meta.title.home": "Galleria Scultura — Sculpture Museum",
-      "meta.title.gallery": "Collection — Galleria Scultura",
-      "meta.title.about": "The Museum — Galleria Scultura",
-      "meta.title.contact": "Visit & Contact — Galleria Scultura",
-      "meta.desc.home": "Online sculpture museum in the spirit of Roman and Italian tradition.",
-      "topbar.location": "Rome · Italy",
-      "topbar.hours": "Permanent collection · Online",
-      "topbar.visit": "Visitor information",
-      "nav.home": "Entrance",
-      "nav.gallery": "Collection",
-      "nav.about": "The Museum",
-      "nav.contact": "Visit",
+      "meta.title.home": "Emanuele “Willy” Bellemo — Sculptor in Chioggia",
+      "meta.title.gallery": "Works — Emanuele Willy Bellemo",
+      "meta.title.about": "The artist — Emanuele Willy Bellemo",
+      "meta.title.contact": "Contact — Emanuele Willy Bellemo",
+      "meta.desc.home": "Sculptures and mixed-media works born from the sea, driftwood and the maritime tradition of Chioggia.",
+      "topbar.location": "Chioggia · Venice · Italy",
+      "topbar.hours": "Canal-side studio · Visits by appointment",
+      "topbar.visit": "Contact & visits",
+      "nav.home": "Home",
+      "nav.gallery": "Works",
+      "nav.about": "The artist",
+      "nav.contact": "Contact",
       "nav.menu": "Menu",
-      "logo.sub": "Museum · Rome",
-      "hero.kicker": "Permanent collection",
-      "hero.title": "Forma Aeterna",
-      "hero.tagline": "A museum of sculpture between Rome and the present",
-      "hero.desc": "Welcome to the museum’s digital halls: works in marble, bronze and terracotta, presented as an exhibition path — silence, light and matter.",
-      "hero.cta.gallery": "Enter the collection",
-      "hero.cta.about": "About the museum",
-      "visit.hours.label": "Hours",
-      "visit.hours.value": "Always open · Online",
-      "visit.ticket.label": "Admission",
-      "visit.ticket.value": "Free · Digital collection",
-      "visit.place.label": "Location",
-      "visit.place.value": "Via dell’Arte 12 · Studio Rome",
-      "intro.visual.kicker": "Room I",
-      "intro.visual.title": "Contemporary sculpture",
-      "intro.kicker": "The museum",
-      "intro.title": "A space for form and history",
-      "intro.p1": "As in an Italian museum, every work has its silence: wall label, material, measure. Here the studio opens to the public — a path through stone, metal and light.",
-      "intro.p2": "The display recalls classical rooms: quiet walls, clear captions, respect for the object. Not a shop, but a place for contemplation.",
-      "intro.cta": "Museum history",
-      "intro.stat.works": "Works in collection",
+      "logo.sub": "Sculptor · Chioggia",
+      "hero.kicker": "Art born from the sea",
+      "hero.title": "Emanuele “Willy” Bellemo",
+      "hero.tagline": "The sea shapes the material. Willy reveals its story.",
+      "hero.desc": "In his canal-side studio in Chioggia, driftwood, terracotta, cork, resin and sand become works inspired by the maritime world.",
+      "hero.cta.gallery": "Discover the works",
+      "hero.cta.about": "Meet the artist",
+      "visit.hours.label": "Studio",
+      "visit.hours.value": "On a canal in Chioggia",
+      "visit.ticket.label": "Meetings",
+      "visit.ticket.value": "Visits by appointment",
+      "visit.place.label": "Inspiration",
+      "visit.place.value": "Sea · Lagoon · Tradition",
+      "intro.visual.kicker": "Chioggia",
+      "intro.visual.title": "A workshop on the canal",
+      "intro.kicker": "The artist",
+      "intro.title": "Between sea and matter",
+      "intro.p1": "Emanuele Bellemo, artistically known as Willy, collects wood on the beach and studies it until a form begins to emerge. Every fragment carries the journey of the sea.",
+      "intro.p2": "Maritime tradition and experimentation meet in his work: driftwood, terracotta, cork, epoxy resin, sand and unexpected materials become fish, boats and presences of the lagoon.",
+      "intro.cta": "Willy’s story",
+      "intro.stat.works": "Works online",
       "intro.stat.materials": "Materials",
-      "intro.stat.inspo": "Exhibition rooms",
-      "featured.kicker": "Highlights",
-      "featured.title": "From the collection",
-      "featured.lead": "A selection of works on display — click to open the full wall label.",
-      "featured.all": "Full collection",
-      "process.kicker": "Itinerary",
-      "process.title": "From workshop to gallery",
-      "process.lead": "Four stages in a work’s journey — from idea to entry into the collection.",
-      "process.1.title": "Study",
-      "process.1.desc": "Sketches, models and the choice of material: marble, bronze or clay.",
-      "process.2.title": "Workshop",
-      "process.2.desc": "Chisel, cast, fire: the dialogue between hand and material.",
-      "process.3.title": "Finish & care",
-      "process.3.desc": "Polish, patina and final details — until the surface breathes.",
-      "process.4.title": "Display",
-      "process.4.desc": "The work enters the room: inventoried, photographed and shared with visitors.",
-      "quote.text": "Ars longa, vita brevis — art is long, life is short. That is why what remains in stone and metal deserves a room.",
-      "quote.cite": "— Galleria Scultura · Museum",
-      "contact.kicker": "Visit & contact",
-      "contact.title": "Plan your visit",
-      "contact.lead": "Enquiries about works, loans, studio visits or institutional press.",
-      "contact.email": "Office",
-      "contact.address": "Address",
-      "contact.address.value": "Via dell’Arte 12 · Studio Rome",
+      "intro.stat.inspo": "Place of origin",
+      "featured.kicker": "Selected works",
+      "featured.title": "From the studio to the world",
+      "featured.lead": "A selection of Willy’s works. Open each piece to discover its materials, details and story.",
+      "featured.all": "View all works",
+      "process.kicker": "The process",
+      "process.title": "From the sea to the artwork",
+      "process.lead": "Every creation begins with an encounter between what the sea returns and what the artist is able to see.",
+      "process.1.title": "The search",
+      "process.1.desc": "Willy walks the shore and gathers wood and materials marked by water, salt and time.",
+      "process.2.title": "The intuition",
+      "process.2.desc": "He studies knots, curves and imperfections until a possible figure appears.",
+      "process.3.title": "The transformation",
+      "process.3.desc": "In the studio he carves, assembles and combines wood, terracotta, resin, sand and cork.",
+      "process.4.title": "The artwork",
+      "process.4.desc": "The material keeps its own history and gains a new identity, often connected to the sea.",
+      "quote.text": "Every piece of wood has already crossed the sea. My work begins by listening to the form it carries.",
+      "quote.cite": "— Emanuele “Willy” Bellemo",
+      "contact.kicker": "Studio & contact",
+      "contact.title": "Enter Willy’s world",
+      "contact.lead": "For information about works, exhibitions or a visit to the Chioggia studio, write to us.",
+      "contact.email": "Email",
+      "contact.address": "Place",
+      "contact.address.value": "Chioggia · Venice · Italy",
       "contact.visits": "Visits",
       "contact.visits.value": "By appointment",
       "contact.reply": "Reply",
-      "contact.reply.value": "Within a few working days",
+      "contact.reply.value": "As soon as possible",
       "form.name": "Name",
       "form.email": "Email",
       "form.subject": "Reason for enquiry",
@@ -266,20 +267,20 @@
       "form.submit": "Send to the office",
       "form.note": "Demo form — local confirmation only, not sent to a server.",
       "form.success": "Thank you — your request has been recorded.",
-      "footer.blurb": "Online sculpture museum in the Roman-Italian spirit. Permanent collection open to every visitor of the web.",
-      "footer.nav": "Navigation",
-      "footer.materials": "Sections",
-      "footer.marble": "Marble",
-      "footer.bronze": "Bronze",
-      "footer.terra": "Terracotta",
-      "footer.wood": "Wood & stone",
-      "footer.tagline": "Permanent collection",
-      "gallery.hero.kicker": "Catalogue",
-      "gallery.hero.title": "The Collection",
-      "gallery.hero.lead": "All inventoried works — filter by material, as in the museum rooms.",
-      "gallery.kicker": "Rooms",
-      "gallery.title": "Works on display",
-      "gallery.lead": "Select a work to read inventory, material and gallery note.",
+      "footer.blurb": "Sculptures and mixed-media works born from the sea and made in Emanuele “Willy” Bellemo’s studio in Chioggia.",
+      "footer.nav": "Explore",
+      "footer.materials": "Materials",
+      "footer.marble": "Driftwood",
+      "footer.bronze": "Terracotta",
+      "footer.terra": "Resin and sand",
+      "footer.wood": "Cork and mixed media",
+      "footer.tagline": "Art born from the sea",
+      "gallery.hero.kicker": "Works archive",
+      "gallery.hero.title": "The works",
+      "gallery.hero.lead": "A gallery open to the world: sculptures and compositions born in Chioggia.",
+      "gallery.kicker": "Collection",
+      "gallery.title": "Works by Willy",
+      "gallery.lead": "Select a work to see materials, dimensions and details.",
       "filter.all": "All",
       "filter.marble": "Marble",
       "filter.bronze": "Bronze",
@@ -293,15 +294,15 @@
       "mat.wood": "Wood",
       "mat.travertine": "Travertine",
       "mat.alabaster": "Alabaster",
-      "about.hero.kicker": "Institution",
-      "about.hero.title": "The Museum",
-      "about.hero.lead": "Mission, history and materials — the character of an Italian exhibition space.",
-      "about.visual.kicker": "Archive",
-      "about.visual.title": "Between workshop and room",
-      "about.kicker": "Mission",
-      "about.title": "To care for and share form",
-      "about.p1": "Galleria Scultura began as a personal museum: a place where sculptures find order, wall labels and an audience — without losing the intimacy of the studio.",
-      "about.p2": "Each piece carries a Latin or mythological name and an inventory number: a bridge between ancient and contemporary, between study and gallery.",
+      "about.hero.kicker": "Emanuele Bellemo",
+      "about.hero.title": "The artist",
+      "about.hero.lead": "A maker of material, deeply connected to the sea and to his Chioggia.",
+      "about.visual.kicker": "The workshop",
+      "about.visual.title": "Where everything takes shape",
+      "about.kicker": "The story",
+      "about.title": "A life close to the sea",
+      "about.p1": "Willy lives and works in Chioggia, a city of canals, boats and maritime tradition. His studio overlooking the water is where collected materials become new presences.",
+      "about.p2": "Throughout the year he takes part in exhibitions, fairs and outdoor events with the Artisti di Chioggia, bringing art into museums and palaces of the historic city.",
       "about.t1.year": "Foundation",
       "about.t1.title": "First core of the collection",
       "about.t1.desc": "Terracotta and studies — the first catalogued works.",
@@ -314,15 +315,15 @@
       "about.t4.year": "Online museum",
       "about.t4.title": "Opening to a digital public",
       "about.t4.desc": "The permanent collection becomes visitable from anywhere in the world.",
-      "about.mat.kicker": "Materials",
-      "about.mat.title": "The voices of material",
-      "about.mat.lead": "As in museum sections: each material has its ideal room.",
-      "about.mat.m.title": "Marble",
-      "about.mat.m.desc": "Carrara and kindred stones: light, coolness and the classical line of the figure.",
-      "about.mat.b.title": "Bronze",
-      "about.mat.b.desc": "Cast and patina — warm, lasting, with the echo of ancient forums.",
-      "about.mat.t.title": "Terracotta",
-      "about.mat.t.desc": "Fired clay: intimate, handmade, close to the soil of Italy.",
+      "about.mat.kicker": "Matter",
+      "about.mat.title": "A search without boundaries",
+      "about.mat.lead": "Nature suggests; Willy experiments.",
+      "about.mat.m.title": "Driftwood",
+      "about.mat.m.desc": "Marked by salt and time, it is the starting point for many works.",
+      "about.mat.b.title": "Terracotta and cork",
+      "about.mat.b.desc": "Warm, tactile materials in dialogue with craft tradition.",
+      "about.mat.t.title": "Resin, sand and mixed media",
+      "about.mat.t.desc": "Contemporary elements that add light, depth and surprise.",
       "about.design.kicker": "Display",
       "about.design.title": "Like an Italian museum",
       "about.design.lead": "Principles of the exhibition experience on this site.",
@@ -334,18 +335,18 @@
       "about.d3.desc": "Marble, bronze and terracotta — the Mediterranean palette.",
       "about.d4.title": "Path",
       "about.d4.desc": "From entrance to collection, like an itinerary through the rooms.",
-      "about.quote": "A museum does not shout: it lets the work speak.",
-      "about.cta.gallery": "Visit the collection",
-      "about.cta.contact": "Contact",
-      "contact.hero.kicker": "Information",
-      "contact.hero.title": "Visit & Contact",
-      "contact.hero.lead": "Office for works, visits, loans and press.",
-      "contact.page.title": "Museum office",
-      "contact.page.lead": "We are available for on-site visits, loan requests and information about the works.",
-      "contact.next.kicker": "Next room",
-      "contact.next.title": "Continue in the collection",
-      "contact.next.lead": "Before you write: the work you seek may already be on display.",
-      "contact.next.cta": "To the collection",
+      "about.quote": "The sea does not bring only materials: it brings forms, memories and possibilities.",
+      "about.cta.gallery": "Discover the works",
+      "about.cta.contact": "Contact Willy",
+      "contact.hero.kicker": "Chioggia",
+      "contact.hero.title": "Contact",
+      "contact.hero.lead": "Information about works, collaborations, exhibitions and studio visits.",
+      "contact.page.title": "Write to Willy",
+      "contact.page.lead": "Tell us which work interests you or when you would like to visit the canal-side workshop.",
+      "contact.next.kicker": "Continue your visit",
+      "contact.next.title": "Explore the works",
+      "contact.next.lead": "Discover forms born from wood, sea and lagoon.",
+      "contact.next.cta": "Go to the gallery",
       "lightbox.close": "Close"
     }
   },
@@ -547,35 +548,24 @@
       "blocks": [
         {
           "id": "blk_mrt231umkp5os",
-          "type": "freeCanvas",
-          "enabled": true,
+          "type": "imageBanner",
+          "enabled": false,
           "data": {
+            "image": "/uploads/1784542480674-361056721f6e.jpeg",
             "height": 520,
-            "background": "#ebe4d7",
-            "items": [
-              {
-                "id": "img_mrt2iqszco5",
-                "type": "image",
-                "src": "/uploads/1784542480660-3d5595ef5368.jpeg",
-                "x": 52.55890725556057,
-                "y": 48.89999530498798,
-                "w": 28,
-                "h": 36,
-                "z": 1,
-                "objectFit": "cover"
-              },
-              {
-                "id": "img_mrt2iy2jrbm",
-                "type": "image",
-                "src": "/uploads/1784542480674-361056721f6e.jpeg",
-                "x": 24.41961170253313,
-                "y": 48.95385437011719,
-                "w": 28,
-                "h": 36,
-                "z": 2,
-                "objectFit": "cover"
-              }
-            ]
+            "overlay": true,
+            "kicker": {
+              "it": "Chioggia · Laguna di Venezia",
+              "en": "Chioggia · Venetian Lagoon"
+            },
+            "title": {
+              "it": "Dove il mare diventa materia",
+              "en": "Where the sea becomes matter"
+            },
+            "lead": {
+              "it": "Una storia di legno, acqua e immaginazione.",
+              "en": "A story of wood, water and imagination."
+            }
           }
         },
         {
@@ -583,110 +573,141 @@
           "type": "hero",
           "enabled": true,
           "data": {
-            "ornament": "MUSEO",
+            "ornament": "",
             "kicker": {
-              "it": "Collezione permanente",
-              "en": "Permanent collection"
+              "it": "",
+              "en": ""
             },
             "title": {
-              "it": "Forma Aeterna",
-              "en": "Forma Aeterna"
+              "it": "Il mare\ndiventa arte",
+              "en": "The sea\nbecomes art"
             },
             "tagline": {
-              "it": "Un museo dedicato alla scultura tra Roma e il presente",
-              "en": "A museum of sculpture between Rome and the present"
+              "it": "Sculture nate dalla materia, dalla laguna e dall’immaginazione",
+              "en": "Sculptures born from matter, the lagoon and imagination"
             },
             "desc": {
-              "it": "Benvenuti nelle sale digitali del museo: opere in marmo, bronzo e terracotta, presentate come in un percorso espositivo — silenzio, luce e materia.",
-              "en": "Welcome to the museum’s digital halls: works in marble, bronze and terracotta, presented as an exhibition path — silence, light and matter."
+              "it": "A Chioggia, il legno portato a riva dal mare trova una nuova vita nelle mani di Willy. Ogni opera conserva la memoria dell’acqua e racconta una storia irripetibile.",
+              "en": "In Chioggia, wood carried ashore by the sea finds a new life in Willy’s hands. Every work preserves the memory of water and tells a unique story."
             },
             "ctaPrimary": {
-              "it": "Entra in collezione",
-              "en": "Enter the collection"
+              "it": "Scopri le opere",
+              "en": "Discover the works"
             },
             "ctaPrimaryLink": "gallery.html",
             "ctaSecondary": {
-              "it": "Scopre il museo",
-              "en": "About the museum"
+              "it": "",
+              "en": ""
+            },
+            "ctaSecondaryLink": "",
+            "image": "/uploads/1784542480674-361056721f6e.jpeg"
+          }
+        },
+        {
+          "id": "blk_artist_intro_willy",
+          "type": "artistIntro",
+          "enabled": true,
+          "data": {
+            "eyebrow": {
+              "it": "WILLY",
+              "en": "WILLY"
+            },
+            "kicker": {
+              "it": "ARTE NATA DAL MARE",
+              "en": "ART BORN FROM THE SEA"
+            },
+            "title": {
+              "it": "Emanuele “Willy” Bellemo",
+              "en": "Emanuele “Willy” Bellemo"
+            },
+            "tagline": {
+              "it": "Il mare modella la materia.\nWilly ne rivela la storia.",
+              "en": "The sea shapes the material.\nWilly reveals its story."
+            },
+            "desc": {
+              "it": "Nel suo atelier sul canale di Chioggia, legni portati a riva, terracotta, sughero, resina e sabbia diventano opere ispirate al mondo marino.",
+              "en": "In his canal-side studio in Chioggia, driftwood, terracotta, cork, resin and sand become works inspired by the maritime world."
+            },
+            "ctaPrimary": {
+              "it": "Scopri le opere",
+              "en": "Discover the works"
+            },
+            "ctaPrimaryLink": "gallery.html",
+            "ctaSecondary": {
+              "it": "Conosci l’artista",
+              "en": "Meet the artist"
             },
             "ctaSecondaryLink": "about.html"
           }
         },
         {
-          "id": "blk_visit_13zoas",
-          "type": "visit",
+          "id": "blk_process_r7vm2s",
+          "type": "process",
           "enabled": true,
           "data": {
-            "items": [
+            "variant": "visual",
+            "kicker": {
+              "it": "Il processo",
+              "en": "The process"
+            },
+            "title": {
+              "it": "Dal mare all’opera",
+              "en": "From sea to sculpture"
+            },
+            "lead": {
+              "it": "Tre momenti raccontano il viaggio della materia: dalla riva, attraverso lo sguardo di Willy, fino alla forma finale.",
+              "en": "Three moments tell the material’s journey: from the shore, through Willy’s eye, to its final form."
+            },
+            "steps": [
               {
-                "label": {
-                  "it": "Orari",
-                  "en": "Hours"
+                "num": "1",
+                "title": {
+                  "it": "Il mare",
+                  "en": "The sea"
                 },
-                "value": {
-                  "it": "Aperto sempre · Online",
-                  "en": "Always open · Online"
+                "desc": {
+                  "it": "Il legno viene modellato dal mare, dal vento e dal tempo. Ogni segno racconta una parte del viaggio.",
+                  "en": "Wood is shaped by sea, wind and time. Every mark tells part of its journey."
+                },
+                "image": "uploads/1784542480674-361056721f6e.jpeg",
+                "imageAlt": {
+                  "it": "Il canale e l’acqua di Chioggia",
+                  "en": "The canal and water of Chioggia"
                 }
               },
               {
-                "label": {
-                  "it": "Ingresso",
-                  "en": "Admission"
+                "num": "2",
+                "title": {
+                  "it": "La materia",
+                  "en": "The material"
                 },
-                "value": {
-                  "it": "Libero · Collezione digitale",
-                  "en": "Free · Digital collection"
+                "desc": {
+                  "it": "Ogni frammento è unico. Legno, terracotta, sughero, resina e sabbia portano con sé tracce e memorie.",
+                  "en": "Every fragment is unique. Wood, terracotta, cork, resin and sand carry traces and memories."
+                },
+                "image": "uploads/1784542480660-3d5595ef5368.jpeg",
+                "imageAlt": {
+                  "it": "Colori e materia della laguna",
+                  "en": "Colours and material of the lagoon"
                 }
               },
               {
-                "label": {
-                  "it": "Sede",
-                  "en": "Location"
+                "num": "3",
+                "title": {
+                  "it": "L’opera",
+                  "en": "The sculpture"
                 },
-                "value": {
-                  "it": "Via dell’Arte 12 · Studio Roma",
-                  "en": "Via dell’Arte 12 · Studio Rome"
+                "desc": {
+                  "it": "Nelle mani di Willy, la materia si trasforma in scultura e rivela una storia nuova.",
+                  "en": "In Willy’s hands, the material becomes sculpture and reveals a new story."
+                },
+                "image": "uploads/1784542480660-3d5595ef5368.jpeg",
+                "imageAlt": {
+                  "it": "Immagine temporanea da sostituire con un’opera di Willy",
+                  "en": "Temporary image to replace with one of Willy’s works"
                 }
               }
             ]
-          }
-        },
-        {
-          "id": "blk_intro_hsj90o",
-          "type": "intro",
-          "enabled": true,
-          "data": {
-            "visualKicker": {
-              "it": "Sala I",
-              "en": "Room I"
-            },
-            "visualTitle": {
-              "it": "Scultura contemporanea",
-              "en": "Contemporary sculpture"
-            },
-            "image": "",
-            "kicker": {
-              "it": "Il museo",
-              "en": "The museum"
-            },
-            "title": {
-              "it": "Uno spazio per la forma e la storia",
-              "en": "A space for form and history"
-            },
-            "p1": {
-              "it": "Come in un museo italiano, ogni opera ha il suo silenzio: cartellino, materia, misura. Qui la bottega si apre al pubblico — un percorso tra pietra, metallo e luce.",
-              "en": "As in an Italian museum, every work has its silence: wall label, material, measure. Here the studio opens to the public — a path through stone, metal and light."
-            },
-            "p2": {
-              "it": "L’allestimento richiama le sale classiche: pareti quiete, didascalie chiare, rispetto per l’oggetto. Non un negozio, ma un luogo di contemplazione.",
-              "en": "The display recalls classical rooms: quiet walls, clear captions, respect for the object. Not a shop, but a place for contemplation."
-            },
-            "cta": {
-              "it": "Storia del museo",
-              "en": "Museum history"
-            },
-            "ctaLink": "about.html",
-            "showStats": true
           }
         },
         {
@@ -695,88 +716,126 @@
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "In evidenza",
-              "en": "Highlights"
+              "it": "Opere scelte",
+              "en": "Selected works"
             },
             "title": {
-              "it": "Dalla collezione",
-              "en": "From the collection"
+              "it": "Forme emerse dalla laguna",
+              "en": "Forms emerging from the lagoon"
             },
             "lead": {
-              "it": "Una selezione di opere esposte — toccate o cliccate per aprire la didascalia completa.",
-              "en": "A selection of works on display — click to open the full wall label."
+              "it": "Tre opere per entrare nel mondo di Willy: materia, memoria e paesaggio marino.",
+              "en": "Three works offering an entrance into Willy’s world of matter, memory and the marine landscape."
             },
             "cta": {
-              "it": "Tutta la collezione",
-              "en": "Full collection"
+              "it": "Esplora la collezione",
+              "en": "Explore the collection"
             },
             "ctaLink": "gallery.html",
             "mode": "featured"
           }
         },
         {
-          "id": "blk_process_r7vm2s",
-          "type": "process",
+          "id": "blk_atelier_canal",
+          "type": "imageText",
           "enabled": true,
           "data": {
+            "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
+            "imageSide": "left",
             "kicker": {
-              "it": "Percorso",
-              "en": "Itinerary"
+              "it": "L’atelier",
+              "en": "The studio"
             },
             "title": {
-              "it": "Dal laboratorio alla sala",
-              "en": "From workshop to gallery"
+              "it": "Una bottega sul canale",
+              "en": "A workshop on the canal"
             },
-            "lead": {
-              "it": "Quattro tappe del viaggio di un’opera — dall’idea all’ingresso in collezione.",
-              "en": "Four stages in a work’s journey — from idea to entry into the collection."
+            "body": {
+              "it": "Nel cuore di Chioggia, Willy lavora a pochi passi dall’acqua. Qui i legni raccolti sulla riva incontrano terracotta, sughero, resina e sabbia, trasformandosi lentamente in presenze marine uniche. L’atelier è visitabile su appuntamento.",
+              "en": "In the heart of Chioggia, Willy works only a few steps from the water. Here, wood gathered from the shore meets terracotta, cork, resin and sand, slowly becoming unique marine forms. Studio visits are available by appointment."
             },
-            "steps": [
+            "cta": {
+              "it": "Scopri l’atelier",
+              "en": "Discover the studio"
+            },
+            "ctaLink": "contact.html"
+          }
+        },
+        {
+          "id": "blk_visit_13zoas",
+          "type": "visit",
+          "enabled": false,
+          "data": {
+            "items": [
               {
-                "num": "I",
-                "title": {
-                  "it": "Studio",
-                  "en": "Study"
+                "label": {
+                  "it": "Atelier",
+                  "en": "Studio"
                 },
-                "desc": {
-                  "it": "Schizzi, modelli e la scelta del materiale: marmo, bronzo o argilla.",
-                  "en": "Sketches, models and the choice of material: marble, bronze or clay."
+                "value": {
+                  "it": "Sul canale di Chioggia",
+                  "en": "On a canal in Chioggia"
                 }
               },
               {
-                "num": "II",
-                "title": {
-                  "it": "Laboratorio",
-                  "en": "Workshop"
+                "label": {
+                  "it": "Incontri",
+                  "en": "Meetings"
                 },
-                "desc": {
-                  "it": "Scalpello, fusione, cottura: il dialogo tra mano e materia.",
-                  "en": "Chisel, cast, fire: the dialogue between hand and material."
+                "value": {
+                  "it": "Visite su appuntamento",
+                  "en": "Visits by appointment"
                 }
               },
               {
-                "num": "III",
-                "title": {
-                  "it": "Restauro & finitura",
-                  "en": "Finish & care"
+                "label": {
+                  "it": "Ispirazione",
+                  "en": "Inspiration"
                 },
-                "desc": {
-                  "it": "Lucidatura, patina e gli ultimi dettagli — finché la superficie respira.",
-                  "en": "Polish, patina and final details — until the surface breathes."
-                }
-              },
-              {
-                "num": "IV",
-                "title": {
-                  "it": "Esposizione",
-                  "en": "Display"
-                },
-                "desc": {
-                  "it": "L’opera entra in sala: inventariata, fotografata e condivisa con i visitatori.",
-                  "en": "The work enters the room: inventoried, photographed and shared with visitors."
+                "value": {
+                  "it": "Mare · Laguna · Tradizione",
+                  "en": "Sea · Lagoon · Tradition"
                 }
               }
             ]
+          }
+        },
+        {
+          "id": "blk_intro_hsj90o",
+          "type": "intro",
+          "enabled": false,
+          "data": {
+            "visualKicker": {
+              "it": "Chioggia",
+              "en": "Chioggia"
+            },
+            "visualTitle": {
+              "it": "Una bottega sul canale",
+              "en": "A workshop on the canal"
+            },
+            "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
+            "kicker": {
+              "it": "L’artista",
+              "en": "The artist"
+            },
+            "title": {
+              "it": "Tra il mare e la materia",
+              "en": "Between sea and matter"
+            },
+            "p1": {
+              "it": "Emanuele Bellemo, conosciuto artisticamente come Willy, raccoglie legni sulla spiaggia e li osserva finché una forma comincia a emergere. Ogni frammento porta con sé il viaggio del mare.",
+              "en": "Emanuele Bellemo, artistically known as Willy, collects wood on the beach and studies it until a form begins to emerge. Every fragment carries the journey of the sea."
+            },
+            "p2": {
+              "it": "Nel suo lavoro convivono tradizione marinara e sperimentazione: legno spiaggiato, terracotta, sughero, resina epossidica, sabbia e materiali inattesi diventano pesci, barche e presenze della laguna.",
+              "en": "Maritime tradition and experimentation meet in his work: driftwood, terracotta, cork, epoxy resin, sand and unexpected materials become fish, boats and presences of the lagoon."
+            },
+            "cta": {
+              "it": "La storia di Willy",
+              "en": "Willy’s story"
+            },
+            "ctaLink": "about.html",
+            "showStats": true
           }
         },
         {
@@ -785,12 +844,12 @@
           "enabled": true,
           "data": {
             "text": {
-              "it": "Ars longa, vita brevis — l’arte è lunga, la vita breve. Per questo ciò che resta in pietra e metallo merita una sala.",
-              "en": "Ars longa, vita brevis — art is long, life is short. That is why what remains in stone and metal deserves a room."
+              "it": "Ogni pezzo di legno ha già attraversato il mare. Il mio lavoro comincia ascoltando la forma che porta con sé.",
+              "en": "Every piece of wood has already crossed the sea. My work begins by listening to the form it carries."
             },
             "cite": {
-              "it": "— Galleria Scultura · Museo",
-              "en": "— Galleria Scultura · Museum"
+              "it": "— Emanuele “Willy” Bellemo",
+              "en": "— Emanuele “Willy” Bellemo"
             }
           }
         },
@@ -817,7 +876,7 @@
         {
           "id": "blk_mrt2300u18ses",
           "type": "freeCanvas",
-          "enabled": true,
+          "enabled": false,
           "data": {
             "height": 520,
             "background": "#ebe4d7",
@@ -898,33 +957,33 @@
           "enabled": true,
           "data": {
             "visualKicker": {
-              "it": "Archivio",
-              "en": "Archive"
+              "it": "Chioggia",
+              "en": "Chioggia"
             },
             "visualTitle": {
-              "it": "Tra laboratorio e sala",
-              "en": "Between workshop and room"
+              "it": "Una bottega sul canale",
+              "en": "A workshop on the canal"
             },
-            "image": "",
+            "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
             "kicker": {
-              "it": "Missione",
-              "en": "Mission"
+              "it": "L’artista",
+              "en": "The artist"
             },
             "title": {
-              "it": "Custodire e condividere la forma",
-              "en": "To care for and share form"
+              "it": "Tra il mare e la materia",
+              "en": "Between sea and matter"
             },
             "p1": {
-              "it": "Galleria Scultura nasce come museo personale: un luogo dove le sculture trovano ordine, didascalia e pubblico — senza perdere l’intimità della bottega.",
-              "en": "Galleria Scultura began as a personal museum: a place where sculptures find order, wall labels and an audience — without losing the intimacy of the studio."
+              "it": "Emanuele Bellemo, conosciuto artisticamente come Willy, raccoglie legni sulla spiaggia e li osserva finché una forma comincia a emergere. Ogni frammento porta con sé il viaggio del mare.",
+              "en": "Emanuele Bellemo, artistically known as Willy, collects wood on the beach and studies it until a form begins to emerge. Every fragment carries the journey of the sea."
             },
             "p2": {
-              "it": "Ogni pezzo porta un nome latino o mitologico e un numero d’inventario: ponte tra antico e contemporaneo, tra studio e sala.",
-              "en": "Each piece carries a Latin or mythological name and an inventory number: a bridge between ancient and contemporary, between study and gallery."
+              "it": "Nel suo lavoro convivono tradizione marinara e sperimentazione: legno spiaggiato, terracotta, sughero, resina epossidica, sabbia e materiali inattesi diventano pesci, barche e presenze della laguna.",
+              "en": "Maritime tradition and experimentation meet in his work: driftwood, terracotta, cork, epoxy resin, sand and unexpected materials become fish, boats and presences of the lagoon."
             },
             "cta": {
-              "it": "",
-              "en": ""
+              "it": "La storia di Willy",
+              "en": "Willy’s story"
             },
             "ctaLink": "",
             "showStats": false
@@ -1055,12 +1114,12 @@
           "enabled": true,
           "data": {
             "text": {
-              "it": "Un museo non grida: lascia che sia l’opera a parlare.",
-              "en": "A museum does not shout: it lets the work speak."
+              "it": "Il mare non porta soltanto materiali: porta forme, ricordi e possibilità.",
+              "en": "The sea does not bring only materials: it brings forms, memories and possibilities."
             },
             "cite": {
-              "it": "— Galleria Scultura · Museo",
-              "en": "— Galleria Scultura · Museum"
+              "it": "— Emanuele “Willy” Bellemo",
+              "en": "— Emanuele “Willy” Bellemo"
             }
           }
         }
@@ -1096,32 +1155,32 @@
             "items": [
               {
                 "label": {
-                  "it": "Orari",
-                  "en": "Hours"
+                  "it": "Atelier",
+                  "en": "Studio"
                 },
                 "value": {
-                  "it": "Aperto sempre · Online",
-                  "en": "Always open · Online"
+                  "it": "Sul canale di Chioggia",
+                  "en": "On a canal in Chioggia"
                 }
               },
               {
                 "label": {
-                  "it": "Ingresso",
-                  "en": "Admission"
+                  "it": "Incontri",
+                  "en": "Meetings"
                 },
                 "value": {
-                  "it": "Libero · Collezione digitale",
-                  "en": "Free · Digital collection"
+                  "it": "Visite su appuntamento",
+                  "en": "Visits by appointment"
                 }
               },
               {
                 "label": {
-                  "it": "Sede",
-                  "en": "Location"
+                  "it": "Ispirazione",
+                  "en": "Inspiration"
                 },
                 "value": {
-                  "it": "Via dell’Arte 12 · Studio Roma",
-                  "en": "Via dell’Arte 12 · Studio Rome"
+                  "it": "Mare · Laguna · Tradizione",
+                  "en": "Sea · Lagoon · Tradition"
                 }
               }
             ]
