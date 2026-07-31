@@ -1043,3 +1043,61 @@ body.is-authenticated {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* v1.0.11 — Artist hero background control in live preview */
+.visual-preview[data-page="about"] .page-hero {
+  position: relative !important;
+  min-height: 680px !important;
+  display: grid !important;
+  align-items: end !important;
+  padding: 9rem 0 5rem !important;
+  overflow: hidden !important;
+  background-color: #102b2c !important;
+  background-image:
+    linear-gradient(180deg, rgba(5,25,25,.42), rgba(5,25,25,.90)),
+    var(--page-hero-image, linear-gradient(#102b2c,#102b2c)) !important;
+  background-position: center, center !important;
+  background-size: cover, cover !important;
+  background-repeat: no-repeat !important;
+  color: #fffaf1 !important;
+}
+.visual-preview[data-page="about"] .page-hero::after {
+  content: "WILLY" !important;
+  display: block !important;
+  position: absolute !important;
+  right: -.04em !important;
+  bottom: -.22em !important;
+  font-family: "Cinzel", serif !important;
+  font-size: clamp(7rem, 22vw, 20rem) !important;
+  color: rgba(255,255,255,.045) !important;
+  pointer-events: none !important;
+}
+.visual-preview[data-page="about"] .page-hero .container { display:block !important; }
+.visual-preview[data-page="about"] .page-hero-inner {
+  position:relative !important; z-index:1 !important; max-width:940px !important;
+  margin:0 !important; text-align:left !important;
+}
+.visual-preview[data-page="about"] .page-hero .section-kicker { color:#d6a17b !important; }
+.visual-preview[data-page="about"] .page-hero h1 {
+  max-width:900px !important; margin:.45rem 0 1.25rem !important; color:#fffaf1 !important;
+  font-size:clamp(3.9rem,9vw,8.5rem) !important; line-height:.88 !important; letter-spacing:-.045em !important;
+}
+.visual-preview[data-page="about"] .page-hero p:not(.section-kicker) {
+  max-width:720px !important; margin-inline:0 !important; color:rgba(255,250,241,.78) !important;
+}
+.vb-pagehero-picker {
+  position:absolute; left:50%; top:1.25rem; transform:translateX(-50%); z-index:35;
+  display:flex; align-items:center; gap:.75rem; padding:.65rem .8rem;
+  background:rgba(250,247,241,.96); border:1px solid rgba(23,48,49,.28);
+  box-shadow:0 10px 30px rgba(0,0,0,.15); font-family:var(--font); color:#173031;
+}
+.vb-pagehero-picker-btn {
+  border:0; padding:.65rem .9rem; cursor:pointer; background:#173b3b; color:#fff;
+  font:600 .76rem/1 var(--font); letter-spacing:.04em;
+}
+.vb-pagehero-picker span { font-size:.72rem; white-space:nowrap; }
+@media (max-width:760px) {
+  .vb-pagehero-picker { width:calc(100% - 2rem); flex-direction:column; text-align:center; }
+  .vb-pagehero-picker span { white-space:normal; }
+}
