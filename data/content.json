@@ -854,23 +854,102 @@
           }
         },
         {
+          "id": "blk_materials_lagoon",
+          "type": "materials",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "La materia",
+              "en": "The materials"
+            },
+            "title": {
+              "it": "Tracce raccolte dalla laguna",
+              "en": "Traces gathered from the lagoon"
+            },
+            "lead": {
+              "it": "Willy accosta elementi segnati dall’acqua e dal tempo. Ogni superficie conserva un’impronta, ogni materia suggerisce una forma.",
+              "en": "Willy brings together elements marked by water and time. Every surface preserves a trace; every material suggests a form."
+            },
+            "cards": [
+              {
+                "icon": "01",
+                "image": "/uploads/1784542480674-361056721f6e.jpeg",
+                "title": {
+                  "it": "Legno spiaggiato",
+                  "en": "Driftwood"
+                },
+                "desc": {
+                  "it": "Rami e frammenti levigati dal mare, scelti per le venature, le ferite e le forme che custodiscono.",
+                  "en": "Branches and fragments polished by the sea, chosen for the grain, scars and forms they preserve."
+                }
+              },
+              {
+                "icon": "02",
+                "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
+                "title": {
+                  "it": "Terra e sabbia",
+                  "en": "Earth and sand"
+                },
+                "desc": {
+                  "it": "Terracotta e sabbia della laguna aggiungono calore, peso e una memoria profondamente veneziana.",
+                  "en": "Terracotta and lagoon sand add warmth, weight and a distinctly Venetian memory."
+                }
+              },
+              {
+                "icon": "03",
+                "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
+                "title": {
+                  "it": "Sughero",
+                  "en": "Cork"
+                },
+                "desc": {
+                  "it": "Leggero e irregolare, il sughero diventa pelle, galleggiamento e dettaglio organico.",
+                  "en": "Light and irregular, cork becomes skin, buoyancy and organic detail."
+                }
+              },
+              {
+                "icon": "04",
+                "image": "/uploads/1784542480674-361056721f6e.jpeg",
+                "title": {
+                  "it": "Resina e pigmenti",
+                  "en": "Resin and pigments"
+                },
+                "desc": {
+                  "it": "Trasparenze e colori fissano riflessi d’acqua, profondità marine e piccoli bagliori della laguna.",
+                  "en": "Transparency and colour capture water reflections, marine depth and small flashes of lagoon light."
+                }
+              }
+            ]
+          }
+        },
+        {
           "id": "blk_contact_cee79k",
           "type": "contact",
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "Visita & contatti",
-              "en": "Visit & contact"
+              "it": "Visita l’atelier",
+              "en": "Visit the studio"
             },
             "title": {
-              "it": "Pianificate la vostra visita",
-              "en": "Plan your visit"
+              "it": "Incontra Willy a Chioggia",
+              "en": "Meet Willy in Chioggia"
             },
             "lead": {
-              "it": "Richieste su opere, prestiti, visite in atelier o stampa istituzionale.",
-              "en": "Enquiries about works, loans, studio visits or institutional press."
+              "it": "L’atelier si trova nel cuore della città, a pochi passi dalla laguna. Le visite sono possibili su appuntamento per conoscere le opere, i materiali e il luogo in cui prendono forma.",
+              "en": "The studio is in the heart of the city, only a few steps from the lagoon. Visits are available by appointment to discover the works, materials and the place where they take shape."
             },
-            "showForm": true
+            "showForm": false,
+            "cta": {
+              "it": "Richiedi una visita",
+              "en": "Request a visit"
+            },
+            "ctaLink": "contact.html",
+            "secondaryCta": {
+              "it": "Scrivi una e-mail",
+              "en": "Send an email"
+            },
+            "secondaryCtaLink": "mailto:atelier@emanuelewillybellemo.it"
           }
         },
         {
@@ -933,26 +1012,26 @@
       "enabled": true,
       "blocks": [
         {
-          "id": "blk_pageHero_mgxvfn",
+          "id": "about_hero_artist",
           "type": "pageHero",
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "Istituzione",
-              "en": "Institution"
+              "it": "Emanuele “Willy” Bellemo",
+              "en": "Emanuele “Willy” Bellemo"
             },
             "title": {
-              "it": "Il Museo",
-              "en": "The Museum"
+              "it": "L’uomo dietro la materia",
+              "en": "The man behind the material"
             },
             "lead": {
-              "it": "Missione, storia e materiali — il carattere di uno spazio espositivo italiano.",
-              "en": "Mission, history and materials — the character of an Italian exhibition space."
+              "it": "Una vita a Chioggia, lo sguardo rivolto alla laguna e una ricerca che comincia sempre da ciò che il mare restituisce.",
+              "en": "A life in Chioggia, a gaze turned toward the lagoon, and a practice that always begins with what the sea returns."
             }
           }
         },
         {
-          "id": "blk_intro_9xx9n5",
+          "id": "about_intro_story",
           "type": "intro",
           "enabled": true,
           "data": {
@@ -961,8 +1040,8 @@
               "en": "Chioggia"
             },
             "visualTitle": {
-              "it": "Una bottega sul canale",
-              "en": "A workshop on the canal"
+              "it": "La laguna come origine",
+              "en": "The lagoon as origin"
             },
             "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
             "kicker": {
@@ -970,157 +1049,283 @@
               "en": "The artist"
             },
             "title": {
-              "it": "Tra il mare e la materia",
-              "en": "Between sea and matter"
+              "it": "Ascoltare prima di scolpire",
+              "en": "Listen before sculpting"
             },
             "p1": {
-              "it": "Emanuele Bellemo, conosciuto artisticamente come Willy, raccoglie legni sulla spiaggia e li osserva finché una forma comincia a emergere. Ogni frammento porta con sé il viaggio del mare.",
-              "en": "Emanuele Bellemo, artistically known as Willy, collects wood on the beach and studies it until a form begins to emerge. Every fragment carries the journey of the sea."
+              "it": "Emanuele Bellemo, per tutti Willy, vive e lavora a Chioggia. Il suo studio nasce tra acqua, barche, cantieri e spiagge: un paesaggio quotidiano che è diventato linguaggio artistico.",
+              "en": "Emanuele Bellemo, known to everyone as Willy, lives and works in Chioggia. His studio was shaped by water, boats, shipyards and beaches—a daily landscape that became his artistic language."
             },
             "p2": {
-              "it": "Nel suo lavoro convivono tradizione marinara e sperimentazione: legno spiaggiato, terracotta, sughero, resina epossidica, sabbia e materiali inattesi diventano pesci, barche e presenze della laguna.",
-              "en": "Maritime tradition and experimentation meet in his work: driftwood, terracotta, cork, epoxy resin, sand and unexpected materials become fish, boats and presences of the lagoon."
+              "it": "Non forza la materia in una forma prestabilita. Osserva nodi, ferite, curve e tracce lasciate dal tempo, poi interviene con misura per far emergere pesci, imbarcazioni e presenze della laguna.",
+              "en": "He does not force material into a predetermined form. He studies knots, scars, curves and traces left by time, then intervenes with restraint to reveal fish, boats and presences of the lagoon."
             },
             "cta": {
-              "it": "La storia di Willy",
-              "en": "Willy’s story"
+              "it": "Scopri le opere",
+              "en": "Explore the works"
             },
-            "ctaLink": "",
+            "ctaLink": "gallery.html",
             "showStats": false
           }
         },
         {
-          "id": "blk_materials_y0lnnz",
-          "type": "materials",
-          "enabled": true,
-          "data": {
-            "kicker": {
-              "it": "Materiali",
-              "en": "Materials"
-            },
-            "title": {
-              "it": "Le voci della materia",
-              "en": "The voices of material"
-            },
-            "lead": {
-              "it": "Come nelle sezioni di un museo: ogni materiale ha la sua sala ideale.",
-              "en": "As in museum sections: each material has its ideal room."
-            },
-            "cards": [
-              {
-                "icon": "M",
-                "title": {
-                  "it": "Marmo",
-                  "en": "Marble"
-                },
-                "desc": {
-                  "it": "Carrara e affini: luce, freschezza e la linea classica della figura.",
-                  "en": "Carrara and kindred stones: light, coolness and the classical line of the figure."
-                }
-              },
-              {
-                "icon": "B",
-                "title": {
-                  "it": "Bronzo",
-                  "en": "Bronze"
-                },
-                "desc": {
-                  "it": "Fusione e patina — caldo, durevole, con l’eco dei fori antichi.",
-                  "en": "Cast and patina — warm, lasting, with the echo of ancient forums."
-                }
-              },
-              {
-                "icon": "T",
-                "title": {
-                  "it": "Terracotta",
-                  "en": "Terracotta"
-                },
-                "desc": {
-                  "it": "Argilla cotta: intima, artigianale, vicina alla terra d’Italia.",
-                  "en": "Fired clay: intimate, handmade, close to the soil of Italy."
-                }
-              }
-            ]
-          }
-        },
-        {
-          "id": "blk_process_q48rlb",
-          "type": "process",
-          "enabled": true,
-          "data": {
-            "kicker": {
-              "it": "Allestimento",
-              "en": "Display"
-            },
-            "title": {
-              "it": "Come un museo italiano",
-              "en": "Like an Italian museum"
-            },
-            "lead": {
-              "it": "Principi dell’esperienza espositiva su questo sito.",
-              "en": "Principles of the exhibition experience on this site."
-            },
-            "steps": [
-              {
-                "num": "I",
-                "title": {
-                  "it": "Didascalie chiare",
-                  "en": "Clear labels"
-                },
-                "desc": {
-                  "it": "Titolo, materia, misura e data — come sui cartellini di sala.",
-                  "en": "Title, material, size and date — as on gallery wall labels."
-                }
-              },
-              {
-                "num": "II",
-                "title": {
-                  "it": "Luce e quiete",
-                  "en": "Light and quiet"
-                },
-                "desc": {
-                  "it": "Pareti calde, ombre morbide, niente rumore visivo intorno alle opere.",
-                  "en": "Warm walls, soft shadows, no visual noise around the works."
-                }
-              },
-              {
-                "num": "III",
-                "title": {
-                  "it": "Materiali nobili",
-                  "en": "Noble materials"
-                },
-                "desc": {
-                  "it": "Marmo, bronzo e terracotta — la tavolozza del Mediterraneo.",
-                  "en": "Marble, bronze and terracotta — the Mediterranean palette."
-                }
-              },
-              {
-                "num": "IV",
-                "title": {
-                  "it": "Percorso",
-                  "en": "Path"
-                },
-                "desc": {
-                  "it": "Dall’ingresso alla collezione, come un itinerario tra le sale.",
-                  "en": "From entrance to collection, like an itinerary through the rooms."
-                }
-              }
-            ]
-          }
-        },
-        {
-          "id": "blk_quote_zyzi9f",
+          "id": "about_quote_manifesto",
           "type": "quote",
           "enabled": true,
           "data": {
             "text": {
-              "it": "Il mare non porta soltanto materiali: porta forme, ricordi e possibilità.",
-              "en": "The sea does not bring only materials: it brings forms, memories and possibilities."
+              "it": "Non cerco una forma nel legno. Cerco di capire quale forma il mare vi abbia già lasciato.",
+              "en": "I do not search for a form in the wood. I try to understand which form the sea has already left within it."
             },
             "cite": {
               "it": "— Emanuele “Willy” Bellemo",
               "en": "— Emanuele “Willy” Bellemo"
             }
+          }
+        },
+        {
+          "id": "about_process_biography",
+          "type": "process",
+          "enabled": true,
+          "data": {
+            "variant": "visual",
+            "kicker": {
+              "it": "Il percorso",
+              "en": "The journey"
+            },
+            "title": {
+              "it": "Una pratica nata lentamente",
+              "en": "A practice formed slowly"
+            },
+            "lead": {
+              "it": "Non una cronologia di premi, ma quattro passaggi che raccontano il modo in cui Willy è arrivato alla sua voce.",
+              "en": "Not a chronology of awards, but four passages that explain how Willy arrived at his own voice."
+            },
+            "steps": [
+              {
+                "num": "01",
+                "image": "/uploads/1784542480674-361056721f6e.jpeg",
+                "title": {
+                  "it": "Raccogliere",
+                  "en": "Collect"
+                },
+                "desc": {
+                  "it": "Camminare lungo la riva, scegliere frammenti segnati dall’acqua e riconoscere ciò che merita una seconda vita.",
+                  "en": "Walking the shoreline, choosing fragments marked by water and recognising what deserves a second life."
+                }
+              },
+              {
+                "num": "02",
+                "title": {
+                  "it": "Osservare",
+                  "en": "Observe"
+                },
+                "desc": {
+                  "it": "Lasciare riposare il materiale finché una direzione, un profilo o un carattere comincia a rendersi visibile.",
+                  "en": "Letting the material rest until a direction, profile or character begins to become visible."
+                }
+              },
+              {
+                "num": "03",
+                "title": {
+                  "it": "Intervenire",
+                  "en": "Intervene"
+                },
+                "desc": {
+                  "it": "Tagliare, unire, modellare e colorare senza cancellare le tracce lasciate dal mare e dal tempo.",
+                  "en": "Cutting, joining, shaping and colouring without erasing the traces left by sea and time."
+                }
+              },
+              {
+                "num": "04",
+                "title": {
+                  "it": "Restituire",
+                  "en": "Return"
+                },
+                "desc": {
+                  "it": "Trasformare il reperto in un’opera capace di portare la laguna dentro una casa, una collezione o uno spazio espositivo.",
+                  "en": "Transforming the find into a work able to carry the lagoon into a home, collection or exhibition space."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "about_atelier_report_intro",
+          "type": "imageBanner",
+          "enabled": true,
+          "data": {
+            "image": "/uploads/1784542480674-361056721f6e.jpeg",
+            "height": 680,
+            "overlay": true,
+            "kicker": {
+              "it": "Dentro la bottega",
+              "en": "Inside the workshop"
+            },
+            "title": {
+              "it": "L’atelier sul canale",
+              "en": "The atelier on the canal"
+            },
+            "caption": {
+              "it": "Un luogo di lavoro, raccolta e incontro. Qui ogni frammento aspetta il proprio tempo.",
+              "en": "A place for work, gathering and encounters. Here every fragment waits for its own time."
+            }
+          }
+        },
+        {
+          "id": "about_atelier_workbench",
+          "type": "imageText",
+          "enabled": true,
+          "data": {
+            "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
+            "imageSide": "left",
+            "kicker": {
+              "it": "01 · Il banco",
+              "en": "01 · The workbench"
+            },
+            "title": {
+              "it": "Dove la materia prende voce",
+              "en": "Where material finds its voice"
+            },
+            "body": {
+              "it": "Sul banco convivono strumenti semplici, pigmenti, corde, legni levigati dal sale e piccoli reperti raccolti lungo la laguna. Nulla è decorativo: ogni oggetto può diventare un punto di partenza. Willy lavora per aggiunte minime, lasciando che nodi, ferite e curve restino leggibili.",
+              "en": "Simple tools, pigments, rope, salt-smoothed wood and small finds from the lagoon share the workbench. Nothing is merely decorative: every object may become a beginning. Willy works through minimal additions, allowing knots, scars and curves to remain visible."
+            },
+            "cta": {
+              "it": "",
+              "en": ""
+            },
+            "ctaLink": ""
+          }
+        },
+        {
+          "id": "about_atelier_materials",
+          "type": "materials",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "02 · L’archivio della materia",
+              "en": "02 · The material archive"
+            },
+            "title": {
+              "it": "Segni raccolti, non materiali perfetti",
+              "en": "Collected traces, not perfect materials"
+            },
+            "lead": {
+              "it": "La bottega conserva ciò che il mare, i cantieri e il tempo hanno già trasformato.",
+              "en": "The workshop keeps what sea, shipyards and time have already transformed."
+            },
+            "cards": [
+              {
+                "icon": "L",
+                "title": {
+                  "it": "Legno di laguna",
+                  "en": "Lagoon wood"
+                },
+                "desc": {
+                  "it": "Tronchi, tavole e frammenti scelti per il loro profilo, le abrasioni e la memoria dell’acqua.",
+                  "en": "Logs, boards and fragments chosen for their profiles, abrasions and memory of water."
+                }
+              },
+              {
+                "icon": "C",
+                "title": {
+                  "it": "Corde e metalli",
+                  "en": "Rope and metals"
+                },
+                "desc": {
+                  "it": "Resti nautici, fili, chiodi e ferri ossidati diventano struttura, giunto o dettaglio narrativo.",
+                  "en": "Nautical remnants, wire, nails and oxidised iron become structure, joints or narrative detail."
+                }
+              },
+              {
+                "icon": "P",
+                "title": {
+                  "it": "Pigmenti e superfici",
+                  "en": "Pigments and surfaces"
+                },
+                "desc": {
+                  "it": "Colori opachi e velature misurate sottolineano la forma senza cancellare la vita precedente del materiale.",
+                  "en": "Matte colours and restrained glazes emphasise form without erasing the material’s previous life."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "about_atelier_light",
+          "type": "imageText",
+          "enabled": true,
+          "data": {
+            "image": "/uploads/1784542480674-361056721f6e.jpeg",
+            "imageSide": "right",
+            "kicker": {
+              "it": "03 · Luce e attesa",
+              "en": "03 · Light and waiting"
+            },
+            "title": {
+              "it": "Il lavoro continua anche quando tutto è fermo",
+              "en": "The work continues even when everything is still"
+            },
+            "body": {
+              "it": "Molti frammenti restano per settimane o mesi nello studio. Cambiano posizione, incontrano altri materiali, vengono osservati nella luce che entra dal canale. L’opera nasce spesso in questo intervallo silenzioso, prima ancora del primo taglio.",
+              "en": "Many fragments remain in the studio for weeks or months. They change position, meet other materials and are observed in the light coming from the canal. The work often begins in this quiet interval, before the first cut."
+            },
+            "cta": {
+              "it": "Visita l’atelier",
+              "en": "Visit the atelier"
+            },
+            "ctaLink": "contact.html"
+          }
+        },
+        {
+          "id": "about_atelier_visit_strip",
+          "type": "cta",
+          "enabled": true,
+          "data": {
+            "dark": true,
+            "kicker": {
+              "it": "La bottega è visitabile",
+              "en": "The workshop can be visited"
+            },
+            "title": {
+              "it": "Vedere le opere nel luogo in cui nascono",
+              "en": "See the works where they are made"
+            },
+            "lead": {
+              "it": "A Chioggia, su appuntamento. Una visita raccolta tra opere finite, materiali in attesa e il canale appena fuori dalla porta.",
+              "en": "In Chioggia, by appointment. An intimate visit among finished works, waiting materials and the canal just outside the door."
+            },
+            "cta": {
+              "it": "Richiedi un appuntamento",
+              "en": "Request an appointment"
+            },
+            "ctaLink": "contact.html"
+          }
+        },
+        {
+          "id": "about_cta_gallery",
+          "type": "cta",
+          "enabled": true,
+          "data": {
+            "dark": true,
+            "kicker": {
+              "it": "Continua il percorso",
+              "en": "Continue the journey"
+            },
+            "title": {
+              "it": "Le opere raccontano il resto",
+              "en": "The works tell the rest"
+            },
+            "lead": {
+              "it": "Ogni scultura conserva la geografia del luogo in cui è nata: acqua, vento, sale e immaginazione.",
+              "en": "Every sculpture preserves the geography of where it was born: water, wind, salt and imagination."
+            },
+            "cta": {
+              "it": "Entra nella collezione",
+              "en": "Enter the collection"
+            },
+            "ctaLink": "gallery.html"
           }
         }
       ]

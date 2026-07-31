@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initI18n();
   renderCurrentPage();
   renderGalleryGrids();
+  renderArtworkPage();
   initHeader();
   initNav();
   initFilters();
@@ -150,10 +151,21 @@ function initLightbox() {
   if (!lightbox) return;
 
   const closeBtn = lightbox.querySelector(".lightbox-close");
+  const prevBtn = lightbox.querySelector(".lightbox-prev");
+  const nextBtn = lightbox.querySelector(".lightbox-next");
+
+  const navigate = (direction) => {
+    const works = (window.GS_SCULPTURES || []).filter((item) => item && item.id);
+    if (!works.length || !currentSculptureId) return;
+    const currentIndex = works.findIndex((item) => item.id === currentSculptureId);
+    const safeIndex = currentIndex < 0 ? 0 : currentIndex;
+    const nextIndex = (safeIndex + direction + works.length) % works.length;
+    openSculpture(works[nextIndex].id);
+  };
 
   document.body.addEventListener("click", (e) => {
     const card = e.target.closest("[data-sculpture]");
-    if (card) openSculpture(card.dataset.sculpture);
+    if (card && !e.target.closest("a[href*='artwork.html']")) openSculpture(card.dataset.sculpture);
   });
 
   window.refreshLightboxLang = function () {
@@ -171,11 +183,16 @@ function initLightbox() {
   };
 
   closeBtn?.addEventListener("click", close);
+  prevBtn?.addEventListener("click", () => navigate(-1));
+  nextBtn?.addEventListener("click", () => navigate(1));
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) close();
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lightbox.classList.contains("open")) close();
+    if (!lightbox.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") navigate(-1);
+    if (e.key === "ArrowRight") navigate(1);
   });
 }
 
@@ -220,3 +237,90 @@ function initReveal() {
 
   els.forEach((el) => io.observe(el));
 }
+
+
+function renderArtworkPage() {
+  const root = document.getElementById("artwork-root");
+  if (!root) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const works = (window.GS_SCULPTURES || []).filter((item) => item && item.id);
+  const work = works.find((item) => item.id === id) || works[0];
+  const lang = typeof getLang === "function" ? getLang() : "it";
+
+  if (!work) {
+    root.innerHTML = `<section class="artwork-empty"><p>${lang === "en" ? "No work available." : "Nessuna opera disponibile."}</p><a class="btn btn-outline" href="gallery.html">${lang === "en" ? "Back to works" : "Torna alle opere"}</a></section>`;
+    return;
+  }
+
+  const currentIndex = works.findIndex((item) => item.id === work.id);
+  const prev = works[(currentIndex - 1 + works.length) % works.length];
+  const next = works[(currentIndex + 1) % works.length];
+  const materialKey = work.materialKey || (work.category === "holz" ? "mat.wood" : work.category === "bronze" ? "mat.bronze" : work.category === "ton" ? "mat.terra" : work.category === "marmor" ? "mat.marble" : "mat.stone");
+  const material = typeof t === "function" ? t(materialKey, lang) : materialKey;
+  const description = (work.desc && (work.desc[lang] || work.desc.it)) || "";
+  const story = (work.story && (work.story[lang] || work.story.it)) || description;
+  const images = [work.image, ...(Array.isArray(work.images) ? work.images : [])].filter(Boolean);
+  const hero = images[0] || "";
+  const detailImages = images.slice(1, 4);
+  const related = works.filter((item) => item.id !== work.id && (item.category === work.category || item.featured)).slice(0, 3);
+  const heroMedia = hero
+    ? `<img src="${escapeArtwork(hero)}" alt="${escapeArtwork(work.title || "")}" />`
+    : `<div class="artwork-placeholder">${sculptureSvg(work.id)}</div>`;
+
+  document.title = `${work.title || (lang === "en" ? "Work" : "Opera")} — Emanuele “Willy” Bellemo`;
+
+  root.innerHTML = `
+    <article class="artwork-detail">
+      <section class="artwork-hero">
+        <div class="artwork-hero-media">${heroMedia}</div>
+        <div class="artwork-hero-caption">
+          <p class="section-kicker">${lang === "en" ? "Selected work" : "Opera selezionata"}</p>
+          <h1>${escapeArtwork(work.title || "")}</h1>
+          <p class="artwork-hero-meta">${escapeArtwork([material, work.year].filter(Boolean).join(" · "))}</p>
+          <a href="#artwork-story" class="artwork-scroll-link">${lang === "en" ? "Discover the work" : "Scopri l’opera"} ↓</a>
+        </div>
+      </section>
+
+      <section class="artwork-facts" id="artwork-story">
+        <div class="artwork-facts-title">
+          <p class="section-kicker">${lang === "en" ? "The work" : "L’opera"}</p>
+          <h2>${escapeArtwork(work.title || "")}</h2>
+        </div>
+        <dl class="artwork-facts-list">
+          <div><dt>${lang === "en" ? "Material" : "Materiale"}</dt><dd>${escapeArtwork(material)}</dd></div>
+          <div><dt>${lang === "en" ? "Dimensions" : "Dimensioni"}</dt><dd>${escapeArtwork(work.size || "—")}</dd></div>
+          <div><dt>${lang === "en" ? "Year" : "Anno"}</dt><dd>${escapeArtwork(work.year || "—")}</dd></div>
+          ${work.inventory ? `<div><dt>${lang === "en" ? "Inventory" : "Inventario"}</dt><dd>${escapeArtwork(work.inventory)}</dd></div>` : ""}
+        </dl>
+        <div class="artwork-story-copy">
+          <p>${escapeArtwork(story)}</p>
+        </div>
+      </section>
+
+      <section class="artwork-details-gallery ${detailImages.length ? "" : "artwork-details-gallery--empty"}">
+        ${detailImages.length
+          ? detailImages.map((src, i) => `<figure class="artwork-detail-image artwork-detail-image--${i + 1}"><img src="${escapeArtwork(src)}" alt="${escapeArtwork((work.title || "") + " — dettaglio " + (i + 1))}" loading="lazy" /></figure>`).join("")
+          : `<div class="artwork-detail-note"><span>${lang === "en" ? "Detail photographs can be added later in the admin." : "Le fotografie di dettaglio potranno essere aggiunte in seguito nel pannello admin."}</span></div>`}
+      </section>
+
+      <nav class="artwork-pagination" aria-label="${lang === "en" ? "Works navigation" : "Navigazione opere"}">
+        <a href="artwork.html?id=${encodeURIComponent(prev.id)}"><span>← ${lang === "en" ? "Previous" : "Precedente"}</span><strong>${escapeArtwork(prev.title || "")}</strong></a>
+        <a class="artwork-pagination-all" href="gallery.html">${lang === "en" ? "All works" : "Tutte le opere"}</a>
+        <a href="artwork.html?id=${encodeURIComponent(next.id)}"><span>${lang === "en" ? "Next" : "Successiva"} →</span><strong>${escapeArtwork(next.title || "")}</strong></a>
+      </nav>
+
+      ${related.length ? `<section class="artwork-related"><div class="artwork-related-heading"><p class="section-kicker">${lang === "en" ? "Continue exploring" : "Continua la visita"}</p><h2>${lang === "en" ? "Related works" : "Opere affini"}</h2></div><div class="artwork-related-grid">${related.map((item) => `<a href="artwork.html?id=${encodeURIComponent(item.id)}" class="artwork-related-card"><div class="artwork-related-media">${item.image ? `<img src="${escapeArtwork(item.image)}" alt="${escapeArtwork(item.title || "")}" loading="lazy" />` : sculptureSvg(item.id)}</div><h3>${escapeArtwork(item.title || "")}</h3><p>${escapeArtwork([item.year, item.size].filter(Boolean).join(" · "))}</p></a>`).join("")}</div></section>` : ""}
+    </article>`;
+}
+
+function escapeArtwork(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;");
+}
+
+window.addEventListener("langchange", renderArtworkPage);

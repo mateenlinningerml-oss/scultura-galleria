@@ -617,7 +617,33 @@ function renderBlockEditorFields(block) {
     biInput("Titel", "title");
     biInput("Lead", "lead", true);
     (d.cards || []).forEach((card, i) => {
-      textInput(`Karte ${i + 1} Icon`, () => card.icon || "", (v) => { card.icon = v; });
+      textInput(`Karte ${i + 1} Nummer`, () => card.icon || "", (v) => { card.icon = v; });
+      textInput(`Karte ${i + 1} Bild-URL`, () => card.image || "", (v) => { card.image = v; });
+      const imageWrap = document.createElement("div");
+      imageWrap.className = "field";
+      imageWrap.innerHTML = `
+        <label>Karte ${i + 1} Bild hochladen</label>
+        ${card.image ? `<img src="/${card.image.replace(/^\//, "")}" alt="" style="display:block;width:100%;max-height:150px;object-fit:cover;margin:.4rem 0;border-radius:4px;" />` : ""}
+        <input type="file" accept="image/*" />
+        ${card.image ? `<button type="button" class="btn-small" data-remove-material-image>Bild entfernen</button>` : ""}
+      `;
+      const upload = imageWrap.querySelector('input[type="file"]');
+      upload.addEventListener("change", async () => {
+        if (!upload.files?.[0]) return;
+        try {
+          card.image = await uploadImage(upload.files[0]);
+          markDirty();
+          renderBlockEditor(block);
+        } catch (err) {
+          alert(err.message || "Upload fehlgeschlagen");
+        }
+      });
+      imageWrap.querySelector("[data-remove-material-image]")?.addEventListener("click", () => {
+        card.image = "";
+        markDirty();
+        renderBlockEditor(block);
+      });
+      fields.appendChild(imageWrap);
       textInput(
         `Karte ${i + 1} Titel (${lang.toUpperCase()})`,
         () => biField(card.title, lang),

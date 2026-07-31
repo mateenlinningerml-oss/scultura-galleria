@@ -134,9 +134,9 @@
 
       case "gallery":
         return `
-        <section class="section gallery-section" data-block-id="${esc(block.id)}" data-block-type="gallery">
-          <div class="container">
-            <div class="gallery-header">
+        <section class="section gallery-section gallery-section--editorial" data-block-id="${esc(block.id)}" data-block-type="gallery">
+          <div class="container gallery-editorial-shell">
+            <div class="gallery-header gallery-header--editorial">
               <div>
                 ${L(d.kicker) ? `<p class="section-kicker">${esc(L(d.kicker))}</p>` : ""}
                 <h2 class="section-title">${esc(L(d.title))}</h2>
@@ -155,7 +155,7 @@
                   : ""
               }
             </div>
-            <div class="gallery-grid" data-gallery="all"></div>
+            <div class="gallery-grid gallery-grid--editorial" data-gallery="all"></div>
           </div>
         </section>`;
 
@@ -172,15 +172,18 @@
             </header>
             <div class="process-grid">
               ${steps
-                .map(
-                  (s) => `
-                <article class="process-card">
-                  ${visual ? `<div class="process-media">${s.image ? `<img src="${esc(s.image)}" alt="${esc(L(s.imageAlt) || L(s.title))}" loading="lazy" />` : `<div class="process-media-placeholder"><span>${esc(L(s.title))}</span></div>`}</div>` : ""}
-                  <div class="process-num">${esc(s.num || "")}</div>
-                  <h3>${esc(L(s.title))}</h3>
-                  <p>${esc(L(s.desc))}</p>
-                </article>`
-                )
+                .map((s, index) => {
+                  const chapterClass = index === steps.length - 1 ? " process-card--final" : index % 2 ? " process-card--reverse" : "";
+                  return `
+                <article class="process-card${chapterClass}" data-process-step="${index + 1}">
+                  ${visual ? `<div class="process-media">${s.image ? `<img src="${esc(s.image)}" alt="${esc(L(s.imageAlt) || L(s.title))}" loading="lazy" />` : `<div class="process-media-placeholder"><span>${esc(L(s.title))}</span><small>${esc(typeof t === "function" ? t("admin.imagePlaceholder") : "Image can be added in the admin")}</small></div>`}</div>` : ""}
+                  <div class="process-copy">
+                    <div class="process-num">${esc(s.num || "")}</div>
+                    <h3>${esc(L(s.title))}</h3>
+                    <p>${esc(L(s.desc))}</p>
+                  </div>
+                </article>`;
+                })
                 .join("")}
             </div>
           </div>
@@ -229,6 +232,10 @@
                   </div>
                 </li>
               </ul>
+              ${(d.ctaLink && L(d.cta)) || (d.secondaryCtaLink && L(d.secondaryCta)) ? `<div class="contact-preview-actions">
+                ${d.ctaLink && L(d.cta) ? `<a href="${esc(d.ctaLink)}" class="btn btn-primary">${esc(L(d.cta))}</a>` : ""}
+                ${d.secondaryCtaLink && L(d.secondaryCta) ? `<a href="${esc(d.secondaryCtaLink)}" class="contact-text-link">${esc(L(d.secondaryCta))}<span aria-hidden="true">↗</span></a>` : ""}
+              </div>` : ""}
             </div>
             ${
               d.showForm !== false
@@ -330,22 +337,29 @@
       case "materials": {
         const cards = Array.isArray(d.cards) ? d.cards : [];
         return `
-        <section class="section gallery-section" data-block-id="${esc(block.id)}" data-block-type="materials">
-          <div class="container">
-            <div class="text-center" style="max-width:440px;margin:0 auto;">
-              ${L(d.kicker) ? `<p class="section-kicker">${esc(L(d.kicker))}</p>` : ""}
-              <h2 class="section-title">${esc(L(d.title))}</h2>
-              ${L(d.lead) ? `<p class="section-lead" style="margin-inline:auto;">${esc(L(d.lead))}</p>` : ""}
-            </div>
-            <div class="materials-grid">
+        <section class="section materials-section" data-block-id="${esc(block.id)}" data-block-type="materials">
+          <div class="container materials-shell">
+            <header class="materials-heading">
+              <div>
+                ${L(d.kicker) ? `<p class="section-kicker">${esc(L(d.kicker))}</p>` : ""}
+                <h2 class="section-title">${esc(L(d.title))}</h2>
+              </div>
+              ${L(d.lead) ? `<p class="section-lead">${esc(L(d.lead))}</p>` : ""}
+            </header>
+            <div class="materials-grid materials-grid--editorial">
               ${cards
                 .map(
-                  (c) => `
-                <div class="material-card">
-                  <div class="icon-tile">${esc(c.icon || "•")}</div>
-                  <h3>${esc(L(c.title))}</h3>
-                  <p>${esc(L(c.desc))}</p>
-                </div>`
+                  (c, index) => `
+                <article class="material-card material-card--editorial">
+                  <div class="material-card-media">
+                    ${c.image ? `<img src="${esc(c.image)}" alt="${esc(L(c.title))}" loading="lazy" />` : `<div class="material-card-placeholder" aria-hidden="true"></div>`}
+                    <span class="material-card-number">${esc(c.icon || String(index + 1).padStart(2, "0"))}</span>
+                  </div>
+                  <div class="material-card-copy">
+                    <h3>${esc(L(c.title))}</h3>
+                    <p>${esc(L(c.desc))}</p>
+                  </div>
+                </article>`
                 )
                 .join("")}
             </div>

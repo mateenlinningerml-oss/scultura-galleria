@@ -181,7 +181,7 @@ function getSculptureById(id) {
   return (window.GS_SCULPTURES || []).find((s) => s.id === id) || null;
 }
 
-function renderSculptureCard(s, lang) {
+function renderSculptureCard(s, lang, index = 0, variant = "default") {
   const materialKey =
     s.materialKey ||
     (s.category === "marmor"
@@ -197,26 +197,35 @@ function renderSculptureCard(s, lang) {
   const metaShort =
     (s.meta && (s.meta[lang] || s.meta.it)) ||
     [s.size, s.year].filter(Boolean).join(" · ");
+  const desc = (s.desc && (s.desc[lang] || s.desc.it)) || "";
 
   const media = s.image
     ? `<img src="${escapeAttr(s.image)}" alt="${escapeAttr(s.title)}" loading="lazy" />`
     : `<div class="sculpture-shape">${placeholderSvg(s.id || s.category)}</div>`;
 
+  const editorial = variant === "editorial";
   return `
-    <article class="card" data-sculpture="${escapeAttr(s.id)}" data-category="${escapeAttr(s.category || "")}">
-      <div class="card-media">
-        <span class="card-badge">${escapeHtml(materialLabel)}</span>
-        ${s.inventory ? `<span class="card-inv">${escapeHtml(s.inventory)}</span>` : ""}
-        ${media}
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">${escapeHtml(s.title || "")}</h3>
-        <p class="card-meta">${escapeHtml(metaShort)}</p>
-        <div class="card-footer">
-          <span class="card-material">${escapeHtml(materialLabel)}</span>
-          <span class="card-year">${escapeHtml(s.year || "")}</span>
+    <article class="card${editorial ? " card--editorial" : ""}" data-sculpture="${escapeAttr(s.id)}" data-category="${escapeAttr(s.category || "")}" data-index="${index}">
+      <a class="card-open" href="artwork.html?id=${encodeURIComponent(s.id)}" aria-label="${escapeAttr((lang === "en" ? "View " : "Apri ") + (s.title || "opera"))}">
+        <div class="card-media">
+          <span class="card-badge">${escapeHtml(materialLabel)}</span>
+          ${s.inventory ? `<span class="card-inv">${escapeHtml(s.inventory)}</span>` : ""}
+          ${media}
+          ${editorial ? `<span class="card-view">${lang === "en" ? "View work" : "Vedi l’opera"}</span>` : ""}
         </div>
-      </div>
+        <div class="card-body">
+          <div class="card-heading-row">
+            <h3 class="card-title">${escapeHtml(s.title || "")}</h3>
+            ${s.year ? `<span class="card-year">${escapeHtml(s.year)}</span>` : ""}
+          </div>
+          <p class="card-meta">${escapeHtml(metaShort)}</p>
+          ${editorial && desc ? `<p class="card-excerpt">${escapeHtml(desc)}</p>` : ""}
+          <div class="card-footer">
+            <span class="card-material">${escapeHtml(materialLabel)}</span>
+            ${s.size ? `<span class="card-size">${escapeHtml(s.size)}</span>` : ""}
+          </div>
+        </div>
+      </a>
     </article>
   `;
 }
@@ -228,11 +237,11 @@ function renderGalleryGrids() {
   const list = featured.length ? featured : all.slice(0, 3);
 
   document.querySelectorAll("[data-gallery='featured']").forEach((el) => {
-    el.innerHTML = list.map((s) => renderSculptureCard(s, lang)).join("");
+    el.innerHTML = list.map((s, index) => renderSculptureCard(s, lang, index, "default")).join("");
   });
 
   document.querySelectorAll("[data-gallery='all']").forEach((el) => {
-    el.innerHTML = all.map((s) => renderSculptureCard(s, lang)).join("");
+    el.innerHTML = all.map((s, index) => renderSculptureCard(s, lang, index, "editorial")).join("");
   });
 }
 

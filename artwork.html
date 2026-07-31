@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visita &amp; Contatti — Emanuele “Willy” Bellemo</title>
-  <meta name="description" content="Segreteria del museo: visite, prestiti, opere e stampa." />
+  <title>Opera — Emanuele “Willy” Bellemo</title>
+  <meta name="description" content="Dettagli dell’opera di Emanuele “Willy” Bellemo." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css?v=1.0.2" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
-<body data-page="contact">
+<body data-page="artwork">
   <div class="marble-edge-top" aria-hidden="true"></div>
   <div class="marble-edge-bottom" aria-hidden="true"></div>
   <div class="marble-edge-accent marble-edge-accent--left" aria-hidden="true"></div>
@@ -40,16 +40,16 @@
         </button>
         <ul class="nav-links">
           <li data-section="hero"><a href="index.html" data-i18n="nav.home">Ingresso</a></li>
-          <li data-section="pageGallery"><a href="gallery.html" data-i18n="nav.gallery">Collezione</a></li>
+          <li data-section="pageGallery"><a href="gallery.html" class="active" data-i18n="nav.gallery">Collezione</a></li>
           <li data-section="pageAbout"><a href="about.html" data-i18n="nav.about">Il Museo</a></li>
-          <li data-section="pageContact"><a href="contact.html" class="active" data-i18n="nav.contact">Visita</a></li>
+          <li data-section="pageContact"><a href="contact.html" data-i18n="nav.contact">Visita</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main id="page-root" data-page-root="contact">
-    <!-- Baukasten -->
+  <main id="artwork-root" class="artwork-page" aria-live="polite">
+    <div class="artwork-loading">Caricamento opera…</div>
   </main>
 
   <footer class="site-footer">
