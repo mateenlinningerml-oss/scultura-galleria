@@ -28,7 +28,8 @@
       "contactNext": true
     },
     "builder": true,
-    "siteVersion": 2
+    "siteVersion": 2,
+    "siteName": "Emanuele “Willy” Bellemo"
   },
   "texts": {
     "it": {
@@ -583,12 +584,12 @@
               "en": "The sea\nbecomes art"
             },
             "tagline": {
-              "it": "Sculture nate dalla materia, dalla laguna e dall’immaginazione",
-              "en": "Sculptures born from matter, the lagoon and imagination"
+              "it": "Sculture nate dal legno che il mare restituisce",
+              "en": "Sculptures born from the wood the sea returns"
             },
             "desc": {
-              "it": "A Chioggia, il legno portato a riva dal mare trova una nuova vita nelle mani di Willy. Ogni opera conserva la memoria dell’acqua e racconta una storia irripetibile.",
-              "en": "In Chioggia, wood carried ashore by the sea finds a new life in Willy’s hands. Every work preserves the memory of water and tells a unique story."
+              "it": "Sono Emanuele “Willy” Bellemo. A Chioggia raccolgo legni modellati dall’acqua, dal sale e dal tempo e li accompagno verso una nuova forma, senza cancellarne la storia.",
+              "en": "I am Emanuele “Willy” Bellemo. In Chioggia I collect wood shaped by water, salt and time, guiding it toward a new form without erasing its story."
             },
             "ctaPrimary": {
               "it": "Scopri le opere",
@@ -613,20 +614,20 @@
               "en": "WILLY"
             },
             "kicker": {
-              "it": "ARTE NATA DAL MARE",
-              "en": "ART BORN FROM THE SEA"
+              "it": "UNA VITA TRA LAGUNA E MARE",
+              "en": "A LIFE BETWEEN LAGOON AND SEA"
             },
             "title": {
               "it": "Emanuele “Willy” Bellemo",
               "en": "Emanuele “Willy” Bellemo"
             },
             "tagline": {
-              "it": "Il mare modella la materia.\nWilly ne rivela la storia.",
-              "en": "The sea shapes the material.\nWilly reveals its story."
+              "it": "Il mare è la mia casa.\nIl legno è il mio linguaggio.",
+              "en": "The sea is my home.\nWood is my language."
             },
             "desc": {
-              "it": "Nel suo atelier sul canale di Chioggia, legni portati a riva, terracotta, sughero, resina e sabbia diventano opere ispirate al mondo marino.",
-              "en": "In his canal-side studio in Chioggia, driftwood, terracotta, cork, resin and sand become works inspired by the maritime world."
+              "it": "Sono nato a Chioggia in una famiglia di pescatori. Il mare mi ha insegnato la pazienza, l’osservazione e il rispetto: gli stessi valori con cui oggi lavoro ogni frammento trovato sulla riva.",
+              "en": "I was born in Chioggia into a family of fishermen. The sea taught me patience, observation and respect—the same values with which I now work every fragment found on the shore."
             },
             "ctaPrimary": {
               "it": "Scopri le opere",
@@ -655,8 +656,8 @@
               "en": "From sea to sculpture"
             },
             "lead": {
-              "it": "Tre momenti raccontano il viaggio della materia: dalla riva, attraverso lo sguardo di Willy, fino alla forma finale.",
-              "en": "Three moments tell the material’s journey: from the shore, through Willy’s eye, to its final form."
+              "it": "Ogni opera nasce da un incontro: il mare porta il legno, la forma suggerisce un’idea e il lavoro paziente la rende visibile.",
+              "en": "Every work begins with an encounter: the sea brings the wood, the form suggests an idea, and patient work makes it visible."
             },
             "steps": [
               {
@@ -666,8 +667,8 @@
                   "en": "The sea"
                 },
                 "desc": {
-                  "it": "Il legno viene modellato dal mare, dal vento e dal tempo. Ogni segno racconta una parte del viaggio.",
-                  "en": "Wood is shaped by sea, wind and time. Every mark tells part of its journey."
+                  "it": "Dopo le mareggiate cammino tra le dune e raccolgo ciò che i grandi fiumi hanno trasportato fino all’Adriatico.",
+                  "en": "After winter storms I walk among the dunes, gathering what the great rivers have carried to the Adriatic."
                 },
                 "image": "uploads/1784542480674-361056721f6e.jpeg",
                 "imageAlt": {
@@ -682,8 +683,8 @@
                   "en": "The material"
                 },
                 "desc": {
-                  "it": "Ogni frammento è unico. Legno, terracotta, sughero, resina e sabbia portano con sé tracce e memorie.",
-                  "en": "Every fragment is unique. Wood, terracotta, cork, resin and sand carry traces and memories."
+                  "it": "Non tutto il legno può essere lavorato. Lo lascio asciugare, lo osservo e aspetto che sia lui a suggerirmi una forma.",
+                  "en": "Not every piece can be worked. I let it dry, observe it and wait for it to suggest a form."
                 },
                 "image": "uploads/1784542480660-3d5595ef5368.jpeg",
                 "imageAlt": {
@@ -698,8 +699,8 @@
                   "en": "The sculpture"
                 },
                 "desc": {
-                  "it": "Nelle mani di Willy, la materia si trasforma in scultura e rivela una storia nuova.",
-                  "en": "In Willy’s hands, the material becomes sculpture and reveals a new story."
+                  "it": "Una scultura può richiedere venti giorni o sei mesi. Il risultato nasce da concentrazione, tempo e rispetto.",
+                  "en": "A sculpture may take twenty days or six months. The result grows from concentration, time and respect."
                 },
                 "image": "uploads/1784542480660-3d5595ef5368.jpeg",
                 "imageAlt": {
@@ -751,8 +752,8 @@
               "en": "A workshop on the canal"
             },
             "body": {
-              "it": "Nel cuore di Chioggia, Willy lavora a pochi passi dall’acqua. Qui i legni raccolti sulla riva incontrano terracotta, sughero, resina e sabbia, trasformandosi lentamente in presenze marine uniche. L’atelier è visitabile su appuntamento.",
-              "en": "In the heart of Chioggia, Willy works only a few steps from the water. Here, wood gathered from the shore meets terracotta, cork, resin and sand, slowly becoming unique marine forms. Studio visits are available by appointment."
+              "it": "Il mio laboratorio si affaccia sull’acqua nella zona di San Domenico, a Chioggia. Dalla porta vedo barche, gabbiani, rondini e il cielo che cambia. La mattina, dopo aver salutato le fotografie dei miei genitori, inizio a lavorare con la musica e i miei cani accanto. Le visite sono possibili su appuntamento.",
+              "en": "My workshop overlooks the water in the San Domenico area of Chioggia. From the door I see boats, seagulls, swallows and the changing sky. In the morning, after greeting the photographs of my parents, I begin working with music and my dogs beside me. Visits are available by appointment."
             },
             "cta": {
               "it": "Scopri l’atelier",
@@ -844,8 +845,8 @@
           "enabled": true,
           "data": {
             "text": {
-              "it": "Ogni pezzo di legno ha già attraversato il mare. Il mio lavoro comincia ascoltando la forma che porta con sé.",
-              "en": "Every piece of wood has already crossed the sea. My work begins by listening to the form it carries."
+              "it": "Non scelgo il legno. È il mare che sceglie per me.",
+              "en": "I do not choose the wood. The sea chooses for me."
             },
             "cite": {
               "it": "— Emanuele “Willy” Bellemo",
@@ -863,12 +864,12 @@
               "en": "The materials"
             },
             "title": {
-              "it": "Tracce raccolte dalla laguna",
-              "en": "Traces gathered from the lagoon"
+              "it": "Ciò che il mare restituisce",
+              "en": "What the sea returns"
             },
             "lead": {
-              "it": "Willy accosta elementi segnati dall’acqua e dal tempo. Ogni superficie conserva un’impronta, ogni materia suggerisce una forma.",
-              "en": "Willy brings together elements marked by water and time. Every surface preserves a trace; every material suggests a form."
+              "it": "Ogni frammento porta i segni del proprio viaggio. Prima di lavorarlo devo capire da dove viene, quanto tempo è rimasto in acqua e quale forma conserva.",
+              "en": "Every fragment carries the marks of its journey. Before working it, I must understand where it came from, how long it remained in water and what form it preserves."
             },
             "cards": [
               {
@@ -879,8 +880,8 @@
                   "en": "Driftwood"
                 },
                 "desc": {
-                  "it": "Rami e frammenti levigati dal mare, scelti per le venature, le ferite e le forme che custodiscono.",
-                  "en": "Branches and fragments polished by the sea, chosen for the grain, scars and forms they preserve."
+                  "it": "Tronchi, rami e radici trasportati dai fiumi e modellati dal mare. Non tutti resistono: scegliere il pezzo giusto è già parte del lavoro.",
+                  "en": "Trunks, branches and roots carried by rivers and shaped by the sea. Not all survive: choosing the right piece is already part of the work."
                 }
               },
               {
@@ -891,8 +892,8 @@
                   "en": "Earth and sand"
                 },
                 "desc": {
-                  "it": "Terracotta e sabbia della laguna aggiungono calore, peso e una memoria profondamente veneziana.",
-                  "en": "Terracotta and lagoon sand add warmth, weight and a distinctly Venetian memory."
+                  "it": "La terra assorbita dalle radici resta impressa nel legno e può riemergere nella finitura con colori profondi e inattesi.",
+                  "en": "Earth absorbed by roots remains embedded in the wood and can reappear during finishing in deep, unexpected colours."
                 }
               },
               {
@@ -903,8 +904,8 @@
                   "en": "Cork"
                 },
                 "desc": {
-                  "it": "Leggero e irregolare, il sughero diventa pelle, galleggiamento e dettaglio organico.",
-                  "en": "Light and irregular, cork becomes skin, buoyancy and organic detail."
+                  "it": "Sughero e altri elementi leggeri entrano nelle opere quando la forma richiede movimento, galleggiamento o una superficie organica.",
+                  "en": "Cork and other light elements enter the work when the form calls for movement, buoyancy or an organic surface."
                 }
               },
               {
@@ -915,8 +916,8 @@
                   "en": "Resin and pigments"
                 },
                 "desc": {
-                  "it": "Trasparenze e colori fissano riflessi d’acqua, profondità marine e piccoli bagliori della laguna.",
-                  "en": "Transparency and colour capture water reflections, marine depth and small flashes of lagoon light."
+                  "it": "Resina, sabbia e pigmenti completano il legno senza nasconderlo, richiamando trasparenze, fondali e riflessi marini.",
+                  "en": "Resin, sand and pigments complete the wood without hiding it, evoking transparency, seabeds and marine reflections."
                 }
               }
             ]
@@ -936,8 +937,8 @@
               "en": "Meet Willy in Chioggia"
             },
             "lead": {
-              "it": "L’atelier si trova nel cuore della città, a pochi passi dalla laguna. Le visite sono possibili su appuntamento per conoscere le opere, i materiali e il luogo in cui prendono forma.",
-              "en": "The studio is in the heart of the city, only a few steps from the lagoon. Visits are available by appointment to discover the works, materials and the place where they take shape."
+              "it": "Il laboratorio è un luogo aperto: amici, curiosi e visitatori possono vedere le opere nel luogo in cui nascono. È preferibile concordare la visita in anticipo.",
+              "en": "The workshop is an open place: friends, curious passers-by and visitors can see the works where they are made. Arranging the visit in advance is recommended."
             },
             "showForm": false,
             "cta": {
@@ -973,16 +974,16 @@
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "Catalogo",
-              "en": "Catalogue"
+              "it": "Le opere",
+              "en": "The works"
             },
             "title": {
-              "it": "La Collezione",
-              "en": "The Collection"
+              "it": "Storie emerse dal legno",
+              "en": "Stories emerging from wood"
             },
             "lead": {
-              "it": "Tutte le opere inventariate — filtrate per materiale, come nelle sale del museo.",
-              "en": "All inventoried works — filter by material, as in the museum rooms."
+              "it": "Ogni scultura nasce da un frammento trovato sulla riva e continua il proprio viaggio nella casa di chi la sceglie.",
+              "en": "Every sculpture begins with a fragment found on the shore and continues its journey in the home of the person who chooses it."
             }
           }
         },
@@ -992,16 +993,16 @@
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "Sale",
-              "en": "Rooms"
+              "it": "La collezione",
+              "en": "The collection"
             },
             "title": {
-              "it": "Opere esposte",
-              "en": "Works on display"
+              "it": "Opere nate dal mare",
+              "en": "Works born from the sea"
             },
             "lead": {
-              "it": "Selezionate un’opera per leggere inventariazione, materia e nota di sala.",
-              "en": "Select a work to read inventory, material and gallery note."
+              "it": "Forme marine, radici e memorie. Seleziona un’opera per scoprirne materiali, tempi e storia.",
+              "en": "Marine forms, roots and memories. Select a work to discover its materials, time and story."
             },
             "showFilters": true
           }
@@ -1025,10 +1026,10 @@
               "en": "The man behind the material"
             },
             "lead": {
-              "it": "Una vita a Chioggia, lo sguardo rivolto alla laguna e una ricerca che comincia sempre da ciò che il mare restituisce.",
-              "en": "A life in Chioggia, a gaze turned toward the lagoon, and a practice that always begins with what the sea returns."
+              "it": "Mi chiamo Emanuele Bellemo, ma tutti mi conoscono come Willy. Sono nato a Chioggia, in una famiglia di pescatori, e il mare accompagna la mia vita da sempre.",
+              "en": "My name is Emanuele Bellemo, though everyone knows me as Willy. I was born in Chioggia into a family of fishermen, and the sea has accompanied my life from the beginning."
             },
-            "image": "/uploads/1784542480674-361056721f6e.jpeg"
+            "image": "/uploads/artist-hero-background-test.png"
           }
         },
         {
@@ -1041,8 +1042,8 @@
               "en": "Chioggia"
             },
             "visualTitle": {
-              "it": "La laguna come origine",
-              "en": "The lagoon as origin"
+              "it": "Casa è Chioggia",
+              "en": "Chioggia is home"
             },
             "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
             "kicker": {
@@ -1050,16 +1051,16 @@
               "en": "The artist"
             },
             "title": {
-              "it": "Ascoltare prima di scolpire",
-              "en": "Listen before sculpting"
+              "it": "Una storia nata nel mare",
+              "en": "A story born at sea"
             },
             "p1": {
-              "it": "Emanuele Bellemo, per tutti Willy, vive e lavora a Chioggia. Il suo studio nasce tra acqua, barche, cantieri e spiagge: un paesaggio quotidiano che è diventato linguaggio artistico.",
-              "en": "Emanuele Bellemo, known to everyone as Willy, lives and works in Chioggia. His studio was shaped by water, boats, shipyards and beaches—a daily landscape that became his artistic language."
+              "it": "Mio nonno e mio padre erano pescatori. Da bambino, appena finiva la scuola, uscivo in mare sul peschereccio di mio padre. Lì ho imparato che il mare può essere meraviglioso e pericoloso, generoso e severo: chiede sempre rispetto.",
+              "en": "My grandfather and father were fishermen. As a child, when school ended, I went to sea on my father’s fishing boat. There I learned that the sea can be beautiful and dangerous, generous and severe: it always demands respect."
             },
             "p2": {
-              "it": "Non forza la materia in una forma prestabilita. Osserva nodi, ferite, curve e tracce lasciate dal tempo, poi interviene con misura per far emergere pesci, imbarcazioni e presenze della laguna.",
-              "en": "He does not force material into a predetermined form. He studies knots, scars, curves and traces left by time, then intervenes with restraint to reveal fish, boats and presences of the lagoon."
+              "it": "Ho iniziato a creare vere opere circa sette anni fa. Sono autodidatta: ho imparato osservando, sperimentando e studiando. A un certo punto ho capito che il legno poteva diventare il linguaggio con cui trasferire ciò che sogno e penso.",
+              "en": "I began creating true works of art about seven years ago. I am self-taught: I learned by observing, experimenting and studying. At a certain point I understood that wood could become the language through which I express what I dream and think."
             },
             "cta": {
               "it": "Scopri le opere",
@@ -1075,8 +1076,8 @@
           "enabled": true,
           "data": {
             "text": {
-              "it": "Non cerco una forma nel legno. Cerco di capire quale forma il mare vi abbia già lasciato.",
-              "en": "I do not search for a form in the wood. I try to understand which form the sea has already left within it."
+              "it": "Per me l’arte è saper trasferire ciò che una persona sogna e pensa. Tutto nasce dalla passione.",
+              "en": "For me, art is knowing how to convey what a person dreams and thinks. Everything begins with passion."
             },
             "cite": {
               "it": "— Emanuele “Willy” Bellemo",
@@ -1091,16 +1092,16 @@
           "data": {
             "variant": "visual",
             "kicker": {
-              "it": "Il percorso",
-              "en": "The journey"
+              "it": "Come nasce un’opera",
+              "en": "How a work is born"
             },
             "title": {
-              "it": "Una pratica nata lentamente",
-              "en": "A practice formed slowly"
+              "it": "Tempo, concentrazione e rispetto",
+              "en": "Time, concentration and respect"
             },
             "lead": {
-              "it": "Non una cronologia di premi, ma quattro passaggi che raccontano il modo in cui Willy è arrivato alla sua voce.",
-              "en": "Not a chronology of awards, but four passages that explain how Willy arrived at his own voice."
+              "it": "Il legno detta il ritmo. A volte l’idea arriva subito; altre volte bisogna aspettare settimane prima di vedere la forma che custodisce.",
+              "en": "The wood sets the pace. Sometimes the idea comes immediately; at other times one must wait weeks before seeing the form it holds."
             },
             "steps": [
               {
@@ -1111,8 +1112,8 @@
                   "en": "Collect"
                 },
                 "desc": {
-                  "it": "Camminare lungo la riva, scegliere frammenti segnati dall’acqua e riconoscere ciò che merita una seconda vita.",
-                  "en": "Walking the shoreline, choosing fragments marked by water and recognising what deserves a second life."
+                  "it": "Cammino lungo le spiagge, soprattutto a Pellestrina, e raccolgo legni portati a riva dalle mareggiate.",
+                  "en": "I walk the beaches, especially at Pellestrina, collecting wood brought ashore by winter storms."
                 }
               },
               {
@@ -1122,8 +1123,8 @@
                   "en": "Observe"
                 },
                 "desc": {
-                  "it": "Lasciare riposare il materiale finché una direzione, un profilo o un carattere comincia a rendersi visibile.",
-                  "en": "Letting the material rest until a direction, profile or character begins to become visible."
+                  "it": "Il pezzo deve asciugare. Lo osservo finché una sirena, una balena, una foca o un polpo cominciano a emergere.",
+                  "en": "The piece must dry. I observe it until a mermaid, whale, seal or octopus begins to emerge."
                 }
               },
               {
@@ -1133,19 +1134,19 @@
                   "en": "Intervene"
                 },
                 "desc": {
-                  "it": "Tagliare, unire, modellare e colorare senza cancellare le tracce lasciate dal mare e dal tempo.",
-                  "en": "Cutting, joining, shaping and colouring without erasing the traces left by sea and time."
+                  "it": "Tolgo il materiale con motosega e utensili, poi lavoro con martello e scalpello. La forma può richiedere mesi di concentrazione.",
+                  "en": "I remove material with chainsaws and tools, then work with hammer and chisel. The form may require months of concentration."
                 }
               },
               {
                 "num": "04",
                 "title": {
-                  "it": "Restituire",
-                  "en": "Return"
+                  "it": "Concludere",
+                  "en": "Complete"
                 },
                 "desc": {
-                  "it": "Trasformare il reperto in un’opera capace di portare la laguna dentro una casa, una collezione o uno spazio espositivo.",
-                  "en": "Transforming the find into a work able to carry the lagoon into a home, collection or exhibition space."
+                  "it": "Capisco che l’opera è finita quando la forma raggiunge il proprio equilibrio. La soddisfazione è sempre diversa, ogni volta.",
+                  "en": "I know the work is finished when the form finds its balance. The satisfaction is different every time."
                 }
               }
             ]
@@ -1168,8 +1169,8 @@
               "en": "The atelier on the canal"
             },
             "caption": {
-              "it": "Un luogo di lavoro, raccolta e incontro. Qui ogni frammento aspetta il proprio tempo.",
-              "en": "A place for work, gathering and encounters. Here every fragment waits for its own time."
+              "it": "Un piccolo laboratorio costruito sull’acqua, dove il mondo passa attraverso il canale e ogni giornata porta una luce diversa.",
+              "en": "A small workshop built on the water, where the world passes through the canal and every day brings a different light."
             }
           }
         },
@@ -1185,12 +1186,12 @@
               "en": "01 · The workbench"
             },
             "title": {
-              "it": "Dove la materia prende voce",
-              "en": "Where material finds its voice"
+              "it": "La mattina, quando la mente è aperta",
+              "en": "Morning, when the mind is open"
             },
             "body": {
-              "it": "Sul banco convivono strumenti semplici, pigmenti, corde, legni levigati dal sale e piccoli reperti raccolti lungo la laguna. Nulla è decorativo: ogni oggetto può diventare un punto di partenza. Willy lavora per aggiunte minime, lasciando che nodi, ferite e curve restino leggibili.",
-              "en": "Simple tools, pigments, rope, salt-smoothed wood and small finds from the lagoon share the workbench. Nothing is merely decorative: every object may become a beginning. Willy works through minimal additions, allowing knots, scars and curves to remain visible."
+              "it": "Il momento migliore per lavorare è verso le otto del mattino. Entro, saluto le fotografie di mio padre e mia madre e comincio. La musica cambia con l’energia che cerco: rap per la carica, classica per la calma, cantautori italiani quando il lavoro diventa più leggero.",
+              "en": "The best time to work is around eight in the morning. I enter, greet the photographs of my father and mother, and begin. The music changes with the energy I need: rap for drive, classical music for calm, Italian singer-songwriters when the work becomes lighter."
             },
             "cta": {
               "it": "",
@@ -1209,12 +1210,12 @@
               "en": "02 · The material archive"
             },
             "title": {
-              "it": "Segni raccolti, non materiali perfetti",
-              "en": "Collected traces, not perfect materials"
+              "it": "Il mare non ti dà il legno che vuoi",
+              "en": "The sea does not give you the wood you want"
             },
             "lead": {
-              "it": "La bottega conserva ciò che il mare, i cantieri e il tempo hanno già trasformato.",
-              "en": "The workshop keeps what sea, shipyards and time have already transformed."
+              "it": "Non scelgo una specie precisa: uso ciò che arriva. La conoscenza serve a capire quale pezzo può durare e quale invece è rimasto troppo a lungo in mare.",
+              "en": "I do not choose a particular species: I use what arrives. Knowledge is needed to understand which piece can last and which has remained too long at sea."
             },
             "cards": [
               {
@@ -1224,30 +1225,30 @@
                   "en": "Lagoon wood"
                 },
                 "desc": {
-                  "it": "Tronchi, tavole e frammenti scelti per il loro profilo, le abrasioni e la memoria dell’acqua.",
-                  "en": "Logs, boards and fragments chosen for their profiles, abrasions and memory of water."
+                  "it": "Legni d’acqua dolce e legni marini reagiscono in modo diverso all’asciugatura. Ogni pezzo deve essere valutato con attenzione.",
+                  "en": "Freshwater and marine woods react differently as they dry. Every piece must be assessed carefully."
                 }
               },
               {
                 "icon": "C",
                 "title": {
-                  "it": "Corde e metalli",
-                  "en": "Rope and metals"
+                  "it": "Attrezzi e gesti",
+                  "en": "Tools and gestures"
                 },
                 "desc": {
-                  "it": "Resti nautici, fili, chiodi e ferri ossidati diventano struttura, giunto o dettaglio narrativo.",
-                  "en": "Nautical remnants, wire, nails and oxidised iron become structure, joints or narrative detail."
+                  "it": "Motosega per togliere la massa, martello e scalpello per entrare nel dettaglio: ogni fase richiede uno strumento diverso.",
+                  "en": "Chainsaw to remove mass, hammer and chisel to enter the detail: every stage calls for a different tool."
                 }
               },
               {
                 "icon": "P",
                 "title": {
-                  "it": "Pigmenti e superfici",
-                  "en": "Pigments and surfaces"
+                  "it": "Musica e concentrazione",
+                  "en": "Music and concentration"
                 },
                 "desc": {
-                  "it": "Colori opachi e velature misurate sottolineano la forma senza cancellare la vita precedente del materiale.",
-                  "en": "Matte colours and restrained glazes emphasise form without erasing the material’s previous life."
+                  "it": "Una scultura può accompagnarmi per mesi. La musica mi aiuta a ritrovare energia, calma e continuità nel tempo.",
+                  "en": "A sculpture may stay with me for months. Music helps me recover energy, calm and continuity over time."
                 }
               }
             ]
@@ -1265,12 +1266,12 @@
               "en": "03 · Light and waiting"
             },
             "title": {
-              "it": "Il lavoro continua anche quando tutto è fermo",
-              "en": "The work continues even when everything is still"
+              "it": "Un mondo che passa attraverso l’acqua",
+              "en": "A world passing through the water"
             },
             "body": {
-              "it": "Molti frammenti restano per settimane o mesi nello studio. Cambiano posizione, incontrano altri materiali, vengono osservati nella luce che entra dal canale. L’opera nasce spesso in questo intervallo silenzioso, prima ancora del primo taglio.",
-              "en": "Many fragments remain in the studio for weeks or months. They change position, meet other materials and are observed in the light coming from the canal. The work often begins in this quiet interval, before the first cut."
+              "it": "Il laboratorio si trova nella zona nord di Chioggia, affacciato sul canale. Vedo il cielo, le barche, i pesci, i gabbiani e le rondini. Passano amici e visitatori, mentre i miei cani restano con me fino alla sera. Tutto, qui dentro, torna sempre al mare.",
+              "en": "The workshop is in the northern part of Chioggia, overlooking the canal. I see the sky, boats, fish, seagulls and swallows. Friends and visitors stop by, while my dogs remain with me until evening. Everything here always returns to the sea."
             },
             "cta": {
               "it": "Visita l’atelier",
@@ -1294,8 +1295,8 @@
               "en": "See the works where they are made"
             },
             "lead": {
-              "it": "A Chioggia, su appuntamento. Una visita raccolta tra opere finite, materiali in attesa e il canale appena fuori dalla porta.",
-              "en": "In Chioggia, by appointment. An intimate visit among finished works, waiting materials and the canal just outside the door."
+              "it": "La porta del laboratorio è spesso aperta. Chi desidera conoscere le opere, i materiali e il luogo può concordare una visita a Chioggia.",
+              "en": "The workshop door is often open. Anyone wishing to discover the works, materials and place can arrange a visit in Chioggia."
             },
             "cta": {
               "it": "Richiedi un appuntamento",
@@ -1319,8 +1320,8 @@
               "en": "The works tell the rest"
             },
             "lead": {
-              "it": "Ogni scultura conserva la geografia del luogo in cui è nata: acqua, vento, sale e immaginazione.",
-              "en": "Every sculpture preserves the geography of where it was born: water, wind, salt and imagination."
+              "it": "Tra le opere più care a Willy ci sono la Scena di caccia sottomarina, realizzata in cinque mesi da un’unica radice, e il Polpo, scavato fino a rivelare otto tentacoli e le loro ventose.",
+              "en": "Among Willy’s dearest works are The Underwater Hunt, made over five months from a single root, and The Octopus, carved to reveal eight tentacles and their suckers."
             },
             "cta": {
               "it": "Entra nella collezione",
@@ -1340,16 +1341,16 @@
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "Informazioni",
-              "en": "Information"
+              "it": "Chioggia · San Domenico",
+              "en": "Chioggia · San Domenico"
             },
             "title": {
-              "it": "Visita & Contatti",
-              "en": "Visit & Contact"
+              "it": "Visita il laboratorio",
+              "en": "Visit the workshop"
             },
             "lead": {
-              "it": "Segreteria per opere, visite, prestiti e stampa.",
-              "en": "Office for works, visits, loans and press."
+              "it": "Un incontro tra opere finite, legni in attesa e il canale appena fuori dalla porta. Le visite sono possibili su appuntamento.",
+              "en": "An encounter among finished works, waiting wood and the canal just outside the door. Visits are available by appointment."
             }
           }
         },
@@ -1398,16 +1399,16 @@
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "Visita & contatti",
-              "en": "Visit & contact"
+              "it": "Contatti",
+              "en": "Contact"
             },
             "title": {
-              "it": "Segreteria del museo",
-              "en": "Museum office"
+              "it": "Incontra Willy a Chioggia",
+              "en": "Meet Willy in Chioggia"
             },
             "lead": {
-              "it": "Siamo a disposizione per visite in sede, richieste di prestito e informazioni sulle opere.",
-              "en": "We are available for on-site visits, loan requests and information about the works."
+              "it": "Scrivi per organizzare una visita, conoscere la disponibilità delle opere, proporre un’esposizione o immaginare un allestimento per ristoranti, hotel e spazi legati al mare.",
+              "en": "Write to arrange a visit, ask about available works, propose an exhibition or imagine an installation for restaurants, hotels and spaces connected to the sea."
             },
             "showForm": true
           }
@@ -1418,16 +1419,16 @@
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "Prossima sala",
-              "en": "Next room"
+              "it": "Continua il viaggio",
+              "en": "Continue the journey"
             },
             "title": {
-              "it": "Continuate in collezione",
-              "en": "Continue in the collection"
+              "it": "Scopri le opere",
+              "en": "Discover the works"
             },
             "lead": {
-              "it": "Prima di scrivere: forse l’opera che cercate è già esposta.",
-              "en": "Before you write: the work you seek may already be on display."
+              "it": "Ogni pezzo conserva il segno dell’acqua, del tempo e delle mani che lo hanno accompagnato verso una nuova vita.",
+              "en": "Every piece preserves the mark of water, time and the hands that guided it toward a new life."
             },
             "cta": {
               "it": "Alla collezione",
@@ -1439,5 +1440,6 @@
         }
       ]
     }
-  }
+  },
+  "_contentVersion": "interview-2026-08-02"
 }

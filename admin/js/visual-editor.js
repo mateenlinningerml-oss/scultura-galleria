@@ -116,8 +116,6 @@
     const page = ensurePage();
     if (!preview || !content || !page || !window.GS_PAGE_RENDERER) return;
 
-    preview.dataset.page = getPageKey();
-
     // Provide content for renderer helpers
     window.GS_CONTENT = content;
     window.GS_SCULPTURES = content.sculptures || [];
@@ -174,19 +172,6 @@
               : "Bild hierher — wird in diesen Block gesetzt";
         el.appendChild(drop);
 
-        if (block.type === "pageHero" && getPageKey() === "about") {
-          const picker = document.createElement("div");
-          picker.className = "vb-pagehero-picker";
-          picker.innerHTML = `
-            <button type="button" class="vb-pagehero-picker-btn" data-pagehero-pick>
-              ${block.data?.image ? "Hintergrundbild ändern" : "Hintergrundbild auswählen"}
-            </button>
-            <span>oder ein Bild aus „Medien“ hierher ziehen</span>
-            <input type="file" accept="image/*" data-pagehero-file hidden>
-          `;
-          el.appendChild(picker);
-        }
-
         return el.outerHTML;
       })
       .join("");
@@ -198,34 +183,6 @@
   function wirePreviewInteractions(preview, page) {
     preview.querySelectorAll(".vb-block").forEach((el) => {
       const id = el.dataset.vbId;
-      const block = page.blocks.find((b) => b.id === id);
-
-      const pickButton = el.querySelector("[data-pagehero-pick]");
-      const pickInput = el.querySelector("[data-pagehero-file]");
-      pickButton?.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        pickInput?.click();
-      });
-      pickInput?.addEventListener("change", async (e) => {
-        e.stopPropagation();
-        const file = e.target.files?.[0];
-        if (!file || !block) return;
-        try {
-          const fd = new FormData();
-          fd.append("image", file);
-          const result = await api("/api/admin/upload", { method: "POST", body: fd });
-          block.data = block.data || {};
-          block.data.image = result.url;
-          markDirty();
-          await loadMedia();
-          renderVisualPreview();
-          if (typeof window.__adminRenderBuilderList === "function") window.__adminRenderBuilderList();
-          toast("Hintergrundbild gesetzt — jetzt „Alles speichern“ drücken");
-        } catch (err) {
-          toast(err.message || "Upload fehlgeschlagen", true);
-        }
-      });
 
       el.addEventListener("click", (e) => {
         if (e.target.closest(".vb-block-chrome")) return;
