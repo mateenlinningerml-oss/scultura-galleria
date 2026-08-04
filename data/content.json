@@ -189,7 +189,8 @@
       "contact.next.title": "Esplora le opere",
       "contact.next.lead": "Scopri le forme nate dal legno, dal mare e dalla laguna.",
       "contact.next.cta": "Vai alla galleria",
-      "lightbox.close": "Chiudi"
+      "lightbox.close": "Chiudi",
+      "meta.desc.about": "La storia di Emanuele “Willy” Bellemo: Chioggia, il mare, la famiglia, il legno spiaggiato, il laboratorio e le opere."
     },
     "en": {
       "meta.title.home": "Emanuele “Willy” Bellemo — Sculptor in Chioggia",
@@ -348,7 +349,8 @@
       "contact.next.title": "Explore the works",
       "contact.next.lead": "Discover forms born from wood, sea and lagoon.",
       "contact.next.cta": "Go to the gallery",
-      "lightbox.close": "Close"
+      "lightbox.close": "Close",
+      "meta.desc.about": "The story of Emanuele “Willy” Bellemo: Chioggia, the sea, family, driftwood, the workshop and the works."
     }
   },
   "sculptures": [
@@ -1017,72 +1019,155 @@
           "type": "pageHero",
           "enabled": true,
           "data": {
+            "image": "/uploads/artist-hero-background-test.png",
             "kicker": {
               "it": "Emanuele “Willy” Bellemo",
               "en": "Emanuele “Willy” Bellemo"
             },
             "title": {
-              "it": "L’uomo dietro la materia",
-              "en": "The man behind the material"
+              "it": "L’uomo dietro il legno",
+              "en": "The man behind the wood"
             },
             "lead": {
-              "it": "Mi chiamo Emanuele Bellemo, ma tutti mi conoscono come Willy. Sono nato a Chioggia, in una famiglia di pescatori, e il mare accompagna la mia vita da sempre.",
-              "en": "My name is Emanuele Bellemo, though everyone knows me as Willy. I was born in Chioggia into a family of fishermen, and the sea has accompanied my life from the beginning."
-            },
-            "image": "/uploads/artist-hero-background-test.png"
+              "it": "Prima di conoscere le mie sculture, vorrei raccontarti da dove nascono: dal mare, da Chioggia e da una vita trascorsa ad ascoltare la materia.",
+              "en": "Before you discover my sculptures, I would like to tell you where they come from: the sea, Chioggia and a lifetime spent listening to material."
+            }
           }
         },
         {
-          "id": "about_intro_story",
+          "id": "about_roots",
           "type": "intro",
           "enabled": true,
           "data": {
             "visualKicker": {
-              "it": "Chioggia",
-              "en": "Chioggia"
+              "it": "Le mie radici",
+              "en": "My roots"
             },
             "visualTitle": {
-              "it": "Casa è Chioggia",
-              "en": "Chioggia is home"
+              "it": "Nato dove il mare è vita",
+              "en": "Born where the sea is life"
             },
             "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
             "kicker": {
-              "it": "L’artista",
-              "en": "The artist"
+              "it": "01 · Le origini",
+              "en": "01 · Origins"
             },
             "title": {
-              "it": "Una storia nata nel mare",
-              "en": "A story born at sea"
+              "it": "Una famiglia di pescatori",
+              "en": "A family of fishermen"
             },
             "p1": {
-              "it": "Mio nonno e mio padre erano pescatori. Da bambino, appena finiva la scuola, uscivo in mare sul peschereccio di mio padre. Lì ho imparato che il mare può essere meraviglioso e pericoloso, generoso e severo: chiede sempre rispetto.",
-              "en": "My grandfather and father were fishermen. As a child, when school ended, I went to sea on my father’s fishing boat. There I learned that the sea can be beautiful and dangerous, generous and severe: it always demands respect."
+              "it": "Mi chiamo Emanuele Bellemo, anche se tutti mi conoscono come Willy. Sono nato e cresciuto a Chioggia, una città costruita sull’acqua, dove il mare non è soltanto un paesaggio: è lavoro, memoria e ritmo quotidiano.",
+              "en": "My name is Emanuele Bellemo, though everyone knows me as Willy. I was born and raised in Chioggia, a city built on water, where the sea is not merely scenery: it is work, memory and the rhythm of daily life."
             },
             "p2": {
-              "it": "Ho iniziato a creare vere opere circa sette anni fa. Sono autodidatta: ho imparato osservando, sperimentando e studiando. A un certo punto ho capito che il legno poteva diventare il linguaggio con cui trasferire ciò che sogno e penso.",
-              "en": "I began creating true works of art about seven years ago. I am self-taught: I learned by observing, experimenting and studying. At a certain point I understood that wood could become the language through which I express what I dream and think."
+              "it": "Provengo da generazioni di pescatori. Mio nonno commerciava il pesce con Burano; mio padre iniziò come marinaio e riuscì poi ad acquistare il proprio peschereccio. Da bambino, appena finiva la scuola, uscivo in mare con lui. Molto prima di diventare scultore, il mare era già il mio maestro.",
+              "en": "I come from generations of fishermen. My grandfather traded fish with Burano; my father began as a sailor and later managed to buy his own fishing boat. As a child, as soon as school ended, I went to sea with him. Long before I became a sculptor, the sea was already my teacher."
             },
             "cta": {
               "it": "Scopri le opere",
-              "en": "Explore the works"
+              "en": "Discover the works"
             },
             "ctaLink": "gallery.html",
             "showStats": false
           }
         },
         {
-          "id": "about_quote_manifesto",
+          "id": "about_quote_sea",
           "type": "quote",
           "enabled": true,
           "data": {
             "text": {
-              "it": "Per me l’arte è saper trasferire ciò che una persona sogna e pensa. Tutto nasce dalla passione.",
-              "en": "For me, art is knowing how to convey what a person dreams and thinks. Everything begins with passion."
+              "it": "Il mare, per me, è tutto.",
+              "en": "The sea, to me, is everything."
             },
             "cite": {
               "it": "— Emanuele “Willy” Bellemo",
               "en": "— Emanuele “Willy” Bellemo"
             }
+          }
+        },
+        {
+          "id": "about_memories",
+          "type": "richText",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "02 · Memorie",
+              "en": "02 · Memories"
+            },
+            "title": {
+              "it": "Il mare insegna bellezza e rispetto",
+              "en": "The sea teaches beauty and respect"
+            },
+            "body": {
+              "it": "Le giornate di pesca con mio padre mi hanno lasciato ricordi che non si cancellano: il lavoro prima dell’alba, la paura durante un fermo nelle acque dell’allora Jugoslavia, il momento in cui vidi tre grandi squali nuotare sotto di noi. Il mare sa essere meraviglioso, ma chiede attenzione, umiltà e rispetto. Queste esperienze riaffiorano ancora oggi nelle forme delle mie opere.",
+              "en": "Fishing days with my father left memories that never disappear: work before dawn, fear during an interception in the waters of former Yugoslavia, and the moment I saw three large sharks swimming beneath us. The sea can be magnificent, but it demands attention, humility and respect. These experiences still return today in the forms of my work."
+            },
+            "align": "left",
+            "dark": false
+          }
+        },
+        {
+          "id": "about_wood_voice",
+          "type": "imageText",
+          "enabled": true,
+          "data": {
+            "image": "/uploads/1784542480674-361056721f6e.jpeg",
+            "imageSide": "right",
+            "kicker": {
+              "it": "03 · La scoperta",
+              "en": "03 · The discovery"
+            },
+            "title": {
+              "it": "Quando il legno ha iniziato a parlare",
+              "en": "When the wood began to speak"
+            },
+            "body": {
+              "it": "Per molti anni ho lavorato il legno per curiosità. Circa sette anni fa ho iniziato a creare vere sculture. Sono autodidatta: ho imparato osservando, studiando, sbagliando e ricominciando. Davanti a una radice o a un tronco vedo spesso una balena, una sirena, un polpo o una tartaruga. Non parto da un blocco neutro: cerco la forma che il materiale custodisce già.",
+              "en": "For many years I worked with wood out of curiosity. About seven years ago I began creating true sculptures. I am self-taught: I learned by observing, studying, making mistakes and beginning again. In a root or trunk I often see a whale, a mermaid, an octopus or a turtle. I do not begin with neutral material: I look for the form it already holds."
+            },
+            "cta": {
+              "it": "",
+              "en": ""
+            },
+            "ctaLink": ""
+          }
+        },
+        {
+          "id": "about_quote_wood",
+          "type": "quote",
+          "enabled": true,
+          "data": {
+            "text": {
+              "it": "Non scelgo il legno. È il mare che sceglie per me.",
+              "en": "I do not choose the wood. The sea chooses for me."
+            },
+            "cite": {
+              "it": "— Emanuele “Willy” Bellemo",
+              "en": "— Emanuele “Willy” Bellemo"
+            }
+          }
+        },
+        {
+          "id": "about_material_respect",
+          "type": "richText",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "04 · La materia",
+              "en": "04 · The material"
+            },
+            "title": {
+              "it": "Rispetto, attesa e trasformazione",
+              "en": "Respect, patience and transformation"
+            },
+            "body": {
+              "it": "Cammino spesso sulle spiagge di Pellestrina con i miei cani. Raccolgo ciò che le mareggiate e i grandi fiumi dell’Alto Adriatico portano a riva. Non tutto il legno può essere lavorato: deve asciugare, essere osservato e compreso. A volte l’idea arriva subito; altre volte servono settimane. Scolpire, per me, non significa imporre una forma, ma accompagnare il materiale fino a rivelare ciò che porta dentro.",
+              "en": "I often walk the beaches of Pellestrina with my dogs. I collect what storms and the great rivers of the northern Adriatic bring ashore. Not every piece can be worked: it must dry, be observed and understood. Sometimes the idea comes at once; other times it takes weeks. For me, sculpting does not mean imposing a shape, but guiding the material until it reveals what it carries within."
+            },
+            "align": "left",
+            "dark": false
           }
         },
         {
@@ -1158,19 +1243,19 @@
           "enabled": true,
           "data": {
             "image": "/uploads/1784542480674-361056721f6e.jpeg",
-            "height": 680,
+            "height": 520,
             "overlay": true,
             "kicker": {
-              "it": "Dentro la bottega",
-              "en": "Inside the workshop"
+              "it": "06 · Il laboratorio",
+              "en": "06 · The workshop"
             },
             "title": {
-              "it": "L’atelier sul canale",
-              "en": "The atelier on the canal"
+              "it": "Una bottega affacciata sul canale",
+              "en": "A workshop overlooking the canal"
             },
             "caption": {
-              "it": "Un piccolo laboratorio costruito sull’acqua, dove il mondo passa attraverso il canale e ogni giornata porta una luce diversa.",
-              "en": "A small workshop built on the water, where the world passes through the canal and every day brings a different light."
+              "it": "A Chioggia il mondo passa attraverso l’acqua.",
+              "en": "In Chioggia, the world passes through water."
             }
           }
         },
@@ -1182,152 +1267,170 @@
             "image": "/uploads/1784542480660-3d5595ef5368.jpeg",
             "imageSide": "left",
             "kicker": {
-              "it": "01 · Il banco",
-              "en": "01 · The workbench"
+              "it": "La routine",
+              "en": "The routine"
             },
             "title": {
               "it": "La mattina, quando la mente è aperta",
               "en": "Morning, when the mind is open"
             },
             "body": {
-              "it": "Il momento migliore per lavorare è verso le otto del mattino. Entro, saluto le fotografie di mio padre e mia madre e comincio. La musica cambia con l’energia che cerco: rap per la carica, classica per la calma, cantautori italiani quando il lavoro diventa più leggero.",
-              "en": "The best time to work is around eight in the morning. I enter, greet the photographs of my father and mother, and begin. The music changes with the energy I need: rap for drive, classical music for calm, Italian singer-songwriters when the work becomes lighter."
+              "it": "Il momento migliore per lavorare è verso le otto del mattino. Entro, saluto le fotografie di mio padre e mia madre e comincio. La musica cambia con l’energia che cerco: rap per la carica, classica per la calma, cantautori italiani quando il lavoro diventa più leggero. I miei cani restano con me e la porta è spesso aperta ad amici, curiosi e visitatori.",
+              "en": "The best time to work is around eight in the morning. I enter, greet the photographs of my father and mother, and begin. The music changes with the energy I need: rap for drive, classical music for calm, Italian singer-songwriters when the work becomes lighter. My dogs stay with me, and the door is often open to friends, curious passers-by and visitors."
             },
             "cta": {
-              "it": "",
-              "en": ""
+              "it": "Visita l’atelier",
+              "en": "Visit the workshop"
             },
-            "ctaLink": ""
+            "ctaLink": "contact.html"
           }
         },
         {
-          "id": "about_atelier_materials",
-          "type": "materials",
+          "id": "about_personal",
+          "type": "richText",
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "02 · L’archivio della materia",
-              "en": "02 · The material archive"
+              "it": "07 · Qualcosa di personale",
+              "en": "07 · Something personal"
             },
             "title": {
-              "it": "Il mare non ti dà il legno che vuoi",
-              "en": "The sea does not give you the wood you want"
+              "it": "Famiglia, precisione e appartenenza",
+              "en": "Family, precision and belonging"
             },
-            "lead": {
-              "it": "Non scelgo una specie precisa: uso ciò che arriva. La conoscenza serve a capire quale pezzo può durare e quale invece è rimasto troppo a lungo in mare.",
-              "en": "I do not choose a particular species: I use what arrives. Knowledge is needed to understand which piece can last and which has remained too long at sea."
+            "body": {
+              "it": "Sono una persona ordinata, precisa e metodica. La famiglia è il centro della mia vita e, dopo la scomparsa dei miei genitori, il legame con mio fratello e la sua famiglia è diventato ancora più forte. La felicità nasce spesso da un’idea nuova: la sera penso all’opera e al mattino non vedo l’ora di tornare in laboratorio. Se mi chiedono dove sia casa, la risposta è semplice: casa è Chioggia.",
+              "en": "I am organised, precise and methodical. Family is at the centre of my life and, after the loss of my parents, the bond with my brother and his family became even stronger. Happiness often begins with a new idea: in the evening I think about the work, and in the morning I cannot wait to return to the studio. If you ask me where home is, the answer is simple: home is Chioggia."
             },
-            "cards": [
-              {
-                "icon": "L",
-                "title": {
-                  "it": "Legno di laguna",
-                  "en": "Lagoon wood"
-                },
-                "desc": {
-                  "it": "Legni d’acqua dolce e legni marini reagiscono in modo diverso all’asciugatura. Ogni pezzo deve essere valutato con attenzione.",
-                  "en": "Freshwater and marine woods react differently as they dry. Every piece must be assessed carefully."
-                }
-              },
-              {
-                "icon": "C",
-                "title": {
-                  "it": "Attrezzi e gesti",
-                  "en": "Tools and gestures"
-                },
-                "desc": {
-                  "it": "Motosega per togliere la massa, martello e scalpello per entrare nel dettaglio: ogni fase richiede uno strumento diverso.",
-                  "en": "Chainsaw to remove mass, hammer and chisel to enter the detail: every stage calls for a different tool."
-                }
-              },
-              {
-                "icon": "P",
-                "title": {
-                  "it": "Musica e concentrazione",
-                  "en": "Music and concentration"
-                },
-                "desc": {
-                  "it": "Una scultura può accompagnarmi per mesi. La musica mi aiuta a ritrovare energia, calma e continuità nel tempo.",
-                  "en": "A sculpture may stay with me for months. Music helps me recover energy, calm and continuity over time."
-                }
-              }
-            ]
+            "align": "left",
+            "dark": false
           }
         },
         {
-          "id": "about_atelier_light",
+          "id": "about_quote_home",
+          "type": "quote",
+          "enabled": true,
+          "data": {
+            "text": {
+              "it": "Casa è Chioggia.",
+              "en": "Home is Chioggia."
+            },
+            "cite": {
+              "it": "— Emanuele “Willy” Bellemo",
+              "en": "— Emanuele “Willy” Bellemo"
+            }
+          }
+        },
+        {
+          "id": "about_works_story",
           "type": "imageText",
           "enabled": true,
           "data": {
             "image": "/uploads/1784542480674-361056721f6e.jpeg",
             "imageSide": "right",
             "kicker": {
-              "it": "03 · Luce e attesa",
-              "en": "03 · Light and waiting"
+              "it": "08 · Le opere",
+              "en": "08 · The works"
             },
             "title": {
-              "it": "Un mondo che passa attraverso l’acqua",
-              "en": "A world passing through the water"
+              "it": "Non creo per vendere, creo per passione",
+              "en": "I do not create to sell; I create from passion"
             },
             "body": {
-              "it": "Il laboratorio si trova nella zona nord di Chioggia, affacciato sul canale. Vedo il cielo, le barche, i pesci, i gabbiani e le rondini. Passano amici e visitatori, mentre i miei cani restano con me fino alla sera. Tutto, qui dentro, torna sempre al mare.",
-              "en": "The workshop is in the northern part of Chioggia, overlooking the canal. I see the sky, boats, fish, seagulls and swallows. Friends and visitors stop by, while my dogs remain with me until evening. Everything here always returns to the sea."
-            },
-            "cta": {
-              "it": "Visita l’atelier",
-              "en": "Visit the atelier"
-            },
-            "ctaLink": "contact.html"
-          }
-        },
-        {
-          "id": "about_atelier_visit_strip",
-          "type": "cta",
-          "enabled": true,
-          "data": {
-            "dark": true,
-            "kicker": {
-              "it": "La bottega è visitabile",
-              "en": "The workshop can be visited"
-            },
-            "title": {
-              "it": "Vedere le opere nel luogo in cui nascono",
-              "en": "See the works where they are made"
-            },
-            "lead": {
-              "it": "La porta del laboratorio è spesso aperta. Chi desidera conoscere le opere, i materiali e il luogo può concordare una visita a Chioggia.",
-              "en": "The workshop door is often open. Anyone wishing to discover the works, materials and place can arrange a visit in Chioggia."
-            },
-            "cta": {
-              "it": "Richiedi un appuntamento",
-              "en": "Request an appointment"
-            },
-            "ctaLink": "contact.html"
-          }
-        },
-        {
-          "id": "about_cta_gallery",
-          "type": "cta",
-          "enabled": true,
-          "data": {
-            "dark": true,
-            "kicker": {
-              "it": "Continua il percorso",
-              "en": "Continue the journey"
-            },
-            "title": {
-              "it": "Le opere raccontano il resto",
-              "en": "The works tell the rest"
-            },
-            "lead": {
-              "it": "Tra le opere più care a Willy ci sono la Scena di caccia sottomarina, realizzata in cinque mesi da un’unica radice, e il Polpo, scavato fino a rivelare otto tentacoli e le loro ventose.",
-              "en": "Among Willy’s dearest works are The Underwater Hunt, made over five months from a single root, and The Octopus, carved to reveal eight tentacles and their suckers."
+              "it": "Tra le opere a cui sono più legato ci sono la Scena di caccia sottomarina, scolpita in cinque mesi da un’unica radice, e il Polpo, scavato fino a rivelare otto tentacoli e le loro ventose. C’è anche un dipinto della barca di mio padre che non venderei mai. Quando una scultura trova una nuova casa, chiedo sempre una fotografia: mi piace sapere dove continua il suo viaggio.",
+              "en": "Among the works closest to me are The Underwater Hunt, carved over five months from a single root, and The Octopus, hollowed out to reveal eight tentacles and their suckers. There is also a painting of my father’s boat that I would never sell. When a sculpture finds a new home, I always ask for a photograph: I like knowing where its journey continues."
             },
             "cta": {
               "it": "Entra nella collezione",
               "en": "Enter the collection"
             },
             "ctaLink": "gallery.html"
+          }
+        },
+        {
+          "id": "about_exhibitions",
+          "type": "richText",
+          "enabled": true,
+          "data": {
+            "kicker": {
+              "it": "09 · Le mostre",
+              "en": "09 · Exhibitions"
+            },
+            "title": {
+              "it": "L’arte come incontro",
+              "en": "Art as an encounter"
+            },
+            "body": {
+              "it": "Da alcuni anni faccio parte degli Artisti di Chioggia. Insieme partecipiamo a esposizioni nei palazzi storici, negli spazi civici e nei luoghi simbolici della città. Le mostre sono importanti perché permettono alle persone di fermarsi davanti a un’opera, ma anche perché il confronto con altri artisti aiuta a crescere, scambiare idee e guardare il proprio lavoro con occhi nuovi.",
+              "en": "For several years I have been part of Artisti di Chioggia. Together we take part in exhibitions in historic buildings, civic spaces and symbolic places around the city. Exhibitions matter because they allow people to pause before a work, but also because dialogue with other artists helps us grow, exchange ideas and see our own work with new eyes."
+            },
+            "align": "left",
+            "dark": false
+          }
+        },
+        {
+          "id": "about_future",
+          "type": "cta",
+          "enabled": true,
+          "data": {
+            "dark": true,
+            "kicker": {
+              "it": "10 · Il futuro",
+              "en": "10 · The future"
+            },
+            "title": {
+              "it": "Vedere le opere continuare a vivere",
+              "en": "Seeing the works continue to live"
+            },
+            "lead": {
+              "it": "Sogno di vedere le mie sculture in ristoranti, alberghi, bed & breakfast e luoghi che raccontano Chioggia. Vorrei anche realizzare un’opera monumentale, nata da un unico pezzo di legno e capace di dialogare con il paesaggio.",
+              "en": "I dream of seeing my sculptures in restaurants, hotels, bed & breakfasts and places that tell the story of Chioggia. I would also like to create a monumental work, born from a single piece of wood and able to enter into dialogue with the landscape."
+            },
+            "cta": {
+              "it": "Scopri le opere",
+              "en": "Discover the works"
+            },
+            "ctaLink": "gallery.html"
+          }
+        },
+        {
+          "id": "about_final_quote",
+          "type": "quote",
+          "enabled": true,
+          "data": {
+            "text": {
+              "it": "Ogni opera che lascia il mio laboratorio continua il suo viaggio nella casa di chi l’ha scelta.",
+              "en": "Every work that leaves my workshop continues its journey in the home of the person who chose it."
+            },
+            "cite": {
+              "it": "— Emanuele “Willy” Bellemo",
+              "en": "— Emanuele “Willy” Bellemo"
+            }
+          }
+        },
+        {
+          "id": "about_visit_cta",
+          "type": "cta",
+          "enabled": true,
+          "data": {
+            "dark": true,
+            "kicker": {
+              "it": "Grazie per essere entrato nel mio mondo",
+              "en": "Thank you for entering my world"
+            },
+            "title": {
+              "it": "Incontra Willy a Chioggia",
+              "en": "Meet Willy in Chioggia"
+            },
+            "lead": {
+              "it": "Il laboratorio sul canale è visitabile su appuntamento. Qui puoi vedere le opere nel luogo in cui nascono e conoscere da vicino i materiali, gli strumenti e le storie che le accompagnano.",
+              "en": "The canal-side workshop can be visited by appointment. Here you can see the works where they are born and discover the materials, tools and stories behind them."
+            },
+            "cta": {
+              "it": "Richiedi una visita",
+              "en": "Request a visit"
+            },
+            "ctaLink": "contact.html"
           }
         }
       ]
@@ -1441,5 +1544,6 @@
       ]
     }
   },
-  "_contentVersion": "interview-2026-08-02"
+  "_contentVersion": "1.2.1",
+  "media": []
 }
