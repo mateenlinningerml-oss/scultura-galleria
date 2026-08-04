@@ -263,7 +263,7 @@ function renderArtworkPage() {
   const story = (work.story && (work.story[lang] || work.story.it)) || description;
   const images = [work.image, ...(Array.isArray(work.images) ? work.images : [])].filter(Boolean);
   const hero = images[0] || "";
-  const detailImages = images.slice(1, 4);
+  const detailImages = images.slice(1);
   const related = works.filter((item) => item.id !== work.id && (item.category === work.category || item.featured)).slice(0, 3);
   const heroMedia = hero
     ? `<img src="${escapeArtwork(hero)}" alt="${escapeArtwork(work.title || "")}" />`
@@ -301,7 +301,7 @@ function renderArtworkPage() {
 
       <section class="artwork-details-gallery ${detailImages.length ? "" : "artwork-details-gallery--empty"}">
         ${detailImages.length
-          ? detailImages.map((src, i) => `<figure class="artwork-detail-image artwork-detail-image--${i + 1}"><img src="${escapeArtwork(src)}" alt="${escapeArtwork((work.title || "") + " — dettaglio " + (i + 1))}" loading="lazy" /></figure>`).join("")
+          ? detailImages.map((src, i) => `<figure class="artwork-detail-image artwork-detail-image--${i + 1}"><button type="button" class="artwork-detail-open" data-artwork-image-index="${i + 1}" aria-label="${lang === "en" ? "Open image" : "Apri immagine"} ${i + 1}"><img src="${escapeArtwork(src)}" alt="${escapeArtwork((work.title || "") + " — dettaglio " + (i + 1))}" loading="lazy" /></button></figure>`).join("")
           : `<div class="artwork-detail-note"><span>${lang === "en" ? "Detail photographs can be added later in the admin." : "Le fotografie di dettaglio potranno essere aggiunte in seguito nel pannello admin."}</span></div>`}
       </section>
 
@@ -313,6 +313,59 @@ function renderArtworkPage() {
 
       ${related.length ? `<section class="artwork-related"><div class="artwork-related-heading"><p class="section-kicker">${lang === "en" ? "Continue exploring" : "Continua la visita"}</p><h2>${lang === "en" ? "Related works" : "Opere affini"}</h2></div><div class="artwork-related-grid">${related.map((item) => `<a href="artwork.html?id=${encodeURIComponent(item.id)}" class="artwork-related-card"><div class="artwork-related-media">${item.image ? `<img src="${escapeArtwork(item.image)}" alt="${escapeArtwork(item.title || "")}" loading="lazy" />` : sculptureSvg(item.id)}</div><h3>${escapeArtwork(item.title || "")}</h3><p>${escapeArtwork([item.year, item.size].filter(Boolean).join(" · "))}</p></a>`).join("")}</div></section>` : ""}
     </article>`;
+
+  initArtworkImageViewer(images, work.title || "", lang);
+}
+
+function initArtworkImageViewer(images, title, lang) {
+  if (!Array.isArray(images) || !images.length) return;
+  let current = 0;
+  const viewer = document.createElement("div");
+  viewer.className = "artwork-image-viewer";
+  viewer.setAttribute("aria-hidden", "true");
+  viewer.innerHTML = `
+    <div class="artwork-image-viewer-backdrop" data-viewer-close></div>
+    <div class="artwork-image-viewer-dialog" role="dialog" aria-modal="true" aria-label="${escapeArtwork(title)}">
+      <button type="button" class="artwork-image-viewer-close" data-viewer-close aria-label="${lang === "en" ? "Close" : "Chiudi"}">×</button>
+      <button type="button" class="artwork-image-viewer-nav artwork-image-viewer-prev" data-viewer-prev aria-label="${lang === "en" ? "Previous image" : "Immagine precedente"}">←</button>
+      <img src="" alt="">
+      <button type="button" class="artwork-image-viewer-nav artwork-image-viewer-next" data-viewer-next aria-label="${lang === "en" ? "Next image" : "Immagine successiva"}">→</button>
+      <div class="artwork-image-viewer-count"></div>
+    </div>`;
+  document.body.appendChild(viewer);
+  const image = viewer.querySelector("img");
+  const count = viewer.querySelector(".artwork-image-viewer-count");
+  const update = () => {
+    image.src = images[current];
+    image.alt = `${title} — ${current + 1}`;
+    count.textContent = `${current + 1} / ${images.length}`;
+  };
+  const open = (index) => {
+    current = Math.max(0, Math.min(images.length - 1, index));
+    update();
+    viewer.classList.add("open");
+    viewer.setAttribute("aria-hidden", "false");
+    document.body.classList.add("artwork-viewer-open");
+  };
+  const close = () => {
+    viewer.classList.remove("open");
+    viewer.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("artwork-viewer-open");
+  };
+  rootArtworkButtons().forEach((button) => button.addEventListener("click", () => open(Number(button.dataset.artworkImageIndex))));
+  viewer.querySelectorAll("[data-viewer-close]").forEach((button) => button.addEventListener("click", close));
+  viewer.querySelector("[data-viewer-prev]").addEventListener("click", () => { current = (current - 1 + images.length) % images.length; update(); });
+  viewer.querySelector("[data-viewer-next]").addEventListener("click", () => { current = (current + 1) % images.length; update(); });
+  document.addEventListener("keydown", (event) => {
+    if (!viewer.classList.contains("open")) return;
+    if (event.key === "Escape") close();
+    if (event.key === "ArrowLeft") { current = (current - 1 + images.length) % images.length; update(); }
+    if (event.key === "ArrowRight") { current = (current + 1) % images.length; update(); }
+  });
+}
+
+function rootArtworkButtons() {
+  return document.querySelectorAll("[data-artwork-image-index]");
 }
 
 function escapeArtwork(value) {

@@ -4328,3 +4328,35 @@ body[data-page="about"] .page-hero-media {
     font-size: clamp(3.3rem, 16vw, 5.4rem) !important;
   }
 }
+
+
+/* =========================================================
+   ARTWORK MULTI-IMAGE GALLERY + VIEWER
+   ========================================================= */
+.artwork-details-gallery { grid-template-columns: repeat(12, minmax(0,1fr)); grid-auto-flow:dense; grid-template-rows:none; }
+.artwork-detail-image { grid-column:span 6; min-height:clamp(360px,48vw,760px); }
+.artwork-detail-image:nth-child(3n+1) { grid-column:span 7; }
+.artwork-detail-image:nth-child(3n+2) { grid-column:span 5; }
+.artwork-detail-image:nth-child(3n) { grid-column:span 12; min-height:clamp(440px,60vw,900px); }
+.artwork-detail-image--1 { grid-row:auto; }
+.artwork-detail-open { width:100%; height:100%; padding:0; border:0; background:transparent; cursor:zoom-in; display:block; overflow:hidden; }
+.artwork-detail-open img { transition:transform .45s ease; }
+.artwork-detail-open:hover img { transform:scale(1.025); }
+body.artwork-viewer-open { overflow:hidden; }
+.artwork-image-viewer { position:fixed; inset:0; z-index:10000; display:none; place-items:center; padding:1.5rem; }
+.artwork-image-viewer.open { display:grid; }
+.artwork-image-viewer-backdrop { position:absolute; inset:0; background:rgba(3,12,12,.94); }
+.artwork-image-viewer-dialog { position:relative; z-index:1; width:min(1500px,100%); height:min(92vh,1000px); display:grid; place-items:center; }
+.artwork-image-viewer-dialog img { max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; }
+.artwork-image-viewer-close, .artwork-image-viewer-nav { position:absolute; z-index:2; border:1px solid rgba(255,255,255,.35); background:rgba(4,20,20,.55); color:#fff; display:grid; place-items:center; cursor:pointer; }
+.artwork-image-viewer-close { top:0; right:0; width:48px; height:48px; font-size:2rem; }
+.artwork-image-viewer-nav { top:50%; transform:translateY(-50%); width:50px; height:64px; font-size:1.45rem; }
+.artwork-image-viewer-prev { left:0; }
+.artwork-image-viewer-next { right:0; }
+.artwork-image-viewer-count { position:absolute; left:50%; bottom:0; transform:translateX(-50%); color:rgba(255,255,255,.78); font-family:var(--font-display); letter-spacing:.14em; }
+@media (max-width:760px){
+  .artwork-detail-image, .artwork-detail-image:nth-child(n) { grid-column:span 12; min-height:420px; }
+  .artwork-image-viewer { padding:.5rem; }
+  .artwork-image-viewer-dialog { height:94vh; }
+  .artwork-image-viewer-nav { width:42px; height:54px; }
+}

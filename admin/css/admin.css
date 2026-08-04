@@ -1043,3 +1043,16 @@ body.is-authenticated {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Artwork multi-image editor */
+.sculpture-gallery-editor { grid-column: 1 / -1; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(31,55,51,.14); }
+.sculpture-gallery-head { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1rem; }
+.sculpture-gallery-head strong, .sculpture-gallery-head span { display:block; }
+.sculpture-gallery-list { display:grid; grid-template-columns:repeat(auto-fill,minmax(145px,1fr)); gap:.85rem; }
+.sculpture-gallery-item { border:1px solid rgba(31,55,51,.16); background:#f7f3ec; padding:.45rem; }
+.sculpture-gallery-item img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
+.sculpture-gallery-item-actions { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:.35rem; padding-top:.45rem; }
+.btn-xs { min-height:28px; padding:.25rem .45rem; font-size:.68rem; }
+.sculpture-gallery-empty { grid-column:1/-1; margin:0; padding:1rem; border:1px dashed rgba(31,55,51,.2); color:#6c7773; text-align:center; }
+@media (max-width:720px){ .sculpture-gallery-head{align-items:flex-start;flex-direction:column}.sculpture-gallery-list{grid-template-columns:repeat(2,minmax(0,1fr));} }

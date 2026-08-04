@@ -924,11 +924,37 @@ function createSculptureCard(s, index) {
           Auf Startseite zeigen
         </label>
         <label class="btn btn-outline btn-sm file-btn">
-          Bild hochladen
+          Hauptbild hochladen
           <input type="file" accept="image/*" data-upload />
         </label>
-        ${s.image ? `<button type="button" class="btn btn-outline btn-sm" data-clear-image>Bild entfernen</button>` : ""}
+        ${s.image ? `<button type="button" class="btn btn-outline btn-sm" data-clear-image>Hauptbild entfernen</button>` : ""}
         <button type="button" class="btn btn-danger btn-sm" data-delete>Löschen</button>
+      </div>
+      <div class="sculpture-gallery-editor">
+        <div class="sculpture-gallery-head">
+          <div>
+            <strong>Weitere Bilder zum Werk</strong>
+            <span class="muted">Detailansichten, Seitenansicht, Rückseite oder Atelierfoto</span>
+          </div>
+          <label class="btn btn-outline btn-sm file-btn">
+            + Bilder hinzufügen
+            <input type="file" accept="image/*" multiple data-gallery-upload />
+          </label>
+        </div>
+        <div class="sculpture-gallery-list">
+          ${(Array.isArray(s.images) ? s.images : []).length
+            ? (s.images || []).map((src, imageIndex) => `
+              <div class="sculpture-gallery-item" data-gallery-item="${imageIndex}">
+                <img src="${escapeAttr(src)}" alt="Detail ${imageIndex + 1}">
+                <div class="sculpture-gallery-item-actions">
+                  <button type="button" class="btn btn-outline btn-xs" data-gallery-left="${imageIndex}" ${imageIndex === 0 ? "disabled" : ""} aria-label="Nach links">←</button>
+                  <span>${imageIndex + 1}</span>
+                  <button type="button" class="btn btn-outline btn-xs" data-gallery-right="${imageIndex}" ${imageIndex === (s.images || []).length - 1 ? "disabled" : ""} aria-label="Nach rechts">→</button>
+                  <button type="button" class="btn btn-danger btn-xs" data-gallery-remove="${imageIndex}">Entfernen</button>
+                </div>
+              </div>`).join("")
+            : `<p class="sculpture-gallery-empty">Noch keine zusätzlichen Bilder vorhanden.</p>`}
+        </div>
       </div>
     </div>
   `;
@@ -948,7 +974,22 @@ function createSculptureCard(s, index) {
         content.sculptures[index].image = url;
         markDirty();
         renderSculptures();
-        toast("Bild hochgeladen — bitte speichern");
+        toast("Hauptbild hochgeladen — bitte speichern");
+      } catch (ex) {
+        toast(ex.message, true);
+      }
+    }
+    if (t.dataset.galleryUpload != null && t.files?.length) {
+      try {
+        const files = Array.from(t.files);
+        const urls = [];
+        for (const file of files) urls.push(await uploadImage(file));
+        const sculpture = content.sculptures[index];
+        sculpture.images = Array.isArray(sculpture.images) ? sculpture.images : [];
+        sculpture.images.push(...urls);
+        markDirty();
+        renderSculptures();
+        toast(`${urls.length} Bild${urls.length === 1 ? "" : "er"} hinzugefügt — bitte speichern`);
       } catch (ex) {
         toast(ex.message, true);
       }
@@ -970,6 +1011,38 @@ function createSculptureCard(s, index) {
     content.sculptures[index].image = "";
     markDirty();
     renderSculptures();
+  });
+  card.querySelectorAll("[data-gallery-remove]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const imageIndex = Number(button.dataset.galleryRemove);
+      const images = Array.isArray(content.sculptures[index].images) ? content.sculptures[index].images : [];
+      images.splice(imageIndex, 1);
+      content.sculptures[index].images = images;
+      markDirty();
+      renderSculptures();
+    });
+  });
+
+  card.querySelectorAll("[data-gallery-left]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const imageIndex = Number(button.dataset.galleryLeft);
+      if (imageIndex <= 0) return;
+      const images = content.sculptures[index].images || [];
+      [images[imageIndex - 1], images[imageIndex]] = [images[imageIndex], images[imageIndex - 1]];
+      markDirty();
+      renderSculptures();
+    });
+  });
+
+  card.querySelectorAll("[data-gallery-right]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const imageIndex = Number(button.dataset.galleryRight);
+      const images = content.sculptures[index].images || [];
+      if (imageIndex >= images.length - 1) return;
+      [images[imageIndex], images[imageIndex + 1]] = [images[imageIndex + 1], images[imageIndex]];
+      markDirty();
+      renderSculptures();
+    });
   });
 
   return card;
@@ -999,6 +1072,7 @@ $("#add-sculpture-btn").addEventListener("click", () => {
     category: "marmor",
     featured: false,
     image: "",
+    images: [],
     meta: { it: "", en: "" },
     desc: { it: "", en: "" },
     materialKey: "mat.marble"
