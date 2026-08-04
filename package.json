@@ -1,7 +1,7 @@
 {
   "name": "scultura-galleria",
-  "version": "1.3.2",
-  "description": "Portfolio und Online-Galerie für Emanuele “Willy” Bellemo.",
+  "version": "1.3.3",
+  "description": "Portfolio und Online-Galerie f\u00fcr Emanuele \u201cWilly\u201d Bellemo.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

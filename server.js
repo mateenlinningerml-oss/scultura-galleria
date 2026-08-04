@@ -92,33 +92,27 @@ function repositoryReleaseOnDisk() {
 }
 
 function syncRepositoryRelease() {
-  // Render serves CMS data from the Persistent Disk. Without this release sync,
-  // a deploy can run new HTML/CSS while still serving an old content.json.
-  // Sync once per package version so production matches the tested localhost build.
+  // IMPORTANT: CMS content and uploads on the Persistent Disk are user data.
+  // Deployments must never overwrite content.json or delete uploaded images.
+  // Repository files are used only to seed files that are genuinely missing.
   if (!process.env.STORAGE_DIR) return;
   if (repositoryReleaseOnDisk() === RELEASE_ID) return;
 
-  // This release intentionally makes production identical to the tested localhost build.
-  // The repository content.json is copied over the Persistent Disk once per package version.
-  copyAtomic(SEED_CONTENT_FILE, CONTENT_FILE);
-
-  // Mirror repository media exactly. This removes stale production-only images
-  // that can keep old content visually different from localhost.
-  const imagePattern = /\.(jpe?g|png|webp|gif|avif)$/i;
-  for (const filename of fs.readdirSync(UPLOAD_DIR)) {
-    if (!imagePattern.test(filename)) continue;
-    fs.unlinkSync(path.join(UPLOAD_DIR, filename));
-  }
+  copyIfMissing(SEED_CONTENT_FILE, CONTENT_FILE);
+  copyIfMissing(SEED_CONFIG_FILE, CONFIG_FILE);
 
   if (fs.existsSync(SEED_UPLOAD_DIR)) {
     for (const filename of fs.readdirSync(SEED_UPLOAD_DIR)) {
-      if (!imagePattern.test(filename)) continue;
-      copyAtomic(path.join(SEED_UPLOAD_DIR, filename), path.join(UPLOAD_DIR, filename));
+      if (!/\.(jpe?g|png|webp|gif|avif)$/i.test(filename)) continue;
+      copyIfMissing(
+        path.join(SEED_UPLOAD_DIR, filename),
+        path.join(UPLOAD_DIR, filename)
+      );
     }
   }
 
   fs.writeFileSync(RELEASE_MARKER, `${RELEASE_ID}\n`, "utf8");
-  console.log(`  Release-Sync:   Repository ${RELEASE_ID} → Persistent Disk`);
+  console.log(`  Safe Release:   ${RELEASE_ID} (CMS data and uploads preserved)`);
 }
 
 function ensureDirs() {
