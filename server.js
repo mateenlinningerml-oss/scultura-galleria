@@ -102,9 +102,17 @@ function syncRepositoryRelease() {
   // The repository content.json is copied over the Persistent Disk once per package version.
   copyAtomic(SEED_CONTENT_FILE, CONTENT_FILE);
 
+  // Mirror repository media exactly. This removes stale production-only images
+  // that can keep old content visually different from localhost.
+  const imagePattern = /\.(jpe?g|png|webp|gif|avif)$/i;
+  for (const filename of fs.readdirSync(UPLOAD_DIR)) {
+    if (!imagePattern.test(filename)) continue;
+    fs.unlinkSync(path.join(UPLOAD_DIR, filename));
+  }
+
   if (fs.existsSync(SEED_UPLOAD_DIR)) {
     for (const filename of fs.readdirSync(SEED_UPLOAD_DIR)) {
-      if (!/\.(jpe?g|png|webp|gif|avif)$/i.test(filename)) continue;
+      if (!imagePattern.test(filename)) continue;
       copyAtomic(path.join(SEED_UPLOAD_DIR, filename), path.join(UPLOAD_DIR, filename));
     }
   }
