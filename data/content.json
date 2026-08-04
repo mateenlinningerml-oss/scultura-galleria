@@ -18,7 +18,7 @@
       "contactHome": true,
       "pageGallery": true,
       "pageAbout": true,
-      "pageContact": false,
+      "pageContact": true,
       "aboutMission": true,
       "aboutMaterials": true,
       "aboutDesign": true,
@@ -28,7 +28,7 @@
       "contactNext": true
     },
     "builder": true,
-    "siteVersion": 2,
+    "siteVersion": 3,
     "siteName": "Emanuele “Willy” Bellemo"
   },
   "texts": {
@@ -40,11 +40,11 @@
       "meta.desc.home": "Sculture e opere materiche nate dal mare, dal legno spiaggiato e dalla tradizione marinara di Chioggia.",
       "topbar.location": "Chioggia · Venezia · Italia",
       "topbar.hours": "Atelier sul canale · Visite su appuntamento",
-      "topbar.visit": "Contatti e visite",
+      "topbar.visit": "Visita il laboratorio",
       "nav.home": "Home",
       "nav.gallery": "Opere",
       "nav.about": "L’artista",
-      "nav.contact": "Contatti",
+      "nav.contact": "Visita",
       "nav.menu": "Menu",
       "logo.sub": "Scultore · Chioggia",
       "hero.kicker": "Arte nata dal mare",
@@ -89,11 +89,11 @@
       "contact.kicker": "Atelier & contatti",
       "contact.title": "Entra nel mondo di Willy",
       "contact.lead": "Per informazioni sulle opere, esposizioni o una visita all’atelier di Chioggia, scrivici.",
-      "contact.email": "E-mail",
-      "contact.address": "Luogo",
-      "contact.address.value": "Chioggia · Venezia · Italia",
-      "contact.visits": "Visite",
-      "contact.visits.value": "Su appuntamento",
+      "contact.email": "Contatto",
+      "contact.address": "Indirizzo",
+      "contact.address.value": "Zona San Domenico · Chioggia · Venezia",
+      "contact.visits": "Orari",
+      "contact.visits.value": "Su appuntamento · Scrivere prima della visita",
       "contact.reply": "Risposta",
       "contact.reply.value": "Appena possibile",
       "form.name": "Nome",
@@ -199,12 +199,12 @@
       "meta.title.contact": "Contact — Emanuele Willy Bellemo",
       "meta.desc.home": "Sculptures and mixed-media works born from the sea, driftwood and the maritime tradition of Chioggia.",
       "topbar.location": "Chioggia · Venice · Italy",
-      "topbar.hours": "Canal-side studio · Visits by appointment",
-      "topbar.visit": "Contact & visits",
+      "topbar.hours": "Canal-side workshop · Visits by appointment",
+      "topbar.visit": "Visit the workshop",
       "nav.home": "Home",
       "nav.gallery": "Works",
       "nav.about": "The artist",
-      "nav.contact": "Contact",
+      "nav.contact": "Visit",
       "nav.menu": "Menu",
       "logo.sub": "Sculptor · Chioggia",
       "hero.kicker": "Art born from the sea",
@@ -249,11 +249,11 @@
       "contact.kicker": "Studio & contact",
       "contact.title": "Enter Willy’s world",
       "contact.lead": "For information about works, exhibitions or a visit to the Chioggia studio, write to us.",
-      "contact.email": "Email",
-      "contact.address": "Place",
-      "contact.address.value": "Chioggia · Venice · Italy",
-      "contact.visits": "Visits",
-      "contact.visits.value": "By appointment",
+      "contact.email": "Contact",
+      "contact.address": "Address",
+      "contact.address.value": "San Domenico area · Chioggia · Venice",
+      "contact.visits": "Opening times",
+      "contact.visits.value": "By appointment · Please contact us before visiting",
       "contact.reply": "Reply",
       "contact.reply.value": "As soon as possible",
       "form.name": "Name",
@@ -1436,10 +1436,10 @@
       ]
     },
     "contact": {
-      "enabled": false,
+      "enabled": true,
       "blocks": [
         {
-          "id": "blk_pageHero_cvcpip",
+          "id": "visit_hero",
           "type": "pageHero",
           "enabled": true,
           "data": {
@@ -1452,90 +1452,132 @@
               "en": "Visit the workshop"
             },
             "lead": {
-              "it": "Un incontro tra opere finite, legni in attesa e il canale appena fuori dalla porta. Le visite sono possibili su appuntamento.",
-              "en": "An encounter among finished works, waiting wood and the canal just outside the door. Visits are available by appointment."
-            }
+              "it": "Entra nel luogo in cui il legno del mare prende forma. Willy accoglie volentieri visitatori, racconta le opere e condivide materiali, strumenti e storie.",
+              "en": "Step into the place where sea-worn wood takes shape. Willy enjoys welcoming visitors, talking about his works and sharing their materials, tools and stories."
+            },
+            "image": "uploads/1784542480660-3d5595ef5368.jpeg"
           }
         },
         {
-          "id": "blk_visit_w8aeh8",
+          "id": "visit_intro",
+          "type": "imageText",
+          "enabled": true,
+          "data": {
+            "image": "uploads/1784542480660-3d5595ef5368.jpeg",
+            "imageSide": "left",
+            "kicker": {
+              "it": "Un atelier aperto",
+              "en": "An open workshop"
+            },
+            "title": {
+              "it": "Opere, conversazioni e il canale fuori dalla porta",
+              "en": "Works, conversations and the canal outside the door"
+            },
+            "body": {
+              "it": "Il laboratorio di Willy si affaccia sull’acqua nella zona di San Domenico. Qui si incontrano sculture finite, radici ancora in attesa e strumenti di lavoro. Willy ama quando le persone entrano, osservano da vicino e gli chiedono come è nata un’opera: raccontare il legno, il mare e il processo fa parte dell’esperienza della visita.",
+              "en": "Willy’s workshop overlooks the water in the San Domenico area. Finished sculptures, roots still waiting and working tools share the same space. Willy enjoys meeting people, letting them look closely and answering questions about how a work was born: talking about the wood, the sea and the process is part of the visit."
+            },
+            "cta": {
+              "it": "Scrivi per una visita",
+              "en": "Request a visit"
+            },
+            "ctaLink": "#visita-contatti"
+          }
+        },
+        {
+          "id": "visit_info",
           "type": "visit",
-          "enabled": false,
+          "enabled": true,
           "data": {
             "items": [
               {
                 "label": {
-                  "it": "Atelier",
-                  "en": "Studio"
+                  "it": "Indirizzo",
+                  "en": "Address"
                 },
                 "value": {
-                  "it": "Sul canale di Chioggia",
-                  "en": "On a canal in Chioggia"
+                  "it": "Zona San Domenico · Chioggia · Venezia",
+                  "en": "San Domenico area · Chioggia · Venice"
                 }
               },
               {
                 "label": {
-                  "it": "Incontri",
-                  "en": "Meetings"
+                  "it": "Orari",
+                  "en": "Opening times"
                 },
                 "value": {
-                  "it": "Visite su appuntamento",
-                  "en": "Visits by appointment"
+                  "it": "Su appuntamento · Scrivere prima della visita",
+                  "en": "By appointment · Please contact us before visiting"
                 }
               },
               {
                 "label": {
-                  "it": "Ispirazione",
-                  "en": "Inspiration"
+                  "it": "Esperienza",
+                  "en": "The experience"
                 },
                 "value": {
-                  "it": "Mare · Laguna · Tradizione",
-                  "en": "Sea · Lagoon · Tradition"
+                  "it": "Visite individuali e piccoli gruppi",
+                  "en": "Individual visits and small groups"
                 }
               }
             ]
           }
         },
         {
-          "id": "blk_contact_zcsgq8",
+          "id": "visit_quote",
+          "type": "quote",
+          "enabled": true,
+          "data": {
+            "text": {
+              "it": "Quando la porta è aperta, amici e visitatori possono entrare, vedere le opere e fermarsi a parlare.",
+              "en": "When the door is open, friends and visitors can come in, see the works and stay for a conversation."
+            },
+            "cite": {
+              "it": "Emanuele “Willy” Bellemo",
+              "en": "Emanuele “Willy” Bellemo"
+            }
+          }
+        },
+        {
+          "id": "visit_contact",
           "type": "contact",
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "Contatti",
-              "en": "Contact"
+              "it": "Prenota",
+              "en": "Book a visit"
             },
             "title": {
-              "it": "Incontra Willy a Chioggia",
-              "en": "Meet Willy in Chioggia"
+              "it": "Incontra Willy nel suo laboratorio",
+              "en": "Meet Willy in his workshop"
             },
             "lead": {
-              "it": "Scrivi per organizzare una visita, conoscere la disponibilità delle opere, proporre un’esposizione o immaginare un allestimento per ristoranti, hotel e spazi legati al mare.",
-              "en": "Write to arrange a visit, ask about available works, propose an exhibition or imagine an installation for restaurants, hotels and spaces connected to the sea."
+              "it": "Scrivi indicando il giorno e l’orario che preferisci. L’indirizzo completo e la conferma della visita verranno comunicati direttamente.",
+              "en": "Write with your preferred day and time. The full address and visit confirmation will be shared directly."
             },
             "showForm": true
           }
         },
         {
-          "id": "blk_cta_4lk0na",
+          "id": "visit_gallery_cta",
           "type": "cta",
           "enabled": true,
           "data": {
             "kicker": {
-              "it": "Continua il viaggio",
-              "en": "Continue the journey"
+              "it": "Prima della visita",
+              "en": "Before your visit"
             },
             "title": {
               "it": "Scopri le opere",
               "en": "Discover the works"
             },
             "lead": {
-              "it": "Ogni pezzo conserva il segno dell’acqua, del tempo e delle mani che lo hanno accompagnato verso una nuova vita.",
-              "en": "Every piece preserves the mark of water, time and the hands that guided it toward a new life."
+              "it": "Esplora la collezione e segnala a Willy quali opere vorresti vedere da vicino.",
+              "en": "Explore the collection and tell Willy which works you would like to see up close."
             },
             "cta": {
-              "it": "Alla collezione",
-              "en": "To the collection"
+              "it": "Vai alle opere",
+              "en": "View the works"
             },
             "ctaLink": "gallery.html",
             "dark": true
@@ -1544,6 +1586,6 @@
       ]
     }
   },
-  "_contentVersion": "1.2.1",
+  "_contentVersion": "1.3.2",
   "media": []
 }
