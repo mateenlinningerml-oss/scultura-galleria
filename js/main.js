@@ -133,7 +133,7 @@ function openSculpture(id) {
   currentSculptureId = id;
 
   if (data.image) {
-    media.innerHTML = `<img src="${data.image}" alt="${data.title}" style="width:100%;height:100%;object-fit:cover;" />`;
+    media.innerHTML = `<img src="${data.image}" alt="${data.title}" style="width:100%;height:100%;object-fit:contain;object-position:center;" />`;
   } else {
     media.innerHTML = data.svg;
   }

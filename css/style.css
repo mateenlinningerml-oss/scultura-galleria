@@ -4360,3 +4360,191 @@ body.artwork-viewer-open { overflow:hidden; }
   .artwork-image-viewer-dialog { height:94vh; }
   .artwork-image-viewer-nav { width:42px; height:54px; }
 }
+
+/* =========================================================
+   v1.3.1 — Refined works intro + uncropped image viewers
+   ========================================================= */
+body[data-page="gallery"] .page-hero {
+  isolation: isolate;
+  min-height: clamp(390px, 52vh, 590px);
+  display: grid;
+  align-items: center;
+  padding: calc(var(--header-h) + clamp(3.5rem, 7vw, 6rem)) 0 clamp(4rem, 7vw, 6.5rem);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,250,241,.12);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(191,101,57,.16), transparent 30%),
+    linear-gradient(145deg, #173832 0%, #0d2927 58%, #091f1f 100%);
+  text-align: left;
+}
+body[data-page="gallery"] .page-hero::before {
+  content: "WORKS";
+  position: absolute;
+  z-index: -1;
+  right: -0.035em;
+  bottom: -0.22em;
+  color: rgba(255,250,241,.045);
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 25vw, 28rem);
+  line-height: .72;
+  letter-spacing: -.055em;
+  pointer-events: none;
+}
+body[data-page="gallery"] .page-hero .container {
+  display: block;
+  width: min(100% - 3rem, 1220px);
+}
+body[data-page="gallery"] .page-hero-inner {
+  max-width: 880px;
+  margin: 0;
+}
+body[data-page="gallery"] .page-hero .section-kicker {
+  margin-bottom: 1.4rem;
+  color: #d28a64;
+  text-align: left;
+}
+body[data-page="gallery"] .page-hero h1 {
+  max-width: 12ch;
+  margin: 0 0 1.5rem;
+  color: #fffaf1;
+  font-size: clamp(3.6rem, 8vw, 7.6rem);
+  line-height: .9;
+  letter-spacing: -.035em;
+  text-transform: none;
+}
+body[data-page="gallery"] .page-hero p:not(.section-kicker) {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255,250,241,.72);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.6;
+  text-align: left;
+}
+body[data-page="gallery"] .gallery-section--editorial {
+  padding-top: clamp(4.5rem, 7vw, 7rem);
+}
+
+/* Collection lightbox: always show the complete artwork. */
+body[data-page="gallery"] .lightbox {
+  padding: clamp(.75rem, 2vw, 1.5rem);
+  background: rgba(5,18,18,.96);
+}
+body[data-page="gallery"] .lightbox-panel {
+  width: min(1500px, 100%);
+  max-width: none;
+  height: min(94dvh, 1040px);
+  max-height: none;
+  grid-template-columns: minmax(0, 1fr) minmax(290px, 380px);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 30px 100px rgba(0,0,0,.46);
+}
+body[data-page="gallery"] .lightbox-media {
+  min-height: 0;
+  height: 100%;
+  padding: clamp(1rem, 2.5vw, 2.5rem);
+  display: grid;
+  place-items: center;
+  background: #071d1c;
+  overflow: hidden;
+}
+body[data-page="gallery"] .lightbox-media img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: transparent !important;
+}
+body[data-page="gallery"] .lightbox-body {
+  background: #f3ede2;
+}
+body[data-page="gallery"] .lightbox-close {
+  top: 1rem;
+  right: 1rem;
+  border-radius: 999px;
+  background: rgba(8,31,29,.78);
+}
+body[data-page="gallery"] .lightbox-nav {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: rgba(8,31,29,.76);
+}
+body[data-page="gallery"] .lightbox-prev { left: 1.25rem; }
+body[data-page="gallery"] .lightbox-next { right: calc(380px + 1.25rem); }
+
+/* Artwork detail viewer: reserve a safe frame around every image. */
+.artwork-image-viewer {
+  padding: clamp(.75rem, 2vw, 1.75rem);
+  background: rgba(2,14,14,.98);
+}
+.artwork-image-viewer-backdrop { background: transparent; }
+.artwork-image-viewer-dialog {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  padding: clamp(3.75rem, 7vh, 5.5rem) clamp(4.25rem, 7vw, 7rem);
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.13);
+  background: radial-gradient(circle at 50% 45%, rgba(255,255,255,.04), transparent 55%);
+}
+.artwork-image-viewer-dialog img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+.artwork-image-viewer-close,
+.artwork-image-viewer-nav {
+  border-radius: 999px;
+  background: rgba(18,42,39,.84);
+  backdrop-filter: blur(8px);
+}
+.artwork-image-viewer-close { top: 1rem; right: 1rem; }
+.artwork-image-viewer-prev { left: 1rem; }
+.artwork-image-viewer-next { right: 1rem; }
+.artwork-image-viewer-count {
+  bottom: 1.15rem;
+  padding: .45rem .8rem;
+  border-radius: 999px;
+  background: rgba(18,42,39,.7);
+}
+
+@media (max-width: 900px) {
+  body[data-page="gallery"] .lightbox-panel {
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 68vh) auto;
+  }
+  body[data-page="gallery"] .lightbox-media { min-height: 0; }
+  body[data-page="gallery"] .lightbox-next { right: 1rem; }
+  .artwork-image-viewer-dialog { padding: 4rem 3.5rem; }
+}
+@media (max-width: 620px) {
+  body[data-page="gallery"] .page-hero {
+    min-height: 500px;
+    padding: calc(var(--header-h) + 3.5rem) 0 4rem;
+  }
+  body[data-page="gallery"] .page-hero .container { width: min(100% - 2rem, 1220px); }
+  body[data-page="gallery"] .page-hero h1 { font-size: clamp(3.25rem, 16vw, 5rem); }
+  body[data-page="gallery"] .lightbox-panel { grid-template-rows: minmax(0, 62vh) auto; }
+  body[data-page="gallery"] .lightbox-media { padding: 3.25rem .75rem 1.25rem; }
+  .artwork-image-viewer { padding: 0; }
+  .artwork-image-viewer-dialog {
+    border: 0;
+    padding: 4.5rem .75rem 4rem;
+  }
+  .artwork-image-viewer-nav { top: auto; bottom: 1rem; transform: none; }
+  .artwork-image-viewer-prev { left: 1rem; }
+  .artwork-image-viewer-next { right: 1rem; }
+  .artwork-image-viewer-count { bottom: 1.4rem; }
+}
